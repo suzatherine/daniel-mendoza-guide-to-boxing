@@ -1,0 +1,1346 @@
+:: StoryTitle
+Daniel Mendoza's Art of Boxing
+
+
+:: StoryData
+{
+	"ifid": "8D21C86D-96BF-4A21-84CC-D8351F18D6F5",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "landing",
+	"zoom": 0.6
+}
+
+
+:: Story Stylesheet [stylesheet]
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+
+/* GENERICS */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Mostly equivalates to 10px but allows users accessibility zoom settings to work*/
+  /* font-size: 10px; */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-size: 10px;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Try to keep your margins going in one direction to avoid margin collapase or grounding. I switch all the top margins off to avoid this issue. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+blockquote,
+address,
+article,
+aside,
+details,
+dialogue,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+header,
+hr,
+main,
+nav,
+pre,
+section,
+table,
+p {
+  margin-top: 0;
+  margin-block-start: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  /* You MUST make sure that links stand out from nomal text though...*/
+}
+
+
+img {
+  /* This means that it can be less than 100% of the width of its parent IF the image is INTRINSICALLY smaller */
+  max-width: 100%;
+
+  height: auto;
+  /* 'auto' is the initial value for height BUT for images (and other elements which have an intrinic height) that is not the case. To make an image responsive you set one dimension (usually width) to [max-]width: 100%; and the other to 'auto' to ensure it keeps aspect ratio. 'auto' basically tells the browser to decide. */
+  vertical-align: middle;
+  /* minor vertical centering. Works for images IF there is a baseline (i.e. they are displayed inline or inline-block) */
+}
+
+/* Because we us <ul>s for lists that we don't always want bulletted. */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* To make actual bulletted lists */
+ul.typographic {
+  list-style: initial;
+  padding-inline-start: 20px;
+}
+
+/* stops icons being the target of JS click events */
+a.btn *,
+button * {
+  pointer-events: null;
+}
+
+/* For 'accessibility text'. If your button only has an image inside it that isn't good for accessibility. Put a span inside there and give it this class and put some descriptive text for what the button does into the span. */
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  clip-path: auto;
+  -webkit-clip-path: auto;
+  white-space: normal;
+}
+
+/* GET RID OF TWINE STYLES */
+#story{
+  margin:0
+}
+
+#passages {
+	max-width: 100%;
+
+}
+
+#story a.link-external:after {
+	content: "";
+}
+
+button{
+    background-color: transparent;
+    border: #fff 1px solid;
+    border-radius: 3px;
+}
+
+button:hover{
+	background-color:#cf1b98;
+	border: #fff 1px solid;
+	color: #fff;
+}
+
+a {
+  color: #f2647d;
+}
+
+a:active {
+  background-color: #f2647d;
+}
+
+a:hover {
+  color: #fff;
+}
+
+#story a.link-external:after {
+	content: "";
+}
+
+#story {
+	margin: 0
+}
+
+/* GENERAL STYLES */
+body{
+  font-size: 1.6rem;
+  font-family: "Space Grotesk";
+  overflow:scroll;
+  background:#000;
+  /* padding: 1.5rem */
+  display:flex;
+  flex-direction: column
+}
+
+header{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+    padding: 2rem
+}
+
+main{
+   padding: 2rem;
+   margin-block-end: 4rem
+}
+
+footer{
+   display:flex;
+  justify-content: space-between;
+  align-items: flex-end; 
+  position:fixed;
+  bottom: 0;
+  padding: 2rem;
+  width: 100%;
+  background-color: #000
+}
+
+nav{
+  display:flex;
+    justify-content: space-between;
+}
+
+.nav-wrapper{
+display:flex;
+  flex-direction:column;
+align-items: flex-start
+}
+
+.nav-wrapper:last-child{
+align-items: flex-end
+}
+
+.nav-item{
+  margin-block-end: 1.5rem
+}
+
+.nav-item:last-child{
+  margin-block-end: 0
+}
+
+
+.nav-wrapper:last-child{
+display:flex;
+align-items: flex-end
+}
+
+.menu-wrapper{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-wrapper > button{
+margin-inline-end: 10px;
+margin-block-end: 10px
+}
+
+.door-container{
+  display:flex;
+  flex-direction: row;
+justify-content: space-around;
+  align-items:center;
+  text-align: right;
+}
+
+.door-item{
+  display:flex;
+  flex-direction:column
+}
+
+.door-item > button > img {
+  max-width: 7rem
+}
+
+.door-item > span {
+  text-align: center
+}
+
+textarea{
+  min-width: 60vw
+}
+
+.wordcontainer{
+  display:flex;
+  flex-direction: row;
+}
+
+.letter-item > input[type=text]{
+    min-width: 2em;
+  	max-width: 2em;
+  	margin-inline-end:10px;
+}
+
+.letter-item > .correct-letter{
+  min-width: 2em;
+  	max-width: 2em;
+  	margin-inline-end:10px;
+}
+
+.words{
+  display:flex;
+  flex-direction: row;
+}
+
+.word{
+  padding: 5px;
+}
+
+.detector{
+ width: 50%;
+}
+
+.spinning{
+
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */ 
+   /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+/* MAP */
+	.map{
+width: 100%;
+    height: 60vh;
+    border: 0;
+    margin: auto;
+    }
+
+
+.directions-card {
+    display: none!important
+}
+
+@media screen and (min-width: 450px) {
+.map{
+	max-width:60vw;
+	height:50vh;
+	border:0
+}
+}
+
+
+:: Story JavaScript [script]
+$('#ui-bar').remove();
+$(document.head).find('#style-ui-bar').remove();
+// TYPEWRITER FN
+!function() {
+    postrender.typewriter = function (b) {
+        if (this.tags) {
+            var r = new RegExp("t8n.typewriter.([0-9]+)(?:[^0-9]|$)","g");
+            var t = r.exec(this.tags.toString());
+            if (t) {
+                typeout(b, t[1]+0);
+            }
+        }
+        return b;
+    };
+    var typeout = function(c,t) {
+        var Furl = function(current) {
+            this.n = current;
+            this.out = false;
+            this.data = current.nodeValue;
+            current.nodeValue = "";
+            this.kids = [];
+            var cn = current.childNodes;
+            if (current.style && current.style.display=="none") {
+                return;
+            }
+            while (cn.length>0) {
+                var f = new Furl(cn[0]);
+                current.removeChild(cn[0]);
+                f.out = true;this.kids.push(f);
+            }
+        };
+        var nodes = new Furl(c);
+        var unfurl = function(furled,d) {
+            var n = furled.n;
+            if (furled.out) {
+                d.appendChild(n);
+                furled.out = false;
+            }
+            if (furled.data) {
+                n.nodeValue += furled.data[0];
+                furled.data = furled.data.slice(1);
+                return true;
+            }
+            for (var j=0; j<furled.kids.length; j++) {
+                var ret = unfurl(furled.kids[j],n);
+                if (ret) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        var title = passage();
+        var intr = setInterval (
+            function() {
+                if (passage() == title && unfurl(nodes,null)) {
+                    return;
+                }
+                clearInterval(intr);
+            }
+        ,t);
+    };
+}();
+
+// MAKE MAP FUNCTION
+
+setup.generateDirectionsMap = function (latorg, longorg, latdest, longdest){
+const iFrame = document.createElement("iframe")
+iFrame.classList.add("map")
+iFrame.setAttribute("loading", "lazy")
+iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
+// iFrame.setAttribute("allowfullscreen")
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${latorg},${longorg}&zoom=17&origin=${latorg},${longorg}&destination=${latdest},${longdest}&mode=walking`)
+const mount = document.getElementById("mapMount")
+return iFrame
+}
+
+//Get random 5 letter word
+
+setup.generate5LetterCode = () => {
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+let word = ""
+for (let i =0 ; i < 5 ; i++){
+word += alphabet[Math.round((alphabet.length-1)*Math.random())];
+}
+  return word;
+}
+
+//Check if an array contains multiple instances of an element
+
+setup.checkForRepeats = (array,element) => {
+ const arrayCopy = [...array];
+ const duplicates = arrayCopy.filter((item, index) => index !== arrayCopy.indexOf(item));
+ return duplicates.contains(element)
+}
+
+
+:: StoryInit {"position":"100,100","size":"100,100"}
+<<cacheaudio "badjoke" "https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3">>
+<<waitforaudio>>
+
+
+:: header {"position":"100,225","size":"100,100"}
+<header>Adventure Functionality /
+ Structure Template</header>
+
+
+:: footer {"position":"100,375","size":"100,100"}
+<footer><div class="nav-wrapper "><div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "I'm lost">><<goto "lost">><</button>></div></div></footer>
+
+
+:: lost {"position":"710,53","size":"100,100"}
+<<set $passage to "lost">><<include "header">>
+<main>
+Sorry to hear that you're lost! 
+You have two options:
+
+<<button "Begin the adventure again">><<goto "landing">><</button>>
+
+<<button "Take me straight to the end location!">><<goto "end">><</button>>
+</main>
+<<include "footer">>
+
+
+:: landing {"position":"455,60","size":"100,100"}
+<<set $passage to "landing">>
+<<include "header">>
+<main>
+
+<<button "Start">><<set $prevpass to $passage>><<goto "DM-05">><</button>>
+     
+
+</main>
+<<include "footer">>
+
+
+:: end {"position":"97,615","size":"100,100"}
+<main>
+
+End
+
+</main>
+
+
+:: footer2 {"position":"99,493","size":"100,100"}
+<footer>
+<div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
+<div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div>
+<div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div>
+<div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
+</footer>
+
+
+:: DM-05 {"position":"454,195","size":"100,100"}
+<<set $passage to "DM-05">><<set $nextpassage to "DM-06">>
+<main>
+
+/*Sound effects*/
+
+Daniel?! Daniel.
+Daniel over here.
+
+One moment. One second.
+
+Are you ready for tonight?
+Does Humphries stand a chance?
+
+Not if I have my way. I’m sorry, I have
+
+Daniel! DANIEL! Over here.
+Will the Star of David shine tonight?
+
+You can call me Daniel Mendoza
+
+Will your defense run tired in the face of strength?
+
+Cheeky questions deserve cheeky answers.
+
+What about your technique?-
+
+You’ll have to read my book.
+
+Daniel!
+
+That’s all we have time for. I’ll see you in the ring.
+
+Hi. Sorry about all that. It’s a big day, you know.
+I’m glad you’re here: someone I can actually talk to. How was your journey?
+
+
+<div class = "menu-wrapper">
+<<button "GOOD">><<set $prevpass to $passage>><<goto "DM-06A">><</button>>
+
+<<button "BAD">><<set $prevpass to $passage>><<goto "DM-06B">><</button>>
+ </div>
+
+</main>
+<<include "footer">>
+
+
+:: DM-06A {"position":"375,325","size":"100,100"}
+<<set $passage to "DM-06A">><<set $nextpassage to "DM-07">>
+<main>
+
+
+Fantastic. We’re off to a great start.
+
+
+
+<<timed 3s>><<set $prevpass to $passage>><<goto "DM-07">><</timed>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-06B {"position":"525,325","size":"100,100"}
+<<set $passage to "DM-06B">><<set $nextpassage to "DM-07">>
+<main>
+
+
+That’s a pity, but out of adversity comes stronger fighters.
+
+
+
+
+<<timed 3s>><<set $prevpass to $passage>><<goto "DM-07">><</timed>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-07 {"position":"450,450","size":"100,100"}
+<<set $passage to "DM-07">><<set $nextpassage to "DM-08">>
+<main>
+
+I want to apologise in advance. I know I said I’d make time for you, but today is a bit of a busy one. I’m fighting Richard Humphries this evening.
+There’s a lot pressure, a lot of buzz. If I’m honest with you, I’m terrified.
+I spent all day yesterday running away from the press, and now I have a to-do list the length of Brick Lane. Countless errands and this lot won’t leave me alone.
+Sometimes I wonder who I’m really fighting.
+But I’m a man of my word; I’ll always make time for a promising mentee.
+I hear you’re the most promising boxer of your generation, but I heard you changed your name? You have a boxer name, I thought.
+
+I swear you had a mighty title?
+
+<<textbox "$boxertitle" "">>
+<div class = "errormessage">
+</div>
+
+<<button "Enter">>
+<<if $boxertitle isnot "">>
+  <<set $prevpass to $passage>>
+  <<goto "DM-08">>
+<<else>>
+  <<replace ".errormessage">>Enter a boxer title<</replace>>
+<</if>>  
+<</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-08 {"position":"450,575","size":"100,100"}
+<<set $passage to "DM-08">><<set $nextpassage to "DM-09">>
+<main>
+
+That’s the one. You don’t want to say that name too loudly here or the press will hound both of us. Let’s get out discreetly. This little alley seems quiet enough.
+
+/*MAP NEEDED*/
+
+<<button "Ok, here. Now what?">><<set $prevpass to $passage>><<goto "DM-09">><</button>>
+
+</main>
+<<include "footer2">>
+
+
+:: DM-09 {"position":"450,700","size":"100,100"}
+<<set $passage to "DM-09">><<set $nextpassage to "DM-10">>
+<main>
+
+Okay, I need you to distract the press for a bit. Is there anything exciting behind us?
+Maybe a suggestion of a good story? Just point out something that could make a good decoy. Do it loudly.
+
+<<button "DONE">><<set $prevpass to $passage>><<goto "DM-10">><</button>>
+
+</main>
+<<include "footer2">>
+
+
+:: DM-10 {"position":"450,825","size":"100,100"}
+<<set $passage to "DM-10">><<set $nextpassage to "DM-11">>
+<main>
+
+Great, I think we shook them off.
+
+It’s truly my pleasure to be with you today. I know you think you’re here to learn from me, but I’ll be honest: you’re also going to help me practise my craft.
+If everything goes well in the ring today, I want to expand my teachings, spread my techniques from The Art of Boxing: Strength, Courage, Art, Activity, and Wind.
+I’ll help you become a better boxer; you’ll help me become a better teacher.
+It’s very generous that you’ve come to my neighborhood.
+So bear with me, and I’ll give you what I’ve got.
+
+/*MAP NEEDED*/
+
+<<button "At Beavis Marks ">><<set $prevpass to $passage>><<goto "DM-11">><</button>>
+
+</main>
+<<include "footer2">>
+
+
+:: DM-11 {"position":"450,950","size":"100,100"}
+<<set $passage to "DM-11">><<set $nextpassage to "DM-12">>
+<main>
+
+So my first category is-
+
+Daniel! Daniel! Who is your friend?
+
+Quick. Let’s get away from them.
+We need a quiet spot.
+Do you see one around you?
+
+Daniel! Is that?-
+
+We need a quiet spot with a bit of space. Can you find one?
+
+<div class = "menu-wrapper">
+<<button "Yes, I’m in a quiet spot with a bit of space">><<set $prevpass to $passage>><<goto "DM-12A">><</button>>
+
+<<button "No, give me a moment">><<set $prevpass to $passage>><<goto "DM-12B">><</button>>
+</div>
+
+
+
+</main>
+<<include "footer">>
+
+
+:: DM-12A {"position":"375,1075","size":"100,100"}
+<<set $passage to "DM-12A">><<set $nextpassage to "DM-13">>
+<main>
+
+Great, let’s get started.
+
+
+<<button "Alright">><<set $prevpass to $passage>><<goto "DM-12B">><</button>>
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-12B {"position":"525,1075","size":"100,100"}
+<<set $passage to "DM-12B">><<set $nextpassage to "DM-13">>
+<main>
+
+Okay. We need some room to practise our punches. Let’s get away from the crowd.
+
+
+
+<<button "I'm in a quiet spot">><<set $prevpass to $passage>><<goto "DM-13">><</button>>
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-13 {"position":"450,1200","size":"100,100"}
+<<set $passage to "DM-13">><<set $nextpassage to "DM-12">>
+<main>
+
+So, as you know from my book, which I’m sure you read, you need to be strong to be a good boxer.
+To be honest, you didn’t need me to tell you that.
+I mean, look at you? You look like you could crush bricks in your sleep.
+That’s a compliment.
+But, as I said in my book, there’s some exercises I like to do.
+
+/*This message is in an old typeface*/
+
+You may amuse yourself by striking straight forward with each arm successively. By
+repeating this you will find yourself able to strike much oftener and quicker in any
+certain, limited, space of time, than you could at first.”
+Why don’t you give it a shot?
+Put your nondominant foot in front of you and point it at a 35- to 45-degree angle
+towards the air. Make sure no one is around you.
+Now put your dominant foot behind you and point it away from the target at a 45- to
+60-degree angle.
+Raise both your arms and make a fist with your hands.
+Have you got it? There we go.
+Now I’m going to need you to slowly, VERY SLOWLY, punch the air in front of you.
+Alternate between each arm.
+…
+There we go.
+Let’s see if you can keep it going for thirty seconds.
+…
+One, two, three, punch, to three. Other hand, two three, punch, two three
+…
+There we go. Do you think you can do a minute?
+
+<div class = "menu-wrapper">
+<<button "Yes">><<set $prevpass to $passage>><<goto "DM-14A">><</button>>
+
+<<button "No">><<set $prevpass to $passage>><<goto "DM-14B">><</button>>
+</div>
+
+
+</main>
+<<include "footer">>
+
+
+:: DM-14A {"position":"375,1325","size":"100,100"}
+<<set $passage to "DM-14A">><<set $nextpassage to "DM-15">>
+<main>
+
+That’s what I thought. Let’s try that again. I’ll talk to you as you’re working out.
+Whenever you’re ready. Try to build a rhythm.
+
+
+
+<<button "Did it">><<set $prevpass to $passage>><<goto "DM-15">><</button>>
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-14B {"position":"525,1325","size":"100,100"}
+<<set $passage to "DM-14B">><<set $nextpassage to "DM-15">>
+<main>
+
+It’s good to preserve your energy. Let’s take a breather.
+
+
+
+<<button "Sounds good">><<set $prevpass to $passage>><<goto "DM-15">><</button>>
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-15 {"position":"450,1450","size":"100,100"}
+<<set $passage to "DM-15">><<set $nextpassage to "DM-16">>
+<main>
+
+I often think about strength when I’m here.
+All these buildings: the storms they’ve withstood. The way they stand upright any time of day.
+You can see Bevis Marks Synagogue just over there.
+That’s where I go to daven, to pray. It’s where I ask for strength every day.
+The building has been around nearly a hundred years now.
+That doesn’t sound like a long time, but it’s one of the oldest synagogues to still be in use today. It’s a small, slightly hidden building.
+Everyone thinks it’s trying to be big and grand and intimidating,
+But it was built to serve the community. It wasn’t designed for prominence.
+
+Daniel! Daniel!
+
+The more attention I get, sometimes, this sounds daft.
+Sometimes I like to think of myself as a building.
+Not built for prominence, but for strength. In public but trying to serve the community.
+
+DANIEL! Daniel!
+
+I want to tell these people to bugger off. But I know what the press will say. I have to be twice as polite as a gentile boxer. One slip of the tongue and they’ll call me smug.
+
+Daniel the Jew! Over here!
+
+That nickname. I had no choice but to claim it. I would have shut-it-down on the spot, I would have practised my boxing with the hack who coined it, if I didn’t think it would harm my community. It’s unfair. But if I win, it’s their win too.
+I’m going to nip in to shul, get away from this lot, have a word with my Rabbi before the big day.
+But I’ll meet you at the market?
+
+/*MAP NEEDED*/
+
+<<button "Here">><<set $prevpass to $passage>><<goto "DM-16">><</button>>
+
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-16 {"position":"450,1575","size":"100,100"}
+<<set $passage to "DM-16">>
+<main>
+
+Thanks for meeting me here. I know, this place looks unassuming. I need to stop off to look at some paperwork. I’m going to build a school here.
+Only if I win, if I ever become, I don’t know: supreme boxer, or something.
+I doubt it will happen.
+I know, I shouldn’t let my ego stop me from doing what I want to do; I can’t help myself. Days like this, when the stress really gets to me, I feel like an imposter.
+It’s hard to think about teaching or doing anything so serious when I’m struggling to take myself seriously. Or maybe I’m taking myself too seriously.
+Anyway, I’ve been talking with some landlords. They have the capacity.
+I think my first course will be on the art of boxing.
+I call it an art even though it’s a science.
+You’ll remember, I wrote about it in my book.
+
+/*Next part needs to be in old typeface*/
+
+“It must be acknowledged, that the art is of such importance, that no boxer ought to trust their strength, however great, without calling in some knowledge of the science to his assistance. Art will always give a boxer the advantage over an adversary.”
+
+Boxing is an art because you’re moving with intention. It’s real-time, responsive, and you’re communicating with your opponent. Just how people avoid each other in crowds. Just watch the pavement for a second and you’ll see: the ways people signal where they’re walking with their eyes, the little dances they play when two people approach each other from opposite directions.
+Being a good boxer is about controlling your body, how you present your intentions and how you read your opponent.
+I want you to try using your body to communicate.
+Pay attention to every finger, every joint, every way you position yourself. It’s all one decision.
+
+<div class="menu-wrapper">
+<<button "Let's try, we're in a group">><<set $prevpass to $passage>><<goto "DM-17A">><</button>>
+
+<<button "Let's try, I'm solo">><<set $prevpass to $passage>><<goto "DM-17B">><</button>>
+</div>
+
+
+</main>
+<<include "footer">>
+
+
+:: DM-17A {"position":"375,1700","size":"100,100"}
+<<set $passage to "DM-17A">><<set $nextpassage to "DM-18A">>
+<main>
+<<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
+<<set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()>>
+
+Okay, we need one challenger to face some opponents. You can pair off for
+this exercise, or take it in turns challenging.
+
+If you’re a challenger, take a look at this letter. DON’T show your opponents. I need you to embody this letter, I’ll give you thirty seconds to get into position. Can your opponent get it?
+
+<div class="randomletter">
+<<button "Reveal random letter">>
+	<<replace ".randomletter">>$randomletter1<</replace>>
+    <<replace ".nextbuttoncontainer">>
+    	<<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-18A">><</button>>
+    <</replace>>    
+<</button>>
+</div>
+
+<div class="nextbuttoncontainer">
+</div>
+
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-18A {"position":"375,1825","size":"100,100"}
+<<set $passage to "DM-18A">><<set $nextpassage to "DM-19A">>
+<main>
+
+Now, I have another challenge. Feel free to swap roles with your opponent. I’m going to share it as soon as you can peek discreetly.
+
+<<button "Continue">><<set $prevpass to $passage>><<goto "DM-19A">><</button>>
+
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-19A {"position":"375,1950","size":"100,100"}
+<<set $passage to "DM-19A">><<set $nextpassage to "DM-20A">>
+<main>
+
+<<set $randomletter2 to $notweirdalphabet.pluck().toUpperCase()>>
+
+$randomletter2
+
+I want you to look around the court. What do you see? Can you see anything beginning with this letter? As soon as you do, find a way to communicate that object without using any words. Let your opponents guess the letter behind the object.
+
+<<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-20A">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-20A {"position":"375,2075","size":"100,100"}
+<<set $passage to "DM-19A">><<set $nextpassage to "DM-21A">>
+<main>
+
+One last challenge. One last letter. Any takers?
+
+
+<<button "Continue">><<set $prevpass to $passage>><<goto "DM-21A">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-21A {"position":"375,2200","size":"100,100"}
+<<set $passage to "DM-21A">><<set $nextpassage to "DM-22A">>
+<main>
+
+<<set $randomletter3 to $notweirdalphabet.pluck().toUpperCase()>>
+
+$randomletter3
+
+Think of an adjective or a way of describing the previous object. This word should start with this letter. I want you to communicate that adjective using only your body. How easy is it to guess the letter?
+
+<<button "Next">><<set $prevpass to $passage>><<goto "DM-22A">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-22A {"position":"375,2325","size":"100,100"}
+<<set $passage to "DM-22A">><<set $nextpassage to "DM-23">>
+<main>
+
+Do you want another round?
+
+<div class ="menu-wrapper">
+<<button "Yes">><<set $prevpass to $passage>><<goto "DM-17A">><</button>>
+
+<<button "No">><<set $prevpass to $passage>><<goto "DM-23">><</button>>
+</div>
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-17B {"position":"525,1700","size":"100,100"}
+<<set $passage to "DM-17B">>
+<main>
+
+You can find a partner to play with, or practise this alone, for when you’re in the ring.
+
+
+<div class="menu-wrapper">
+<<button "Playing with an opponent">><<set $prevpass to $passage>><<goto "DM-17A">><</button>>
+
+<<button "Playing alone">><<set $prevpass to $passage>><<goto "DM-18B">><</button>>
+</div>
+
+
+</main>
+<<include "footer">>
+
+
+:: DM-18B {"position":"525,1825","size":"100,100"}
+<<set $passage to "DM-18B">><<set $nextpassage to "DM-19B">>
+<main>
+<<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
+<<set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()>>
+
+$randomletter1
+
+1. Take a look at this letter. DON’T show anyone. I need you to embody this letter, I’ll give you thirty seconds to get into position.
+
+
+<<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-19B">><</button>>
+
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-19B {"position":"525,1950","size":"100,100"}
+<<set $passage to "DM-19B">><<set $nextpassage to "DM-20B">>
+<main>
+
+$randomletter1
+
+2. Now, I want you to look around the court. What do you see? Can you see anything beginning with your letter? As soon as you do, find a way to communicate that object without using any words.
+
+
+
+<<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-20B">><</button>>
+
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-20B {"position":"525,2075","size":"100,100"}
+<<set $passage to "DM-20B">><<set $nextpassage to "DM-21B">>
+<main>
+
+$randomletter1
+
+3. Finally, think of an adjective or a way of describing your object. This word should start with the same letter. I want you to communicate that adjective using only your body. How easy is it to guess?
+
+
+
+<<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-21B">><</button>>
+
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-21B {"position":"525,2200","size":"100,100"}
+<<set $passage to "DM-20B">><<set $nextpassage to "DM-23">>
+<main>
+
+Do you want another round?
+
+
+<div class = "menu-wrapper">
+<<button "Yes">><<set $prevpass to $passage>><<goto "DM-18B">><</button>>
+
+<<button "No">><<set $prevpass to $passage>><<goto "DM-23">><</button>>
+</div>
+
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-23 {"position":"450,2450","size":"100,100"}
+<<set $passage to "DM-23">><<set $nextpassage to "DM-24">>
+<main>
+
+Daniel! Daniel!
+
+For goodness sake. Let’s get out of here, but try to transform yourself into the first animal you see. I’ve found one will pay you attention if you move like a pigeon.
+
+/*MAP NEEDED*/
+
+<<button "Here">><<set $prevpass to $passage>><<goto "DM-24">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-24 {"position":"450,2575","size":"100,100"}
+<<set $passage to "DM-24">><<set $nextpassage to "DM-25">>
+<main>
+
+Great, we shook them off.
+Whilst we’re walking, I can probably squeeze in another lesson. My nerves about today also have me stressing about you, making this trip worth your while. I have another spiel for you. Stop me if you know it: I’m sure you definitely, one-hundred-per-cent read my book,
+The part about activity.
+“Strength and art mean very little for a static boxer.
+Movement, and precise activity is a necessary requisite”
+I want to teach you side-stepping. It’s a somewhat self-explanatory move.
+You can maximise pressure on your opponent by moving side to side.
+You open new angles for attack. Pair a side-step with a tactical duck or slip, and you’ve got a defensive move too.
+It’s my signature.
+But it’s all in the footwork, and it’s a tricky skill to get right.
+So as you walk down this street, and I need you to be careful,
+I want you to practise your footwork.
+Try turning ninety degrees and walking sideways.
+Make sure to turn your head left-to-right. You need to keep your wits about you.
+There you go.
+Once you have a clearing, try turning 180 degrees but walk in the same direction.
+It’s not easy is it?
+
+Daniel! Daniel!
+
+Oh dear. We need to pick up the pace. I’ll run ahead; you keep practicing the side-step.
+
+/*MAP NEEDED*/
+
+<<button "At Leadenhall Market">><<set $prevpass to $passage>><<goto "DM-25">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-25 {"position":"450,2700","size":"100,100"}
+<<set $passage to "DM-25">><<set $nextpassage to "DM-26">>
+<main>
+
+There you are! I was just picking up some groceries.
+I only eat a slice of bread, maybe some butter on a big day.
+But my wife: she wants some kosher meat for shabbat.
+And a place like this, it helps calm me down.
+Sometimes I’ll look around and catch a detail that’s been here for hundreds of years.
+It’s easy to imagine crowds of people who were here before me, and the countless crowds who will be here after. It makes stressing about the present seem pointless.
+Anyway, I need to tell you about courage.
+Let me check my notes.
+…
+Ah! There it is.
+Yes
+
+/*Next passage in old typeface*/
+
+“In mentioning Courage as a necessary requisite, it has been considered in both its active and passive sense; that is, as spirit or resolution in engaging your adversary, and as hardiness or bottom in bearing their blows.”
+You see courage is a give and take.
+It’s about opening yourself to the unknownSorry. Surely that’s not?
+No way. Of all the days to see Elizabeth Wilkinson doing her errands.
+Elizabeth!
+
+Daniel!
+
+You know Elizabeth Wilkinson? The ‘Championess’? I don’t think she picked her nickname either. But she’s a legend of the ring, a bare-knuckled titan.
+
+I thought that was you. I spotted you in the distance.
+There aren’t many 5 foot 7 inch men who walk with your posture.
+And to see two up and coming boxers as I’m doing my groceries
+
+I’m going for the championship, Elizabeth.
+
+You’ll always be up-and coming to me.
+
+I was going to encourage my mentee to play a game. Maybe you’ll take part?
+
+I only have a minute…
+
+Okay. Best of three then.
+
+Rock, paper, scissors. I need you to raise a move on three.
+You know how to play?
+
+Of course. I’ll hold up rock, paper or scissors on three.
+
+
+<<button "Let's play">><<set $prevpass to $passage>><<goto "DM-26">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-26 {"position":"450,2825","size":"100,100"}
+<<set $passage to "DM-26">><<set $nextpassage to "DM-27">>
+<main>
+
+<<set $rps to ["Rock!", "Paper!", "Scissors!"]>>
+<<set $opponent to $rps.random()>>
+
+Okay. One, two, three
+
+$opponent
+
+<<button "Next round">><<set $prevpass to $passage>><<goto "DM-27">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-27 {"position":"450,2950","size":"100,100"}
+<<set $passage to "DM-27">><<set $nextpassage to "DM-28">>
+<main>
+
+<<set $opponent to $rps.random()>>
+
+Okay. One, two, three
+
+$opponent
+
+<<button "Next round">><<set $prevpass to $passage>><<goto "DM-28">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-28 {"position":"450,3075","size":"100,100"}
+<<set $passage to "DM-28">><<set $nextpassage to "DM-29">>
+<main>
+
+<<set $opponent to $rps.random()>>
+
+Okay. One, two, three
+
+$opponent
+
+<<button "Next round">><<set $prevpass to $passage>><<goto "DM-29">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-29 {"position":"450,3200","size":"100,100"}
+<<set $passage to "DM-29">><<set $nextpassage to "DM-30">>
+<main>
+
+There it is-
+
+I really need to go. Best of luck tonight.
+
+Always a pleasure.
+
+/*The sound of footsteps walking away.*/
+
+You had some great reflexes there. But I wonder if there are any other worthy adversaries in this area. Do you see any other boxers on your level? Any other people who play your game?
+I bet there’s a few around here. You don’t have to know them.
+Challenge another person to a few rounds of rock, paper, scissors.
+I’ll meet you in a moment.
+
+/*MAP NEEDED*/
+
+<<button "Next">><<set $prevpass to $passage>><<goto "DM-30">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: DM-30 {"position":"450,3325","size":"100,100"}
+<<set $passage to "DM-30">><<set $nextpassage to "end">>
+<main>
+
+And now we reach our
+We reach our
+Sorry, I-
+Now we reach our final lesson.
+I’m getting overwhelmed. The pressure is mounting.
+I feel the weight of my own name and my community behind me.
+I could do with this lesson too.
+You remember what I wrote about wind?
+
+/*Next passage in typeface font*/
+
+“To improve wind, one must breath. By too violent exertion in fighting a person becomes winded, or out of breath. The wind may be much improved by frequent practice, and greatly recovered when lost in fighting.”
+
+Sometimes it’s important to find some fresh air.
+I need to calm down.
+Let me guide you through one of my breathing exercises.
+I’ll join you.
+
+First, I need you to look at a spot that is completely unmoving.
+I know it’s hard; the city is always on-the-go. But find an anchoring point, stare at it for 30 seconds. Let the world move around you; stay focused; don’t allow yourself to get swept up.
+
+Now inhale, take a deep breath through your nose.
+Look around you. Find a building or a structure that represents stability. Something sturdy, something standing with confidence, something unphased by the weather. 
+Focus on it. Breathe out through your nose.
+
+Now breathe in again.
+
+Daniel! Daniel!
+
+Find a building that represents intention. Something artistic, something designed with a specific purpose, something choreographed with the world around it. Focus on it.
+Breathe out.
+
+Now breathe in again. One last time. Find a building that represents a larger idea. Something that’s meaningful to lots of people, something that leads the way, something that can inspire the next generation. Now breathe out.
+
+Daniel! Daniel! Daniel!
+
+I think I’m ready.
+
+
+<<button "Good luck Daniel!">><<set $prevpass to $passage>><<goto "end">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
