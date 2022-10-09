@@ -160,17 +160,17 @@ button{
 }
 
 button:hover{
-	background-color:#cf1b98;
+	background-color:#ea9e25;
 	border: #fff 1px solid;
 	color: #fff;
 }
 
 a {
-  color: #f2647d;
+  color:#ea9e25;;
 }
 
 a:active {
-  background-color: #f2647d;
+  background-color: #ea9e25;;
 }
 
 a:hover {
@@ -187,14 +187,18 @@ a:hover {
 
 /* GENERAL STYLES */
 body{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   font-family: "Space Grotesk";
+  color:#fff;
+  /* color:#000; */
   overflow:scroll;
-  background:#000;
+  background:#188081;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
 }
+
 
 header{
   display:flex;
@@ -205,18 +209,23 @@ header{
 
 main{
    padding: 2rem;
-   margin-block-end: 4rem
+   margin-block-end: 10rem
 }
+
+input[type=text]{
+  border: 1px solid #fff
+}
+/* FOOTER  */
 
 footer{
    display:flex;
   justify-content: space-between;
-  align-items: flex-end; 
+align-items: end;
   position:fixed;
   bottom: 0;
   padding: 2rem;
   width: 100%;
-  background-color: #000
+background: #188081;
 }
 
 nav{
@@ -235,17 +244,32 @@ align-items: flex-end
 }
 
 .nav-item{
-  margin-block-end: 1.5rem
+  margin-block-end: 0.5rem;
+  width:100%;
+  display:flex
 }
 
-.nav-item:last-child{
-  margin-block-end: 0
+.nav-item.replay, .nav-item.end{
+justify-content: center
+}
+.nav-item.replay, .nav-item.forward{
+justify-content: end
 }
 
+.nav-item.replay, .nav-item.back{
+justify-content: start
+}
 
-.nav-wrapper:last-child{
-display:flex;
-align-items: flex-end
+.nav-item.forward > button, 
+.nav-item.back > button{
+  font-size:2rem
+}
+footer > button:first-child,  {
+  font-size:2rem
+}
+
+.nav-item > button{
+ font-size: 1.3rem
 }
 
 .menu-wrapper{
@@ -425,16 +449,35 @@ $(document.head).find('#style-ui-bar').remove();
 
 // MAKE MAP FUNCTION
 
-setup.generateDirectionsMap = function (latorg, longorg, latdest, longdest){
+setup.generateDirectionsMap = function (origin, dest){
 const iFrame = document.createElement("iframe")
 iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${latorg},${longorg}&zoom=17&origin=${latorg},${longorg}&destination=${latdest},${longdest}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
+console.log(iFrame)
 return iFrame
+// this.mapMount.appendChild(iFrame)
 }
+
+// MAKE MAP WITH WAYPOINTS FUNCTION
+
+setup.generateDirectionsMapWP = function (origin, dest, wayp){
+const iFrame = document.createElement("iframe")
+iFrame.classList.add("map")
+iFrame.setAttribute("loading", "lazy")
+iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
+// iFrame.setAttribute("allowfullscreen")
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
+const mount = document.getElementById("mapMount")
+console.log(iFrame)
+return iFrame
+// this.mapMount.appendChild(iFrame)
+}
+
+// <<set $map = setup.generateDirectionsMap([], [])>>
 
 //Get random 5 letter word
 
@@ -457,21 +500,76 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "badjoke" "https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3">>
+<<cacheaudio "DM_05" "https://www.youhavefoundconey.net/tgksnd/DM/DM_05.mp3">>
+
+<<cacheaudio "DM_06A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_06A.mp3">>
+<<cacheaudio "DM_06B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_06B.mp3">>
+<<cacheaudio "DM_07" "https://www.youhavefoundconey.net/tgksnd/DM/DM_07.mp3">>
+<<cacheaudio "DM_08" "https://www.youhavefoundconey.net/tgksnd/DM/DM_09.mp3">>
+<<cacheaudio "DM_09" "https://www.youhavefoundconey.net/tgksnd/DM/DM_09.mp3">>
+
+<<cacheaudio "DM_10" "https://www.youhavefoundconey.net/tgksnd/DM/DM_10.mp3">>
+<<cacheaudio "DM_11" "https://www.youhavefoundconey.net/tgksnd/DM/DM_11.mp3">>
+
+<<cacheaudio "DM_12A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_12A.mp3">>
+<<cacheaudio "DM_12B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_12B.mp3">>
+<<cacheaudio "DM_13" "https://www.youhavefoundconey.net/tgksnd/DM/DM_13.mp3">>
+<<cacheaudio "DM_14A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_14A.mp3">>
+<<cacheaudio "DM_14B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_14B.mp3">>
+<<cacheaudio "DM_15" "https://www.youhavefoundconey.net/tgksnd/DM/DM_15.mp3">>
+<<cacheaudio "DM_16" "https://www.youhavefoundconey.net/tgksnd/DM/DM_16.mp3">>
+
+<<cacheaudio "DM_17A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_17A.mp3">>
+<<cacheaudio "DM_17B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_17B.mp3">>
+<<cacheaudio "DM_18B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_18B.mp3">>
+<<cacheaudio "DM_18A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_18A.mp3">>
+<<cacheaudio "DM_19A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_19A.mp3">>
+
+<<cacheaudio "DM_19B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_19B.mp3">>
+<<cacheaudio "DM_20A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_20A.mp3">>
+<<cacheaudio "DM_20B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_20B.mp3">>
+<<cacheaudio "DM_21A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_21A.mp3">>
+<<cacheaudio "DM_21B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_21B.mp3">>
+<<cacheaudio "DM_22A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_22A.mp3">>
+<<cacheaudio "DM_23" "https://www.youhavefoundconey.net/tgksnd/DM/DM_23.mp3">>
+<<cacheaudio "DM_24" "https://www.youhavefoundconey.net/tgksnd/DM/DM_24.mp3">>
+<<cacheaudio "DM_25" "https://www.youhavefoundconey.net/tgksnd/DM/DM_25.mp3">>
+<<cacheaudio "DM_26-8_P" "https://www.youhavefoundconey.net/tgksnd/DM/DM_26-8_P.mp3">>
+<<cacheaudio "DM_26-8_R" "https://www.youhavefoundconey.net/tgksnd/DM/DM_26-8_R.mp3">>
+<<cacheaudio "DM_26-8_S" "https://www.youhavefoundconey.net/tgksnd/DM/DM_26-8_S.mp3">>
+<<cacheaudio "DM_29" "https://www.youhavefoundconey.net/tgksnd/DM/DM_29.mp3">>
+<<cacheaudio "34" "https://www.youhavefoundconey.net/tgksnd/DM/34.mp3">>
+
+
 <<waitforaudio>>
 
 
 :: header {"position":"100,225","size":"100,100"}
-<header>Adventure Functionality /
- Structure Template</header>
+<header>Daniel Mendoza</header>
+
+:: footer {"position":"99,493","size":"100,100"}
+<footer>
+<div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
+<div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div>
+<div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div>
+<div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
+</footer>
+
+:: footersimple {"position":"100,375","size":"100,100"}
+<footer><div class="nav-wrapper "><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div></div><div class="nav-wrapper"><div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div></div></footer>
 
 
-:: footer {"position":"100,375","size":"100,100"}
-<footer><div class="nav-wrapper "><div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "I'm lost">><<goto "lost">><</button>></div></div></footer>
+:: footerlost {"position":"100,375","size":"100,100"}
+<footer><div class="nav-wrapper "><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div></footer>
+
+:: footerend {"position":"99,485","size":"100,100"}
+<footer>
+<div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
+</footer>
 
 
 :: lost {"position":"710,53","size":"100,100"}
-<<set $passage to "lost">><<include "header">>
+<<set $passage to "lost">>
 <main>
 Sorry to hear that you're lost! 
 You have two options:
@@ -480,19 +578,19 @@ You have two options:
 
 <<button "Take me straight to the end location!">><<goto "end">><</button>>
 </main>
-<<include "footer">>
+<<include "footerlost">>
 
 
 :: landing {"position":"455,60","size":"100,100"}
 <<set $passage to "landing">>
-<<include "header">>
+
 <main>
 
 <<button "Start">><<set $prevpass to $passage>><<goto "DM-05">><</button>>
      
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: end {"position":"97,615","size":"100,100"}
@@ -501,23 +599,15 @@ You have two options:
 End
 
 </main>
+<<include "footerend">>
 
 
-:: footer2 {"position":"99,493","size":"100,100"}
-<footer>
-<div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
-<div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div>
-<div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div>
-<div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
-</footer>
 
 
 :: DM-05 {"position":"454,195","size":"100,100"}
 <<set $passage to "DM-05">><<set $nextpassage to "DM-06">>
+<<audio ":all" stop>><<audio "DM_06" play>>
 <main>
-
-/*Sound effects*/
-
 Daniel?! Daniel.
 Daniel over here.
 
@@ -556,7 +646,7 @@ I’m glad you’re here: someone I can actually talk to. How was your journey?
  </div>
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-06A {"position":"375,325","size":"100,100"}
@@ -573,7 +663,7 @@ Fantastic. We’re off to a great start.
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-06B {"position":"525,325","size":"100,100"}
@@ -591,7 +681,7 @@ That’s a pity, but out of adversity comes stronger fighters.
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-07 {"position":"450,450","size":"100,100"}
@@ -623,7 +713,7 @@ I swear you had a mighty title?
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-08 {"position":"450,575","size":"100,100"}
@@ -637,7 +727,7 @@ That’s the one. You don’t want to say that name too loudly here or the press
 <<button "Ok, here. Now what?">><<set $prevpass to $passage>><<goto "DM-09">><</button>>
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-09 {"position":"450,700","size":"100,100"}
@@ -650,7 +740,7 @@ Maybe a suggestion of a good story? Just point out something that could make a g
 <<button "DONE">><<set $prevpass to $passage>><<goto "DM-10">><</button>>
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-10 {"position":"450,825","size":"100,100"}
@@ -670,7 +760,7 @@ So bear with me, and I’ll give you what I’ve got.
 <<button "At Beavis Marks ">><<set $prevpass to $passage>><<goto "DM-11">><</button>>
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-11 {"position":"450,950","size":"100,100"}
@@ -698,7 +788,7 @@ We need a quiet spot with a bit of space. Can you find one?
 
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-12A {"position":"375,1075","size":"100,100"}
@@ -714,7 +804,7 @@ Great, let’s get started.
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-12B {"position":"525,1075","size":"100,100"}
@@ -731,7 +821,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-13 {"position":"450,1200","size":"100,100"}
@@ -774,7 +864,7 @@ There we go. Do you think you can do a minute?
 
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-14A {"position":"375,1325","size":"100,100"}
@@ -792,7 +882,7 @@ Whenever you’re ready. Try to build a rhythm.
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-14B {"position":"525,1325","size":"100,100"}
@@ -809,7 +899,7 @@ It’s good to preserve your energy. Let’s take a breather.
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-15 {"position":"450,1450","size":"100,100"}
@@ -850,7 +940,7 @@ But I’ll meet you at the market?
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-16 {"position":"450,1575","size":"100,100"}
@@ -884,7 +974,7 @@ Pay attention to every finger, every joint, every way you position yourself. It�
 
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-17A {"position":"375,1700","size":"100,100"}
@@ -915,7 +1005,7 @@ If you’re a challenger, take a look at this letter. DON’T show your opponent
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-18A {"position":"375,1825","size":"100,100"}
@@ -931,7 +1021,7 @@ Now, I have another challenge. Feel free to swap roles with your opponent. I’m
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-19A {"position":"375,1950","size":"100,100"}
@@ -949,7 +1039,7 @@ I want you to look around the court. What do you see? Can you see anything begin
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-20A {"position":"375,2075","size":"100,100"}
@@ -964,7 +1054,7 @@ One last challenge. One last letter. Any takers?
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-21A {"position":"375,2200","size":"100,100"}
@@ -982,7 +1072,7 @@ Think of an adjective or a way of describing the previous object. This word shou
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-22A {"position":"375,2325","size":"100,100"}
@@ -999,7 +1089,7 @@ Do you want another round?
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-17B {"position":"525,1700","size":"100,100"}
@@ -1017,7 +1107,7 @@ You can find a partner to play with, or practise this alone, for when you’re i
 
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-18B {"position":"525,1825","size":"100,100"}
@@ -1038,7 +1128,7 @@ $randomletter1
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-19B {"position":"525,1950","size":"100,100"}
@@ -1058,7 +1148,7 @@ $randomletter1
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-20B {"position":"525,2075","size":"100,100"}
@@ -1078,7 +1168,7 @@ $randomletter1
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-21B {"position":"525,2200","size":"100,100"}
@@ -1098,7 +1188,7 @@ Do you want another round?
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-23 {"position":"450,2450","size":"100,100"}
@@ -1116,7 +1206,7 @@ For goodness sake. Let’s get out of here, but try to transform yourself into t
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-24 {"position":"450,2575","size":"100,100"}
@@ -1152,7 +1242,7 @@ Oh dear. We need to pick up the pace. I’ll run ahead; you keep practicing the 
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-25 {"position":"450,2700","size":"100,100"}
@@ -1208,7 +1298,7 @@ Of course. I’ll hold up rock, paper or scissors on three.
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-26 {"position":"450,2825","size":"100,100"}
@@ -1227,7 +1317,7 @@ $opponent
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-27 {"position":"450,2950","size":"100,100"}
@@ -1245,7 +1335,7 @@ $opponent
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-28 {"position":"450,3075","size":"100,100"}
@@ -1263,7 +1353,7 @@ $opponent
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-29 {"position":"450,3200","size":"100,100"}
@@ -1290,7 +1380,7 @@ I’ll meet you in a moment.
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
 :: DM-30 {"position":"450,3325","size":"100,100"}
@@ -1341,6 +1431,6 @@ I think I’m ready.
 
 
 </main>
-<<include "footer2">>
+<<include "footer">>
 
 
