@@ -1373,7 +1373,7 @@ I’ll meet you in a moment.
 
 $map6
 
-<<button "Next">><<set $prevpass to $passage>><<goto "DM-30">><</button>>
+<<button "At 120">><<set $prevpass to $passage>><<goto "DM-30">><</button>>
 
 
 
