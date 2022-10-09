@@ -1303,6 +1303,9 @@ Of course. I’ll hold up rock, paper or scissors on three.
 <<set $passage to "DM-26">><<audio ":all" stop>><<audio "DM_26" play>><<set $rps to ["Rock!", "Paper!", "Scissors!"]>>
 <<set $opponent to $rps.random()>>
 /* TODO PLAY AUDIO BASED ON RESULT */
+/* <<audio ":all" stop>><<audio "DM_28_P" play>>
+<<audio ":all" stop>><<audio "DM_28_R" play>>
+<<audio ":all" stop>><<audio "DM_28_S" play>> */
 <main>
 
 
@@ -1320,7 +1323,11 @@ $opponent
 
 
 :: DM-27 {"position":"450,2950","size":"100,100"}
-<<set $passage to "DM-27">><<audio ":all" stop>><<audio "DM_27" play>>
+<<set $passage to "DM-27">>
+/* TODO PLAY AUDIO BASED ON RESULT */
+/* <<audio ":all" stop>><<audio "DM_28_P" play>>
+<<audio ":all" stop>><<audio "DM_28_R" play>>
+<<audio ":all" stop>><<audio "DM_28_S" play>> */
 <main>
 
 <<set $opponent to $rps.random()>>
@@ -1338,7 +1345,11 @@ $opponent
 
 
 :: DM-28 {"position":"450,3075","size":"100,100"}
-<<set $passage to "DM-28">><<set $nextpassage to "DM-29">><<audio ":all" stop>><<audio "DM_28" play>>
+<<set $passage to "DM-28">><<set $nextpassage to "DM-29">>
+/* TODO PLAY AUDIO BASED ON RESULT */
+/* <<audio ":all" stop>><<audio "DM_28_P" play>>
+<<audio ":all" stop>><<audio "DM_28_R" play>>
+<<audio ":all" stop>><<audio "DM_28_S" play>> */
 <main>
 
 <<set $opponent to $rps.random()>>
