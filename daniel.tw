@@ -382,6 +382,13 @@ width: 100%;
 }
 }
 
+/* SPECIFICS */
+h2.letter{
+
+  font-size: 5rem;
+
+}
+
 
 :: Story JavaScript [script]
 $('#ui-bar').remove();
@@ -505,7 +512,7 @@ setup.checkForRepeats = (array,element) => {
 <<cacheaudio "DM_06A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_06A.mp3">>
 <<cacheaudio "DM_06B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_06B.mp3">>
 <<cacheaudio "DM_07" "https://www.youhavefoundconey.net/tgksnd/DM/DM_07.mp3">>
-<<cacheaudio "DM_08" "https://www.youhavefoundconey.net/tgksnd/DM/DM_09.mp3">>
+<<cacheaudio "DM_08" "https://www.youhavefoundconey.net/tgksnd/DM/DM_08.mp3">>
 <<cacheaudio "DM_09" "https://www.youhavefoundconey.net/tgksnd/DM/DM_09.mp3">>
 
 <<cacheaudio "DM_10" "https://www.youhavefoundconey.net/tgksnd/DM/DM_10.mp3">>
@@ -590,7 +597,7 @@ You have two options:
      
 
 </main>
-<<include "footersimple">>
+
 
 
 :: end {"position":"97,615","size":"100,100"}
@@ -606,7 +613,7 @@ End
 
 :: DM-05 {"position":"454,195","size":"100,100"}
 <<set $passage to "DM-05">><<set $nextpassage to "DM-06">>
-<<audio ":all" stop>><<audio "DM_06" play>>
+<<audio ":all" stop>><<audio "DM_05" play>>
 <main>
 Daniel?! Daniel.
 Daniel over here.
@@ -650,7 +657,7 @@ I’m glad you’re here: someone I can actually talk to. How was your journey?
 
 
 :: DM-06A {"position":"375,325","size":"100,100"}
-<<set $passage to "DM-06A">><<set $nextpassage to "DM-07">>
+<<set $passage to "DM-06A">><<set $nextpassage to "DM-07">><<audio ":all" stop>><<audio "DM_06A" play>>
 <main>
 
 
@@ -667,7 +674,7 @@ Fantastic. We’re off to a great start.
 
 
 :: DM-06B {"position":"525,325","size":"100,100"}
-<<set $passage to "DM-06B">><<set $nextpassage to "DM-07">>
+<<set $passage to "DM-06B">><<set $nextpassage to "DM-07">><<audio ":all" stop>><<audio "DM_06B" play>>
 <main>
 
 
@@ -685,7 +692,7 @@ That’s a pity, but out of adversity comes stronger fighters.
 
 
 :: DM-07 {"position":"450,450","size":"100,100"}
-<<set $passage to "DM-07">><<set $nextpassage to "DM-08">>
+<<set $passage to "DM-07">><<set $nextpassage to "DM-08">><<audio ":all" stop>><<audio "DM_07" play>>
 <main>
 
 I want to apologise in advance. I know I said I’d make time for you, but today is a bit of a busy one. I’m fighting Richard Humphries this evening.
@@ -717,12 +724,12 @@ I swear you had a mighty title?
 
 
 :: DM-08 {"position":"450,575","size":"100,100"}
-<<set $passage to "DM-08">><<set $nextpassage to "DM-09">>
+<<set $passage to "DM-08">><<set $nextpassage to "DM-09">><<audio ":all" stop>><<audio "DM_08" play>><<set $map1 = setup.generateDirectionsMap([], [])>>
 <main>
 
 That’s the one. You don’t want to say that name too loudly here or the press will hound both of us. Let’s get out discreetly. This little alley seems quiet enough.
 
-/*MAP NEEDED*/
+$map1
 
 <<button "Ok, here. Now what?">><<set $prevpass to $passage>><<goto "DM-09">><</button>>
 
@@ -731,7 +738,7 @@ That’s the one. You don’t want to say that name too loudly here or the press
 
 
 :: DM-09 {"position":"450,700","size":"100,100"}
-<<set $passage to "DM-09">><<set $nextpassage to "DM-10">>
+<<set $passage to "DM-09">><<set $nextpassage to "DM-10">><<audio ":all" stop>><<audio "DM_09" play>>
 <main>
 
 Okay, I need you to distract the press for a bit. Is there anything exciting behind us?
@@ -744,7 +751,7 @@ Maybe a suggestion of a good story? Just point out something that could make a g
 
 
 :: DM-10 {"position":"450,825","size":"100,100"}
-<<set $passage to "DM-10">><<set $nextpassage to "DM-11">>
+<<set $passage to "DM-10">><<set $nextpassage to "DM-11">><<audio ":all" stop>><<audio "DM_10" play>><<set $map2 = setup.generateDirectionsMap([], [])>>
 <main>
 
 Great, I think we shook them off.
@@ -755,7 +762,7 @@ I’ll help you become a better boxer; you’ll help me become a better teacher.
 It’s very generous that you’ve come to my neighborhood.
 So bear with me, and I’ll give you what I’ve got.
 
-/*MAP NEEDED*/
+$map2
 
 <<button "At Beavis Marks ">><<set $prevpass to $passage>><<goto "DM-11">><</button>>
 
@@ -764,7 +771,7 @@ So bear with me, and I’ll give you what I’ve got.
 
 
 :: DM-11 {"position":"450,950","size":"100,100"}
-<<set $passage to "DM-11">><<set $nextpassage to "DM-12">>
+<<set $passage to "DM-11">><<audio ":all" stop>><<audio "DM_11" play>>
 <main>
 
 So my first category is-
@@ -792,7 +799,7 @@ We need a quiet spot with a bit of space. Can you find one?
 
 
 :: DM-12A {"position":"375,1075","size":"100,100"}
-<<set $passage to "DM-12A">><<set $nextpassage to "DM-13">>
+<<set $passage to "DM-12A">><<set $nextpassage to "DM-13">><<audio ":all" stop>><<audio "DM_12A" play>>
 <main>
 
 Great, let’s get started.
@@ -808,7 +815,7 @@ Great, let’s get started.
 
 
 :: DM-12B {"position":"525,1075","size":"100,100"}
-<<set $passage to "DM-12B">><<set $nextpassage to "DM-13">>
+<<set $passage to "DM-12B">><<set $nextpassage to "DM-13">><<audio ":all" stop>><<audio "DM_12B" play>>
 <main>
 
 Okay. We need some room to practise our punches. Let’s get away from the crowd.
@@ -825,7 +832,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 
 :: DM-13 {"position":"450,1200","size":"100,100"}
-<<set $passage to "DM-13">><<set $nextpassage to "DM-12">>
+<<set $passage to "DM-13">><<audio ":all" stop>><<audio "DM_13" play>>
 <main>
 
 So, as you know from my book, which I’m sure you read, you need to be strong to be a good boxer.
@@ -868,7 +875,7 @@ There we go. Do you think you can do a minute?
 
 
 :: DM-14A {"position":"375,1325","size":"100,100"}
-<<set $passage to "DM-14A">><<set $nextpassage to "DM-15">>
+<<set $passage to "DM-14A">><<set $nextpassage to "DM-15">><<audio ":all" stop>><<audio "DM_14A" play>>
 <main>
 
 That’s what I thought. Let’s try that again. I’ll talk to you as you’re working out.
@@ -886,7 +893,7 @@ Whenever you’re ready. Try to build a rhythm.
 
 
 :: DM-14B {"position":"525,1325","size":"100,100"}
-<<set $passage to "DM-14B">><<set $nextpassage to "DM-15">>
+<<set $passage to "DM-14B">><<set $nextpassage to "DM-15">><<audio ":all" stop>><<audio "DM_14B" play>>
 <main>
 
 It’s good to preserve your energy. Let’s take a breather.
@@ -903,7 +910,7 @@ It’s good to preserve your energy. Let’s take a breather.
 
 
 :: DM-15 {"position":"450,1450","size":"100,100"}
-<<set $passage to "DM-15">><<set $nextpassage to "DM-16">>
+<<set $passage to "DM-15">><<set $nextpassage to "DM-16">><<audio ":all" stop>><<audio "DM_15" play>><<set $map3 = setup.generateDirectionsMap([], [])>>
 <main>
 
 I often think about strength when I’m here.
@@ -931,7 +938,7 @@ That nickname. I had no choice but to claim it. I would have shut-it-down on the
 I’m going to nip in to shul, get away from this lot, have a word with my Rabbi before the big day.
 But I’ll meet you at the market?
 
-/*MAP NEEDED*/
+$map3
 
 <<button "Here">><<set $prevpass to $passage>><<goto "DM-16">><</button>>
 
@@ -944,7 +951,7 @@ But I’ll meet you at the market?
 
 
 :: DM-16 {"position":"450,1575","size":"100,100"}
-<<set $passage to "DM-16">>
+<<set $passage to "DM-16">><<audio ":all" stop>><<audio "DM_16" play>>
 <main>
 
 Thanks for meeting me here. I know, this place looks unassuming. I need to stop off to look at some paperwork. I’m going to build a school here.
@@ -978,7 +985,7 @@ Pay attention to every finger, every joint, every way you position yourself. It�
 
 
 :: DM-17A {"position":"375,1700","size":"100,100"}
-<<set $passage to "DM-17A">><<set $nextpassage to "DM-18A">>
+<<set $passage to "DM-17A">><<set $nextpassage to "DM-18A">><<audio ":all" stop>><<audio "DM_17A" play>>
 <main>
 <<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
 <<set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()>>
@@ -988,9 +995,9 @@ this exercise, or take it in turns challenging.
 
 If you’re a challenger, take a look at this letter. DON’T show your opponents. I need you to embody this letter, I’ll give you thirty seconds to get into position. Can your opponent get it?
 
-<div class="randomletter">
+<div class="randomletter ">
 <<button "Reveal random letter">>
-	<<replace ".randomletter">>$randomletter1<</replace>>
+	<<replace ".randomletter">><h2 class="letter">$randomletter1</h2><</replace>>
     <<replace ".nextbuttoncontainer">>
     	<<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-18A">><</button>>
     <</replace>>    
@@ -1009,7 +1016,7 @@ If you’re a challenger, take a look at this letter. DON’T show your opponent
 
 
 :: DM-18A {"position":"375,1825","size":"100,100"}
-<<set $passage to "DM-18A">><<set $nextpassage to "DM-19A">>
+<<set $passage to "DM-18A">><<set $nextpassage to "DM-19A">><<audio ":all" stop>><<audio "DM_18A" play>>
 <main>
 
 Now, I have another challenge. Feel free to swap roles with your opponent. I’m going to share it as soon as you can peek discreetly.
@@ -1025,13 +1032,9 @@ Now, I have another challenge. Feel free to swap roles with your opponent. I’m
 
 
 :: DM-19A {"position":"375,1950","size":"100,100"}
-<<set $passage to "DM-19A">><<set $nextpassage to "DM-20A">>
+<<set $passage to "DM-19A">><<set $nextpassage to "DM-20A">><<audio ":all" stop>><<audio "DM_19A" play>><<set $randomletter2 to $notweirdalphabet.pluck().toUpperCase()>>
 <main>
-
-<<set $randomletter2 to $notweirdalphabet.pluck().toUpperCase()>>
-
-$randomletter2
-
+<h2 class="letter">$randomletter2</h2>
 I want you to look around the court. What do you see? Can you see anything beginning with this letter? As soon as you do, find a way to communicate that object without using any words. Let your opponents guess the letter behind the object.
 
 <<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-20A">><</button>>
@@ -1043,7 +1046,7 @@ I want you to look around the court. What do you see? Can you see anything begin
 
 
 :: DM-20A {"position":"375,2075","size":"100,100"}
-<<set $passage to "DM-19A">><<set $nextpassage to "DM-21A">>
+<<set $passage to "DM-19A">><<set $nextpassage to "DM-21A">><<audio ":all" stop>><<audio "DM_20A" play>>
 <main>
 
 One last challenge. One last letter. Any takers?
@@ -1058,13 +1061,9 @@ One last challenge. One last letter. Any takers?
 
 
 :: DM-21A {"position":"375,2200","size":"100,100"}
-<<set $passage to "DM-21A">><<set $nextpassage to "DM-22A">>
+<<set $passage to "DM-21A">><<set $nextpassage to "DM-22A">><<audio ":all" stop>><<audio "DM_21A" play>><<set $randomletter3 to $notweirdalphabet.pluck().toUpperCase()>>
 <main>
-
-<<set $randomletter3 to $notweirdalphabet.pluck().toUpperCase()>>
-
-$randomletter3
-
+<h2 class="letter">$randomletter3</h2>
 Think of an adjective or a way of describing the previous object. This word should start with this letter. I want you to communicate that adjective using only your body. How easy is it to guess the letter?
 
 <<button "Next">><<set $prevpass to $passage>><<goto "DM-22A">><</button>>
@@ -1076,7 +1075,7 @@ Think of an adjective or a way of describing the previous object. This word shou
 
 
 :: DM-22A {"position":"375,2325","size":"100,100"}
-<<set $passage to "DM-22A">><<set $nextpassage to "DM-23">>
+<<set $passage to "DM-22A">><<audio ":all" stop>><<audio "DM_22A" play>>
 <main>
 
 Do you want another round?
@@ -1089,11 +1088,11 @@ Do you want another round?
 
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-17B {"position":"525,1700","size":"100,100"}
-<<set $passage to "DM-17B">>
+<<set $passage to "DM-17B">><<audio ":all" stop>><<audio "DM_17B" play>>
 <main>
 
 You can find a partner to play with, or practise this alone, for when you’re in the ring.
@@ -1111,7 +1110,7 @@ You can find a partner to play with, or practise this alone, for when you’re i
 
 
 :: DM-18B {"position":"525,1825","size":"100,100"}
-<<set $passage to "DM-18B">><<set $nextpassage to "DM-19B">>
+<<set $passage to "DM-18B">><<set $nextpassage to "DM-19B">><<audio ":all" stop>><<audio "DM_18B" play>>
 <main>
 <<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
 <<set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()>>
@@ -1132,7 +1131,7 @@ $randomletter1
 
 
 :: DM-19B {"position":"525,1950","size":"100,100"}
-<<set $passage to "DM-19B">><<set $nextpassage to "DM-20B">>
+<<set $passage to "DM-19B">><<set $nextpassage to "DM-20B">><<audio ":all" stop>><<audio "DM_19B" play>>
 <main>
 
 $randomletter1
@@ -1152,7 +1151,7 @@ $randomletter1
 
 
 :: DM-20B {"position":"525,2075","size":"100,100"}
-<<set $passage to "DM-20B">><<set $nextpassage to "DM-21B">>
+<<set $passage to "DM-20B">><<set $nextpassage to "DM-21B">><<audio ":all" stop>><<audio "DM_20B" play>>
 <main>
 
 $randomletter1
@@ -1172,7 +1171,7 @@ $randomletter1
 
 
 :: DM-21B {"position":"525,2200","size":"100,100"}
-<<set $passage to "DM-20B">><<set $nextpassage to "DM-23">>
+<<set $passage to "DM-20B">><<set $nextpassage to "DM-23">><<audio ":all" stop>><<audio "DM_21B" play>>
 <main>
 
 Do you want another round?
@@ -1188,18 +1187,17 @@ Do you want another round?
 
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-23 {"position":"450,2450","size":"100,100"}
-<<set $passage to "DM-23">><<set $nextpassage to "DM-24">>
+<<set $passage to "DM-23">><<set $nextpassage to "DM-24">><<audio ":all" stop>><<audio "DM_23" play>><<set $map4 = setup.generateDirectionsMap([], [])>>
 <main>
 
 Daniel! Daniel!
 
 For goodness sake. Let’s get out of here, but try to transform yourself into the first animal you see. I’ve found one will pay you attention if you move like a pigeon.
-
-/*MAP NEEDED*/
+$map4
 
 <<button "Here">><<set $prevpass to $passage>><<goto "DM-24">><</button>>
 
@@ -1210,7 +1208,7 @@ For goodness sake. Let’s get out of here, but try to transform yourself into t
 
 
 :: DM-24 {"position":"450,2575","size":"100,100"}
-<<set $passage to "DM-24">><<set $nextpassage to "DM-25">>
+<<set $passage to "DM-24">><<set $nextpassage to "DM-25">><<audio ":all" stop>><<audio "DM_24" play>><<set $map4 = setup.generateDirectionsMap([], [])>>
 <main>
 
 Great, we shook them off.
@@ -1235,7 +1233,7 @@ Daniel! Daniel!
 
 Oh dear. We need to pick up the pace. I’ll run ahead; you keep practicing the side-step.
 
-/*MAP NEEDED*/
+$map4
 
 <<button "At Leadenhall Market">><<set $prevpass to $passage>><<goto "DM-25">><</button>>
 
@@ -1246,7 +1244,7 @@ Oh dear. We need to pick up the pace. I’ll run ahead; you keep practicing the 
 
 
 :: DM-25 {"position":"450,2700","size":"100,100"}
-<<set $passage to "DM-25">><<set $nextpassage to "DM-26">>
+<<set $passage to "DM-25">><<set $nextpassage to "DM-26">><<audio ":all" stop>><<audio "DM_25" play>>
 <main>
 
 There you are! I was just picking up some groceries.
@@ -1302,11 +1300,12 @@ Of course. I’ll hold up rock, paper or scissors on three.
 
 
 :: DM-26 {"position":"450,2825","size":"100,100"}
-<<set $passage to "DM-26">><<set $nextpassage to "DM-27">>
+<<set $passage to "DM-26">><<audio ":all" stop>><<audio "DM_26" play>><<set $rps to ["Rock!", "Paper!", "Scissors!"]>>
+<<set $opponent to $rps.random()>>
+/* TODO PLAY AUDIO BASED ON RESULT */
 <main>
 
-<<set $rps to ["Rock!", "Paper!", "Scissors!"]>>
-<<set $opponent to $rps.random()>>
+
 
 Okay. One, two, three
 
@@ -1317,11 +1316,11 @@ $opponent
 
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-27 {"position":"450,2950","size":"100,100"}
-<<set $passage to "DM-27">><<set $nextpassage to "DM-28">>
+<<set $passage to "DM-27">><<audio ":all" stop>><<audio "DM_27" play>>
 <main>
 
 <<set $opponent to $rps.random()>>
@@ -1335,11 +1334,11 @@ $opponent
 
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-28 {"position":"450,3075","size":"100,100"}
-<<set $passage to "DM-28">><<set $nextpassage to "DM-29">>
+<<set $passage to "DM-28">><<set $nextpassage to "DM-29">><<audio ":all" stop>><<audio "DM_28" play>>
 <main>
 
 <<set $opponent to $rps.random()>>
@@ -1353,11 +1352,11 @@ $opponent
 
 
 </main>
-<<include "footer">>
+<<include "footersimple">>
 
 
 :: DM-29 {"position":"450,3200","size":"100,100"}
-<<set $passage to "DM-29">><<set $nextpassage to "DM-30">>
+<<set $passage to "DM-29">><<set $nextpassage to "DM-30">><<audio ":all" stop>><<audio "DM_29" play>><<set $map6 = setup.generateDirectionsMap([], [])>>
 <main>
 
 There it is-
@@ -1366,14 +1365,13 @@ I really need to go. Best of luck tonight.
 
 Always a pleasure.
 
-/*The sound of footsteps walking away.*/
 
 You had some great reflexes there. But I wonder if there are any other worthy adversaries in this area. Do you see any other boxers on your level? Any other people who play your game?
 I bet there’s a few around here. You don’t have to know them.
 Challenge another person to a few rounds of rock, paper, scissors.
 I’ll meet you in a moment.
 
-/*MAP NEEDED*/
+$map6
 
 <<button "Next">><<set $prevpass to $passage>><<goto "DM-30">><</button>>
 
@@ -1384,7 +1382,7 @@ I’ll meet you in a moment.
 
 
 :: DM-30 {"position":"450,3325","size":"100,100"}
-<<set $passage to "DM-30">><<set $nextpassage to "end">>
+<<set $passage to "DM-30">><<set $nextpassage to "end">><<audio ":all" stop>><<audio "34" play>>
 <main>
 
 And now we reach our

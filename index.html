@@ -465,6 +465,13 @@ width: 100%;
 	height:50vh;
 	border:0
 }
+}
+
+/* SPECIFICS */
+h2.letter{
+
+  font-size: 5rem;
+
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
 $(document.head).find('#style-ui-bar').remove();
 // TYPEWRITER FN
@@ -582,7 +589,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;&lt;cacheaudio &quot;DM_06A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_06A.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;DM_06B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_06B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;DM_07&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_07.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_08&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_09.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_08&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_08.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;DM_09&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_09.mp3&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;DM_10&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_10.mp3&quot;&gt;&gt;
@@ -641,14 +648,13 @@ You have two options:
 &lt;&lt;button &quot;Start&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-05&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
      
 
-&lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="end" tags="" position="97,615" size="100,100">&lt;main&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="9" name="end" tags="" position="97,615" size="100,100">&lt;main&gt;
 
 End
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footerend&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="DM-05" tags="" position="454,195" size="100,100">&lt;&lt;set $passage to &quot;DM-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-06&quot;&gt;&gt;
-&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_06&quot; play&gt;&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_05&quot; play&gt;&gt;
 &lt;main&gt;
 Daniel?! Daniel.
 Daniel over here.
@@ -688,7 +694,7 @@ I’m glad you’re here: someone I can actually talk to. How was your journey?
  &lt;/div&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DM-06A" tags="" position="375,325" size="100,100">&lt;&lt;set $passage to &quot;DM-06A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-07&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DM-06A" tags="" position="375,325" size="100,100">&lt;&lt;set $passage to &quot;DM-06A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-07&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_06A&quot; play&gt;&gt;
 &lt;main&gt;
 
 
@@ -701,7 +707,7 @@ Fantastic. We’re off to a great start.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="DM-06B" tags="" position="525,325" size="100,100">&lt;&lt;set $passage to &quot;DM-06B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-07&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="DM-06B" tags="" position="525,325" size="100,100">&lt;&lt;set $passage to &quot;DM-06B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-07&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_06B&quot; play&gt;&gt;
 &lt;main&gt;
 
 
@@ -715,7 +721,7 @@ That’s a pity, but out of adversity comes stronger fighters.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="DM-07" tags="" position="450,450" size="100,100">&lt;&lt;set $passage to &quot;DM-07&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-08&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="DM-07" tags="" position="450,450" size="100,100">&lt;&lt;set $passage to &quot;DM-07&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_07&quot; play&gt;&gt;
 &lt;main&gt;
 
 I want to apologise in advance. I know I said I’d make time for you, but today is a bit of a busy one. I’m fighting Richard Humphries this evening.
@@ -743,17 +749,17 @@ I swear you had a mighty title?
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="DM-08" tags="" position="450,575" size="100,100">&lt;&lt;set $passage to &quot;DM-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-09&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="DM-08" tags="" position="450,575" size="100,100">&lt;&lt;set $passage to &quot;DM-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-09&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_08&quot; play&gt;&gt;&lt;&lt;set $map1 = setup.generateDirectionsMap([], [])&gt;&gt;
 &lt;main&gt;
 
 That’s the one. You don’t want to say that name too loudly here or the press will hound both of us. Let’s get out discreetly. This little alley seems quiet enough.
 
-/*MAP NEEDED*/
+$map1
 
 &lt;&lt;button &quot;Ok, here. Now what?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-09&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="DM-09" tags="" position="450,700" size="100,100">&lt;&lt;set $passage to &quot;DM-09&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-10&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="DM-09" tags="" position="450,700" size="100,100">&lt;&lt;set $passage to &quot;DM-09&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-10&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_09&quot; play&gt;&gt;
 &lt;main&gt;
 
 Okay, I need you to distract the press for a bit. Is there anything exciting behind us?
@@ -762,7 +768,7 @@ Maybe a suggestion of a good story? Just point out something that could make a g
 &lt;&lt;button &quot;DONE&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-10&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="DM-10" tags="" position="450,825" size="100,100">&lt;&lt;set $passage to &quot;DM-10&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-11&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="DM-10" tags="" position="450,825" size="100,100">&lt;&lt;set $passage to &quot;DM-10&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_10&quot; play&gt;&gt;&lt;&lt;set $map2 = setup.generateDirectionsMap([], [])&gt;&gt;
 &lt;main&gt;
 
 Great, I think we shook them off.
@@ -773,12 +779,12 @@ I’ll help you become a better boxer; you’ll help me become a better teacher.
 It’s very generous that you’ve come to my neighborhood.
 So bear with me, and I’ll give you what I’ve got.
 
-/*MAP NEEDED*/
+$map2
 
 &lt;&lt;button &quot;At Beavis Marks &quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-11&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="DM-11" tags="" position="450,950" size="100,100">&lt;&lt;set $passage to &quot;DM-11&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-12&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="DM-11" tags="" position="450,950" size="100,100">&lt;&lt;set $passage to &quot;DM-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_11&quot; play&gt;&gt;
 &lt;main&gt;
 
 So my first category is-
@@ -802,7 +808,7 @@ We need a quiet spot with a bit of space. Can you find one?
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="DM-12A" tags="" position="375,1075" size="100,100">&lt;&lt;set $passage to &quot;DM-12A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-13&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="DM-12A" tags="" position="375,1075" size="100,100">&lt;&lt;set $passage to &quot;DM-12A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_12A&quot; play&gt;&gt;
 &lt;main&gt;
 
 Great, let’s get started.
@@ -814,7 +820,7 @@ Great, let’s get started.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="DM-12B" tags="" position="525,1075" size="100,100">&lt;&lt;set $passage to &quot;DM-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-13&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="DM-12B" tags="" position="525,1075" size="100,100">&lt;&lt;set $passage to &quot;DM-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_12B&quot; play&gt;&gt;
 &lt;main&gt;
 
 Okay. We need some room to practise our punches. Let’s get away from the crowd.
@@ -827,7 +833,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="DM-13" tags="" position="450,1200" size="100,100">&lt;&lt;set $passage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-12&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="DM-13" tags="" position="450,1200" size="100,100">&lt;&lt;set $passage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_13&quot; play&gt;&gt;
 &lt;main&gt;
 
 So, as you know from my book, which I’m sure you read, you need to be strong to be a good boxer.
@@ -866,7 +872,7 @@ There we go. Do you think you can do a minute?
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="DM-14A" tags="" position="375,1325" size="100,100">&lt;&lt;set $passage to &quot;DM-14A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-15&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="DM-14A" tags="" position="375,1325" size="100,100">&lt;&lt;set $passage to &quot;DM-14A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_14A&quot; play&gt;&gt;
 &lt;main&gt;
 
 That’s what I thought. Let’s try that again. I’ll talk to you as you’re working out.
@@ -880,7 +886,7 @@ Whenever you’re ready. Try to build a rhythm.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="DM-14B" tags="" position="525,1325" size="100,100">&lt;&lt;set $passage to &quot;DM-14B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-15&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="DM-14B" tags="" position="525,1325" size="100,100">&lt;&lt;set $passage to &quot;DM-14B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_14B&quot; play&gt;&gt;
 &lt;main&gt;
 
 It’s good to preserve your energy. Let’s take a breather.
@@ -893,7 +899,7 @@ It’s good to preserve your energy. Let’s take a breather.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="DM-15" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-16&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="DM-15" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-16&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_15&quot; play&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([], [])&gt;&gt;
 &lt;main&gt;
 
 I often think about strength when I’m here.
@@ -921,7 +927,7 @@ That nickname. I had no choice but to claim it. I would have shut-it-down on the
 I’m going to nip in to shul, get away from this lot, have a word with my Rabbi before the big day.
 But I’ll meet you at the market?
 
-/*MAP NEEDED*/
+$map3
 
 &lt;&lt;button &quot;Here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-16&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
@@ -930,7 +936,7 @@ But I’ll meet you at the market?
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="DM-16" tags="" position="450,1575" size="100,100">&lt;&lt;set $passage to &quot;DM-16&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="DM-16" tags="" position="450,1575" size="100,100">&lt;&lt;set $passage to &quot;DM-16&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_16&quot; play&gt;&gt;
 &lt;main&gt;
 
 Thanks for meeting me here. I know, this place looks unassuming. I need to stop off to look at some paperwork. I’m going to build a school here.
@@ -960,7 +966,7 @@ Pay attention to every finger, every joint, every way you position yourself. It�
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="DM-17A" tags="" position="375,1700" size="100,100">&lt;&lt;set $passage to &quot;DM-17A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-18A&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="DM-17A" tags="" position="375,1700" size="100,100">&lt;&lt;set $passage to &quot;DM-17A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-18A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_17A&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;&lt;set $notweirdalphabet = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;,&#39;i&#39;,&#39;j&#39;,&#39;k&#39;,&#39;l&#39;,&#39;m&#39;,&#39;n&#39;,&#39;o&#39;,&#39;p&#39;,&#39;r&#39;,&#39;s&#39;,&#39;t&#39;,&#39;u&#39;]&gt;&gt;
 &lt;&lt;set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
@@ -970,9 +976,9 @@ this exercise, or take it in turns challenging.
 
 If you’re a challenger, take a look at this letter. DON’T show your opponents. I need you to embody this letter, I’ll give you thirty seconds to get into position. Can your opponent get it?
 
-&lt;div class=&quot;randomletter&quot;&gt;
+&lt;div class=&quot;randomletter &quot;&gt;
 &lt;&lt;button &quot;Reveal random letter&quot;&gt;&gt;
-	&lt;&lt;replace &quot;.randomletter&quot;&gt;&gt;$randomletter1&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;replace &quot;.randomletter&quot;&gt;&gt;&lt;h2 class=&quot;letter&quot;&gt;$randomletter1&lt;/h2&gt;&lt;&lt;/replace&gt;&gt;
     &lt;&lt;replace &quot;.nextbuttoncontainer&quot;&gt;&gt;
     	&lt;&lt;button &quot;Next Challenge&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-18A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
     &lt;&lt;/replace&gt;&gt;    
@@ -987,7 +993,7 @@ If you’re a challenger, take a look at this letter. DON’T show your opponent
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="DM-18A" tags="" position="375,1825" size="100,100">&lt;&lt;set $passage to &quot;DM-18A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-19A&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="DM-18A" tags="" position="375,1825" size="100,100">&lt;&lt;set $passage to &quot;DM-18A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_18A&quot; play&gt;&gt;
 &lt;main&gt;
 
 Now, I have another challenge. Feel free to swap roles with your opponent. I’m going to share it as soon as you can peek discreetly.
@@ -999,13 +1005,9 @@ Now, I have another challenge. Feel free to swap roles with your opponent. I’m
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="DM-19A" tags="" position="375,1950" size="100,100">&lt;&lt;set $passage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-20A&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="DM-19A" tags="" position="375,1950" size="100,100">&lt;&lt;set $passage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-20A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_19A&quot; play&gt;&gt;&lt;&lt;set $randomletter2 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
 &lt;main&gt;
-
-&lt;&lt;set $randomletter2 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
-
-$randomletter2
-
+&lt;h2 class=&quot;letter&quot;&gt;$randomletter2&lt;/h2&gt;
 I want you to look around the court. What do you see? Can you see anything beginning with this letter? As soon as you do, find a way to communicate that object without using any words. Let your opponents guess the letter behind the object.
 
 &lt;&lt;button &quot;Next Challenge&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-20A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -1013,7 +1015,7 @@ I want you to look around the court. What do you see? Can you see anything begin
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="DM-20A" tags="" position="375,2075" size="100,100">&lt;&lt;set $passage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-21A&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="DM-20A" tags="" position="375,2075" size="100,100">&lt;&lt;set $passage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-21A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_20A&quot; play&gt;&gt;
 &lt;main&gt;
 
 One last challenge. One last letter. Any takers?
@@ -1024,13 +1026,9 @@ One last challenge. One last letter. Any takers?
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="DM-21A" tags="" position="375,2200" size="100,100">&lt;&lt;set $passage to &quot;DM-21A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-22A&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="DM-21A" tags="" position="375,2200" size="100,100">&lt;&lt;set $passage to &quot;DM-21A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-22A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_21A&quot; play&gt;&gt;&lt;&lt;set $randomletter3 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
 &lt;main&gt;
-
-&lt;&lt;set $randomletter3 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
-
-$randomletter3
-
+&lt;h2 class=&quot;letter&quot;&gt;$randomletter3&lt;/h2&gt;
 Think of an adjective or a way of describing the previous object. This word should start with this letter. I want you to communicate that adjective using only your body. How easy is it to guess the letter?
 
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-22A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -1038,7 +1036,7 @@ Think of an adjective or a way of describing the previous object. This word shou
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="DM-22A" tags="" position="375,2325" size="100,100">&lt;&lt;set $passage to &quot;DM-22A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-23&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="DM-22A" tags="" position="375,2325" size="100,100">&lt;&lt;set $passage to &quot;DM-22A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_22A&quot; play&gt;&gt;
 &lt;main&gt;
 
 Do you want another round?
@@ -1051,7 +1049,7 @@ Do you want another round?
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="DM-17B" tags="" position="525,1700" size="100,100">&lt;&lt;set $passage to &quot;DM-17B&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="DM-17B" tags="" position="525,1700" size="100,100">&lt;&lt;set $passage to &quot;DM-17B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_17B&quot; play&gt;&gt;
 &lt;main&gt;
 
 You can find a partner to play with, or practise this alone, for when you’re in the ring.
@@ -1065,7 +1063,7 @@ You can find a partner to play with, or practise this alone, for when you’re i
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="DM-18B" tags="" position="525,1825" size="100,100">&lt;&lt;set $passage to &quot;DM-18B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-19B&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="DM-18B" tags="" position="525,1825" size="100,100">&lt;&lt;set $passage to &quot;DM-18B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-19B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_18B&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;&lt;set $notweirdalphabet = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;,&#39;i&#39;,&#39;j&#39;,&#39;k&#39;,&#39;l&#39;,&#39;m&#39;,&#39;n&#39;,&#39;o&#39;,&#39;p&#39;,&#39;r&#39;,&#39;s&#39;,&#39;t&#39;,&#39;u&#39;]&gt;&gt;
 &lt;&lt;set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
@@ -1082,7 +1080,7 @@ $randomletter1
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="DM-19B" tags="" position="525,1950" size="100,100">&lt;&lt;set $passage to &quot;DM-19B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-20B&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="DM-19B" tags="" position="525,1950" size="100,100">&lt;&lt;set $passage to &quot;DM-19B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_19B&quot; play&gt;&gt;
 &lt;main&gt;
 
 $randomletter1
@@ -1098,7 +1096,7 @@ $randomletter1
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="DM-20B" tags="" position="525,2075" size="100,100">&lt;&lt;set $passage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-21B&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="DM-20B" tags="" position="525,2075" size="100,100">&lt;&lt;set $passage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-21B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_20B&quot; play&gt;&gt;
 &lt;main&gt;
 
 $randomletter1
@@ -1114,7 +1112,7 @@ $randomletter1
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="DM-21B" tags="" position="525,2200" size="100,100">&lt;&lt;set $passage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-23&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="DM-21B" tags="" position="525,2200" size="100,100">&lt;&lt;set $passage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-23&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_21B&quot; play&gt;&gt;
 &lt;main&gt;
 
 Do you want another round?
@@ -1130,21 +1128,20 @@ Do you want another round?
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="DM-23" tags="" position="450,2450" size="100,100">&lt;&lt;set $passage to &quot;DM-23&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-24&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="DM-23" tags="" position="450,2450" size="100,100">&lt;&lt;set $passage to &quot;DM-23&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_23&quot; play&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([], [])&gt;&gt;
 &lt;main&gt;
 
 Daniel! Daniel!
 
 For goodness sake. Let’s get out of here, but try to transform yourself into the first animal you see. I’ve found one will pay you attention if you move like a pigeon.
-
-/*MAP NEEDED*/
+$map4
 
 &lt;&lt;button &quot;Here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="DM-24" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-25&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="DM-24" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-25&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_24&quot; play&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([], [])&gt;&gt;
 &lt;main&gt;
 
 Great, we shook them off.
@@ -1169,14 +1166,14 @@ Daniel! Daniel!
 
 Oh dear. We need to pick up the pace. I’ll run ahead; you keep practicing the side-step.
 
-/*MAP NEEDED*/
+$map4
 
 &lt;&lt;button &quot;At Leadenhall Market&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-25&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="DM-25" tags="" position="450,2700" size="100,100">&lt;&lt;set $passage to &quot;DM-25&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-26&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="DM-25" tags="" position="450,2700" size="100,100">&lt;&lt;set $passage to &quot;DM-25&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_25&quot; play&gt;&gt;
 &lt;main&gt;
 
 There you are! I was just picking up some groceries.
@@ -1228,11 +1225,12 @@ Of course. I’ll hold up rock, paper or scissors on three.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="DM-26" tags="" position="450,2825" size="100,100">&lt;&lt;set $passage to &quot;DM-26&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-27&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="DM-26" tags="" position="450,2825" size="100,100">&lt;&lt;set $passage to &quot;DM-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_26&quot; play&gt;&gt;&lt;&lt;set $rps to [&quot;Rock!&quot;, &quot;Paper!&quot;, &quot;Scissors!&quot;]&gt;&gt;
+&lt;&lt;set $opponent to $rps.random()&gt;&gt;
+/* TODO PLAY AUDIO BASED ON RESULT */
 &lt;main&gt;
 
-&lt;&lt;set $rps to [&quot;Rock!&quot;, &quot;Paper!&quot;, &quot;Scissors!&quot;]&gt;&gt;
-&lt;&lt;set $opponent to $rps.random()&gt;&gt;
+
 
 Okay. One, two, three
 
@@ -1243,7 +1241,7 @@ $opponent
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="DM-27" tags="" position="450,2950" size="100,100">&lt;&lt;set $passage to &quot;DM-27&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-28&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="DM-27" tags="" position="450,2950" size="100,100">&lt;&lt;set $passage to &quot;DM-27&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_27&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;&lt;set $opponent to $rps.random()&gt;&gt;
@@ -1257,7 +1255,7 @@ $opponent
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="DM-28" tags="" position="450,3075" size="100,100">&lt;&lt;set $passage to &quot;DM-28&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-29&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="DM-28" tags="" position="450,3075" size="100,100">&lt;&lt;set $passage to &quot;DM-28&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-29&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_28&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;&lt;set $opponent to $rps.random()&gt;&gt;
@@ -1271,7 +1269,7 @@ $opponent
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="DM-29" tags="" position="450,3200" size="100,100">&lt;&lt;set $passage to &quot;DM-29&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-30&quot;&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="DM-29" tags="" position="450,3200" size="100,100">&lt;&lt;set $passage to &quot;DM-29&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-30&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_29&quot; play&gt;&gt;&lt;&lt;set $map6 = setup.generateDirectionsMap([], [])&gt;&gt;
 &lt;main&gt;
 
 There it is-
@@ -1280,21 +1278,20 @@ I really need to go. Best of luck tonight.
 
 Always a pleasure.
 
-/*The sound of footsteps walking away.*/
 
 You had some great reflexes there. But I wonder if there are any other worthy adversaries in this area. Do you see any other boxers on your level? Any other people who play your game?
 I bet there’s a few around here. You don’t have to know them.
 Challenge another person to a few rounds of rock, paper, scissors.
 I’ll meet you in a moment.
 
-/*MAP NEEDED*/
+$map6
 
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-30&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="DM-30" tags="" position="450,3325" size="100,100">&lt;&lt;set $passage to &quot;DM-30&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="DM-30" tags="" position="450,3325" size="100,100">&lt;&lt;set $passage to &quot;DM-30&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;34&quot; play&gt;&gt;
 &lt;main&gt;
 
 And now we reach our
