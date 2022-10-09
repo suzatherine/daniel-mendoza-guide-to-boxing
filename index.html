@@ -648,9 +648,10 @@ You have two options:
 &lt;&lt;button &quot;Start&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-05&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
      
 
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="9" name="end" tags="" position="100,625" size="100,100">&lt;main&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="9" name="end" tags="" position="100,625" size="100,100">&lt;&lt;set $map7 = setup.generateDirectionsMap([], [])&gt;&gt;
+&lt;main&gt;
 
-End
+$map7
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footerend&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="DM-05" tags="" position="454,195" size="100,100">&lt;&lt;set $passage to &quot;DM-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-06&quot;&gt;&gt;
