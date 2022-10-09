@@ -7,7 +7,7 @@ Daniel Mendoza's Art of Boxing
 	"ifid": "8D21C86D-96BF-4A21-84CC-D8351F18D6F5",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "landing",
+	"start": "DM-24",
 	"zoom": 0.6
 }
 
@@ -554,6 +554,7 @@ setup.checkForRepeats = (array,element) => {
 :: header {"position":"100,225","size":"100,100"}
 <header>Daniel Mendoza</header>
 
+
 :: footer {"position":"99,493","size":"100,100"}
 <footer>
 <div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
@@ -562,12 +563,14 @@ setup.checkForRepeats = (array,element) => {
 <div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
 </footer>
 
+
 :: footersimple {"position":"100,375","size":"100,100"}
 <footer><div class="nav-wrapper "><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div></div><div class="nav-wrapper"><div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div></div></footer>
 
 
 :: footerlost {"position":"100,375","size":"100,100"}
 <footer><div class="nav-wrapper "><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div></footer>
+
 
 :: footerend {"position":"99,485","size":"100,100"}
 <footer>
@@ -599,16 +602,13 @@ You have two options:
 </main>
 
 
-
-:: end {"position":"97,615","size":"100,100"}
+:: end {"position":"100,625","size":"100,100"}
 <main>
 
 End
 
 </main>
 <<include "footerend">>
-
-
 
 
 :: DM-05 {"position":"454,195","size":"100,100"}
@@ -1300,19 +1300,21 @@ Of course. I’ll hold up rock, paper or scissors on three.
 
 
 :: DM-26 {"position":"450,2825","size":"100,100"}
-<<set $passage to "DM-26">><<audio ":all" stop>><<audio "DM_26" play>><<set $rps to ["Rock!", "Paper!", "Scissors!"]>>
+<<set $passage to "DM-26">><<audio ":all" stop>><<set $rps to ["Rock!", "Paper!", "Scissors!"]>>
 <<set $opponent to $rps.random()>>
-/* TODO PLAY AUDIO BASED ON RESULT */
-/* <<audio ":all" stop>><<audio "DM_28_P" play>>
-<<audio ":all" stop>><<audio "DM_28_R" play>>
-<<audio ":all" stop>><<audio "DM_28_S" play>> */
+
 <main>
 
-
-
 Okay. One, two, three
+<<if $opponent is "Rock!">>
+<<audio ":all" stop>><<audio "DM_26-8_R" play>>
+<<elseif $opponent is "Paper!">>
+<<audio ":all" stop>><<audio "DM_26-8_P" play>>
+<<else>>
+<<audio ":all" stop>><<audio "DM_26-8_S" play>> 
+<</if>>
 
-$opponent
+<<timed 3s>>$opponent<</timed>>
 
 <<button "Next round">><<set $prevpass to $passage>><<goto "DM-27">><</button>>
 
@@ -1324,17 +1326,21 @@ $opponent
 
 :: DM-27 {"position":"450,2950","size":"100,100"}
 <<set $passage to "DM-27">>
-/* TODO PLAY AUDIO BASED ON RESULT */
-/* <<audio ":all" stop>><<audio "DM_28_P" play>>
-<<audio ":all" stop>><<audio "DM_28_R" play>>
-<<audio ":all" stop>><<audio "DM_28_S" play>> */
+
 <main>
 
 <<set $opponent to $rps.random()>>
 
 Okay. One, two, three
+<<if $opponent is "Rock!">>
+<<audio ":all" stop>><<audio "DM_26-8_R" play>>
+<<elseif $opponent is "Paper!">>
+<<audio ":all" stop>><<audio "DM_26-8_P" play>>
+<<else>>
+<<audio ":all" stop>><<audio "DM_26-8_S" play>> 
+<</if>>
 
-$opponent
+<<timed 3s>>$opponent<</timed>>
 
 <<button "Next round">><<set $prevpass to $passage>><<goto "DM-28">><</button>>
 
@@ -1355,8 +1361,15 @@ $opponent
 <<set $opponent to $rps.random()>>
 
 Okay. One, two, three
+<<if $opponent is "Rock!">>
+<<audio ":all" stop>><<audio "DM_26-8_R" play>>
+<<elseif $opponent is "Paper!">>
+<<audio ":all" stop>><<audio "DM_26-8_P" play>>
+<<else>>
+<<audio ":all" stop>><<audio "DM_26-8_S" play>> 
+<</if>>
 
-$opponent
+<<timed 3s>>$opponent<</timed>>
 
 <<button "Next round">><<set $prevpass to $passage>><<goto "DM-29">><</button>>
 
