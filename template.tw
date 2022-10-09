@@ -603,10 +603,10 @@ You have two options:
 
 
 :: end {"position":"100,625","size":"100,100"}
-<<set $map7 = setup.generateDirectionsMap([], [])>>
+<<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.51233042912303, -0.0809482307665927], [51.51233042912303, -0.0809482307665927])>>
 <main>
 
-$map7
+$endMap
 
 </main>
 <<include "footerend">>
@@ -725,7 +725,7 @@ I swear you had a mighty title?
 
 
 :: DM-08 {"position":"450,575","size":"100,100"}
-<<set $passage to "DM-08">><<set $nextpassage to "DM-09">><<audio ":all" stop>><<audio "DM_08" play>><<set $map1 = setup.generateDirectionsMap([], [])>>
+<<set $passage to "DM-08">><<set $nextpassage to "DM-09">><<audio ":all" stop>><<audio "DM_08" play>><<set $map1 = setup.generateDirectionsMap([51.51488091335985, -0.08084894611020126], [51.51478694203192, -0.08001595791060313])>>
 <main>
 
 That’s the one. You don’t want to say that name too loudly here or the press will hound both of us. Let’s get out discreetly. This little alley seems quiet enough.
@@ -752,7 +752,7 @@ Maybe a suggestion of a good story? Just point out something that could make a g
 
 
 :: DM-10 {"position":"450,825","size":"100,100"}
-<<set $passage to "DM-10">><<set $nextpassage to "DM-11">><<audio ":all" stop>><<audio "DM_10" play>><<set $map2 = setup.generateDirectionsMap([], [])>>
+<<set $passage to "DM-10">><<set $nextpassage to "DM-11">><<audio ":all" stop>><<audio "DM_10" play>><<set $map2 = setup.generateDirectionsMap([51.51478694203192, -0.08001595791060313], [51.51470988196478, -0.0790065685171643])>>
 <main>
 
 Great, I think we shook them off.
@@ -911,7 +911,7 @@ It’s good to preserve your energy. Let’s take a breather.
 
 
 :: DM-15 {"position":"450,1450","size":"100,100"}
-<<set $passage to "DM-15">><<set $nextpassage to "DM-16">><<audio ":all" stop>><<audio "DM_15" play>><<set $map3 = setup.generateDirectionsMap([], [])>>
+<<set $passage to "DM-15">><<set $nextpassage to "DM-16">><<audio ":all" stop>><<audio "DM_15" play>><<set $map3 = setup.generateDirectionsMap([51.51470988196478, -0.0790065685171643], [51.513336789798096, -0.08330679250171254])>>
 <main>
 
 I often think about strength when I’m here.
@@ -1192,7 +1192,7 @@ Do you want another round?
 
 
 :: DM-23 {"position":"450,2450","size":"100,100"}
-<<set $passage to "DM-23">><<set $nextpassage to "DM-24">><<audio ":all" stop>><<audio "DM_23" play>><<set $map4 = setup.generateDirectionsMap([], [])>>
+<<set $passage to "DM-23">><<set $nextpassage to "DM-24">><<audio ":all" stop>><<audio "DM_23" play>><<set $map4 = setup.generateDirectionsMap([51.513336789798096, -0.08330679250171254], [51.512892842200664, -0.08337869822763945])>>
 <main>
 
 Daniel! Daniel!
@@ -1209,7 +1209,7 @@ $map4
 
 
 :: DM-24 {"position":"450,2575","size":"100,100"}
-<<set $passage to "DM-24">><<set $nextpassage to "DM-25">><<audio ":all" stop>><<audio "DM_24" play>><<set $map4 = setup.generateDirectionsMap([], [])>>
+<<set $passage to "DM-24">><<set $nextpassage to "DM-25">><<audio ":all" stop>><<audio "DM_24" play>><<set $map4 = setup.generateDirectionsMap([51.513336789798096, -0.08330679250171254], [51.512892842200664, -0.08337869822763945])>>
 <main>
 
 Great, we shook them off.
@@ -1314,8 +1314,7 @@ Okay. One, two, three
 <<else>>
 <<audio ":all" stop>><<audio "DM_26-8_S" play>> 
 <</if>>
-
-<<timed 3s>>$opponent<</timed>>
+<<timed 3s>><h2 class="letter">$opponent</h2><</timed>>
 
 <<button "Next round">><<set $prevpass to $passage>><<goto "DM-27">><</button>>
 
@@ -1340,8 +1339,7 @@ Okay. One, two, three
 <<else>>
 <<audio ":all" stop>><<audio "DM_26-8_S" play>> 
 <</if>>
-
-<<timed 3s>>$opponent<</timed>>
+<<timed 3s>><h2 class="letter">$opponent</h2><</timed>>
 
 <<button "Next round">><<set $prevpass to $passage>><<goto "DM-28">><</button>>
 
@@ -1353,10 +1351,6 @@ Okay. One, two, three
 
 :: DM-28 {"position":"450,3075","size":"100,100"}
 <<set $passage to "DM-28">><<set $nextpassage to "DM-29">>
-/* TODO PLAY AUDIO BASED ON RESULT */
-/* <<audio ":all" stop>><<audio "DM_28_P" play>>
-<<audio ":all" stop>><<audio "DM_28_R" play>>
-<<audio ":all" stop>><<audio "DM_28_S" play>> */
 <main>
 
 <<set $opponent to $rps.random()>>
@@ -1369,8 +1363,7 @@ Okay. One, two, three
 <<else>>
 <<audio ":all" stop>><<audio "DM_26-8_S" play>> 
 <</if>>
-
-<<timed 3s>>$opponent<</timed>>
+<<timed 3s>><h2 class="letter">$opponent</h2><</timed>>
 
 <<button "Next round">><<set $prevpass to $passage>><<goto "DM-29">><</button>>
 
@@ -1381,7 +1374,7 @@ Okay. One, two, three
 
 
 :: DM-29 {"position":"450,3200","size":"100,100"}
-<<set $passage to "DM-29">><<set $nextpassage to "DM-30">><<audio ":all" stop>><<audio "DM_29" play>><<set $map6 = setup.generateDirectionsMap([], [])>>
+<<set $passage to "DM-29">><<set $nextpassage to "DM-30">><<audio ":all" stop>><<audio "DM_29" play>><<set $map6 = setup.generateDirectionsMap([51.512892842200664, -0.08337869822763945], [51.51233042912303, -0.0809482307665927])>>
 <main>
 
 There it is-
