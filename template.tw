@@ -17,7 +17,7 @@ Daniel Mendoza's Art of Boxing
 
 @font-face {
   font-family: "Big John";
-  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+  src: url("./assets/fonts/bigjohn.otf") format("opentype");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
@@ -668,12 +668,13 @@ setup.checkForRepeats = (array,element) => {
 :: lost {"position":"710,53","size":"100,100"}
 <<set $passage to "lost">>
 <main>
-Sorry to hear that you're lost! 
 You have two options:
 
-<<button "Begin the adventure again">><<goto "landing">><</button>>
-
-<<button "Take me straight to the end location!">><<goto "end">><</button>>
+<div class="menu-wrapper">
+  <<button "Begin the adventure again">><<goto "landing">><</button>>
+  
+  <<button "Take me straight to the end location!">><<goto "end">><</button>>
+</div>
 </main>
 <<include "footerlost">>
 
