@@ -691,7 +691,7 @@ You have two options:
 
 
 :: end {"position":"100,625","size":"100,100"}
-<<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.51233042912303, -0.0809482307665927], [51.51233042912303, -0.0809482307665927])>>
+<<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.51233042912303, -0.0809482307665927])>>
 <main>
 
 $endMap
