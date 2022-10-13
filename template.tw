@@ -15,6 +15,11 @@ Daniel Mendoza's Art of Boxing
 :: Story Stylesheet [stylesheet]
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
+@font-face {
+  font-family: "Big John";
+  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+}
+
 /* GENERICS */
 html {
   box-sizing: border-box;
@@ -243,6 +248,9 @@ align-items: flex-start
 align-items: flex-end
 }
 
+.nav-wrapper.end > .nav-item{
+justify-content: flex-end;
+}
 .nav-item{
   margin-block-end: 0.5rem;
   width:100%;
@@ -360,6 +368,76 @@ textarea{
     }
 }
 
+/* KEY  */
+.key-wrapper{
+  width:fit-content;
+  display:flex;
+  justify-content:center;
+  padding: 2rem;
+  margin:auto
+}
+
+
+.key-wrapper > img{
+    width:100px
+}
+
+.adventure-wrapper{
+border: solid 1px white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.adv-item{
+display: flex;
+   justify-content: space-between;
+    align-items: end;
+}
+
+.adventure-title{
+  margin-block-end:0;
+  text-align:center
+}
+
+.endpoint {
+  font-family: "Big John";
+  font-size:3rem;
+  text-align:center
+}
+
+.glowing {
+  /* width: 100px;
+  height: 100px; */
+  border-radius:50%;
+  background-color: transparent;
+  -webkit-animation: glowing 3s ease-in-out infinite alternate;
+  -moz-animation: glowing 3s ease-in-out infinite alternate;
+  animation: glowing 3s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glowing {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #DAA520, 0 0 60px #DAA520, 0 0 70px #DAA520;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #FAFAD2, 0 0 40px #FAFAD2, 0 0 50px #FAFAD2, 0 0 60px #FAFAD2, 0 0 70px #FAFAD26, 0 0 80px #FAFAD2;
+  }
+}
+
+@media screen and (min-width: 450px) {
+.choices{
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+.adventure-wrapper{
+  padding: 2rem
+}
+
+}
 
 /* MAP */
 	.map{
@@ -577,6 +655,8 @@ setup.checkForRepeats = (array,element) => {
 <div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
 </footer>
 
+:: footerkey
+<footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "DM-32">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "DM-32adventures">><</button>></div></div></footer>
 
 :: lost {"position":"710,53","size":"100,100"}
 <<set $passage to "lost">>
@@ -608,43 +688,143 @@ You have two options:
 
 $endMap
 
+<<button "Next">><<set $prevpass to $passage>><<goto "DM-32">><</button>>
+
 </main>
 <<include "footerend">>
 
+
+:: DM-01 {"position":"449,226","size":"100,100"}
+<<set $passage to "DM-01">><<set $nextpassage to "DM-02B">>
+/* <<audio ":all" stop>><<audio "DM-01" play>> */
+<main>
+<div id="mount"></div> 
+
+Felix, keeper of the Maze, and small dragon, here at your service.
+
+
+I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. For the City is full of treasure. Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+
+You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
+
+You’ve opened up door #4 into the maze of adventures. 
+
+You’ll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
+
+If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+
+What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
+
+Now are you playing this adventure solo or with a group?
+ 
+<div class="menu-wrapper">
+  <<button "Solo">><<set $prevpass to $passage>><<goto "DM-02A">><</button>>
+  
+  <<button "Group">><<set $prevpass to $passage>><<goto "DM-02B">><</button>></div>
+</main>
+<<include "footer">>
+
+:: DM-02A {"position":"448,476","size":"100,100"}
+<<set $passage to "DM-02A">><<set $nextpassage to "DM-03">>
+/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<main>
+<div id="mount"></div> 
+This adventure is great for a solo player
+<<button "Next">><<set $prevpass to $passage>><<goto "DM-03">><</button>>
+ 
+</main>
+<<include "footer">>
+
+:: DM-02B {"position":"448,476","size":"100,100"}
+<<set $passage to "DM-02B">><<set $nextpassage to "DM-03">>
+/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<main>
+<div id="mount"></div> 
+This is perfect for a group! If you’re playing on separate devices try to press your buttons at the same time to stay in sync.  
+
+<<button "Next">><<set $prevpass to $passage>><<goto "DM-03">><</button>>
+ 
+ 
+</main>
+<<include "footer">>
+
+:: DM-03 {"position":"448,476","size":"100,100"}
+<<set $passage to "DM-03.1">><<set $nextpassage to "DM-04">>
+/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<main>
+<div id="mount"></div> 
+You can always use the arrows or the replay button if you need to hear or read anything again. 
+
+I’ll provide maps when needed.
+
+And the "Take me to the end" button will skip the adventure and show you how to get to the surprise at the end.
+
+Are you ready?
+
+
+<<button "Yes!">><<set $prevpass to $passage>><<goto "DM-04">><</button>>
+ 
+ 
+</main>
+<<include "footer">>
+
+:: DM-04 {"position":"448,476","size":"100,100"}
+<<set $passage to "DM-04">><<set $nextpassage to "DM-05">><<audio ":all" stop>><main>
+My friend Daniel will be here soon to guide you, connecting from the year 1789.
+
+I’ll provide maps when needed. 
+
+Oh, I hear the reporters now. 
+
+We must be connecting with Daniel, take good care of him for me. 
+
+<<timed 8s>><<set $prevpass to $passage>><<goto "DM-05">><</timed>>
+
+</main>
+<<include "footer">>
 
 :: DM-05 {"position":"454,195","size":"100,100"}
 <<set $passage to "DM-05">><<set $nextpassage to "DM-06">>
 <<audio ":all" stop>><<audio "DM_05" play>>
 <main>
-Daniel?! Daniel.
-Daniel over here.
 
-One moment. One second.
+<div id="mount"></div>
 
-Are you ready for tonight?
-Does Humphries stand a chance?
 
-Not if I have my way. I’m sorry, I have
+<<timed 0s>><<replace "#mount">>JOURNALISTS: Daniel! Daniel! Over here!<</replace>><</timed>>
 
-Daniel! DANIEL! Over here.
-Will the Star of David shine tonight?
+<<timed 7s>><<replace "#mount">>Daniel, over here! Daniel! Daniel! <</replace>><</timed>>
 
-You can call me Daniel Mendoza
+<<timed 14s>><<replace "#mount">>Over here! Daniel, over here! Daniel! <</replace>><</timed>>
 
-Will your defense run tired in the face of strength?
+<<timed 20s>><<replace "#mount">>DANIEL: One moment, one second.<</replace>><</timed>>
 
-Cheeky questions deserve cheeky answers.
+<<timed 24s>><<replace "#mount">>JOURNALIST: Daniel, over here! Are you ready for tonight? Does Humphries stand a chance? <</replace>><</timed>>
 
-What about your technique?-
+<<timed 28s>><<replace "#mount">>D: Not if I have my way. Sorry, I have -<</replace>><</timed>>
 
-You’ll have to read my book.
+<<timed 30.5s>><<replace "#mount">>J: Daniel! Over here! Will the Star of David shine tonight?<</replace>><</timed>>
 
-Daniel!
+<<timed 37s>><<replace "#mount">>D: You can call me Daniel Mendoza.<</replace>><</timed>>
 
-That’s all we have time for. I’ll see you in the ring.
+<<timed 38s>><<replace "#mount">>J: Will your defence run tired in the face of strength?<</replace>><</timed>>
 
-Hi. Sorry about all that. It’s a big day, you know.
-I’m glad you’re here: someone I can actually talk to. How was your journey?
+<<timed 42s>><<replace "#mount">>D: Cheeky questions deserve cheeky answers.<</replace>><</timed>>
+
+<<timed 44s>><<replace "#mount">>J: What about your technique?
+
+D: You'll have to read my book.<</replace>><</timed>>
+
+<<timed 47s>><<replace "#mount">>That's all we have time for. I'll see you in the ring.<</replace>><</timed>>
+
+<<timed 50s>><<replace "#mount">>J: Daniel, over here!<</replace>><</timed>>
+
+<<timed 55s>><<replace "#mount">>D: Hi. Sorry about all that.<</replace>><</timed>>
+
+<<timed 56s>><<replace "#mount">>It's a big day, you know? I'm glad you're here. Someone I can actually talk to.<</replace>><</timed>>
+
+<<timed 63s>><<replace "#mount">>How was your journey?
+
 
 
 <div class = "menu-wrapper">
@@ -652,6 +832,8 @@ I’m glad you’re here: someone I can actually talk to. How was your journey?
 
 <<button "BAD">><<set $prevpass to $passage>><<goto "DM-06B">><</button>>
  </div>
+ 
+ <</replace>><</timed>>
 
 </main>
 <<include "footersimple">>
@@ -663,7 +845,6 @@ I’m glad you’re here: someone I can actually talk to. How was your journey?
 
 
 Fantastic. We’re off to a great start.
-
 
 
 <<timed 3s>><<set $prevpass to $passage>><<goto "DM-07">><</timed>>
@@ -682,9 +863,7 @@ Fantastic. We’re off to a great start.
 That’s a pity, but out of adversity comes stronger fighters.
 
 
-
-
-<<timed 3s>><<set $prevpass to $passage>><<goto "DM-07">><</timed>>
+<<timed 7s>><<set $prevpass to $passage>><<goto "DM-07">><</timed>>
 
 
 
@@ -696,14 +875,29 @@ That’s a pity, but out of adversity comes stronger fighters.
 <<set $passage to "DM-07">><<set $nextpassage to "DM-08">><<audio ":all" stop>><<audio "DM_07" play>>
 <main>
 
-I want to apologise in advance. I know I said I’d make time for you, but today is a bit of a busy one. I’m fighting Richard Humphries this evening.
-There’s a lot pressure, a lot of buzz. If I’m honest with you, I’m terrified.
-I spent all day yesterday running away from the press, and now I have a to-do list the length of Brick Lane. Countless errands and this lot won’t leave me alone.
-Sometimes I wonder who I’m really fighting.
-But I’m a man of my word; I’ll always make time for a promising mentee.
-I hear you’re the most promising boxer of your generation, but I heard you changed your name? You have a boxer name, I thought.
+<div id="mount"></div>
 
-I swear you had a mighty title?
+
+<<timed 0s>><<replace "#mount">>I wanted to apologise in advance.<</replace>><</timed>>
+
+<<timed 3s>><<replace "#mount">>I know I said I'd make time for you today, but today is a bit of a busy one.<</replace>><</timed>>
+
+<<timed 7.5s>><<replace "#mount">>I'm fighting Richard Humphries this evening, so there's a lot of pressure, a lot of buzz.<</replace>><</timed>>
+
+<<timed 14s>><<replace "#mount">>If I'm honest with you, I am terrified.<</replace>><</timed>>
+
+<<timed 18.5s>><<replace "#mount">>I spent all day yesterday running away from the press and now I have a to-do list the length of Brick Lane.<</replace>><</timed>>
+
+<<timed 24.5s>><<replace "#mount">>Countless errands and this lot won't leave me alone. Sometimes I wonder who I'm really fighting.<</replace>><</timed>>
+
+<<timed 31s>><<replace "#mount">>But I'm a man of my word. I'll always make time for a promising mentee.<</replace>><</timed>>
+
+<<timed 36.5s>><<replace "#mount">>I hear you're the most promising boxer of your generation. <</replace>><</timed>>
+
+<<timed 41s>><<replace "#mount">>But I heard you changed your name. You have a boxer name, I thought.<</replace>><</timed>>
+
+<<timed 45.5s>><<replace "#mount">>I swear you had a mighty title?
+
 
 <<textbox "$boxertitle" "">>
 <div class = "errormessage">
@@ -718,7 +912,7 @@ I swear you had a mighty title?
 <</if>>  
 <</button>>
 
-
+<</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -728,11 +922,23 @@ I swear you had a mighty title?
 <<set $passage to "DM-08">><<set $nextpassage to "DM-09">><<audio ":all" stop>><<audio "DM_08" play>><<set $map1 = setup.generateDirectionsMap([51.51488091335985, -0.08084894611020126], [51.51478694203192, -0.08001595791060313])>>
 <main>
 
-That’s the one. You don’t want to say that name too loudly here or the press will hound both of us. Let’s get out discreetly. This little alley seems quiet enough.
+<div id="mount"></div>
+
+<<timed 0s>><<replace "#mount">>That's the one!<</replace>><</timed>>
+
+<<timed 3s>><<replace "#mount">>You don't want to say that name too loudly here or the press will hound both of us.<</replace>><</timed>>
+
+<<timed 8s>><<replace "#mount">>Let's get out discreetly. <</replace>><</timed>>
+
+<<timed 10s>><<replace "#mount">>
+
+Cross St Mary Axe Street and find your way to the opposite side of the Gherkin.
 
 $map1
 
 <<button "Ok, here. Now what?">><<set $prevpass to $passage>><<goto "DM-09">><</button>>
+
+<</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -742,10 +948,17 @@ $map1
 <<set $passage to "DM-09">><<set $nextpassage to "DM-10">><<audio ":all" stop>><<audio "DM_09" play>>
 <main>
 
-Okay, I need you to distract the press for a bit. Is there anything exciting behind us?
-Maybe a suggestion of a good story? Just point out something that could make a good decoy. Do it loudly.
+<div id="mount"></div>
 
-<<button "DONE">><<set $prevpass to $passage>><<goto "DM-10">><</button>>
+<<timed 0s>><<replace "#mount">>Okay. I need you to distract the press for a little bit.<</replace>><</timed>>
+
+<<timed 5s>><<replace "#mount">>Is there anything exciting behind us? Maybe a suggestion of a good story?<</replace>><</timed>>
+
+<<timed 9.5s>><<replace "#mount">>Just point something out that could make a good decoy. Do it loudly.
+
+<<button "Done">><<set $prevpass to $passage>><<goto "DM-10">><</button>>
+
+<</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -755,17 +968,33 @@ Maybe a suggestion of a good story? Just point out something that could make a g
 <<set $passage to "DM-10">><<set $nextpassage to "DM-11">><<audio ":all" stop>><<audio "DM_10" play>><<set $map2 = setup.generateDirectionsMap([51.51478694203192, -0.08001595791060313], [51.51470988196478, -0.0790065685171643])>>
 <main>
 
-Great, I think we shook them off.
+<div id="mount"></div>
 
-It’s truly my pleasure to be with you today. I know you think you’re here to learn from me, but I’ll be honest: you’re also going to help me practise my craft.
-If everything goes well in the ring today, I want to expand my teachings, spread my techniques from The Art of Boxing: Strength, Courage, Art, Activity, and Wind.
-I’ll help you become a better boxer; you’ll help me become a better teacher.
-It’s very generous that you’ve come to my neighborhood.
-So bear with me, and I’ll give you what I’ve got.
+<<timed 0s>><<replace "#mount">>Great. I think we shook them off.<</replace>><</timed>>
+
+<<timed 5s>><<replace "#mount">>It's truly my pleasure to be with you today.<</replace>><</timed>>
+
+<<timed 7s>><<replace "#mount">>I know you think you're here to learn from me, but I'll be honest, you're also going to help me practice my craft.<</replace>><</timed>>
+
+<<timed 15s>><<replace "#mount">>If everything goes well in the ring today, I wanna expand my teachings.<</replace>><</timed>>
+
+<<timed 19s>><<replace "#mount">>Spread my techniques from 'The Art of Boxing': Strength, Courage, Art, Activity, and Wind.<</replace>><</timed>>
+
+<<timed 28s>><<replace "#mount">>I'll help you become a better boxer. You'll help me become a better teacher. <</replace>><</timed>>
+
+<<timed 33.5s>><<replace "#mount">>It's very generous that you've come to my neighbourhood. So, bear with me and I'll give you what I've got.<</replace>><</timed>>
+
+<<timed 41s>><<replace "#mount">>
+
+Head down the ramps. You should see Hollander House just in front of you. This is Bury Street. Take a left down here
+
+Turn right at Bevis Marks. On your left, you’ll see a plaque and heritage work site
 
 $map2
 
-<<button "At Beavis Marks ">><<set $prevpass to $passage>><<goto "DM-11">><</button>>
+<<button "At Bevis Marks ">><<set $prevpass to $passage>><<goto "DM-11">><</button>>
+
+<</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -775,17 +1004,21 @@ $map2
 <<set $passage to "DM-11">><<audio ":all" stop>><<audio "DM_11" play>>
 <main>
 
-So my first category is-
+<div id="mount"></div>
 
-Daniel! Daniel! Who is your friend?
+<<timed 0s>><<replace "#mount">>So, my first category is -<</replace>><</timed>>
 
-Quick. Let’s get away from them.
-We need a quiet spot.
-Do you see one around you?
+<<timed 2s>><<replace "#mount">>JOURNALISTS: Daniel! Daniel! Who's your friend?<</replace>><</timed>>
 
-Daniel! Is that?-
+<<timed 6.5s>><<replace "#mount">>DANIEL: Quick. Let's get away from them.<</replace>><</timed>>
 
-We need a quiet spot with a bit of space. Can you find one?
+<<timed 8.5s>><<replace "#mount">>We need a quiet spot. Do you see one around you?<</replace>><</timed>>
+
+<<timed 12s>><<replace "#mount">>J: Daniel! Daniel! Over here!<</replace>><</timed>>
+
+<<timed 14s>><<replace "#mount">>D: We need a quiet spot with a bit of space. Can you find one?<</replace>><</timed>>
+
+<<timed 18s>><<replace "#mount">>D: We need a quiet spot with a bit of space. Can you find one?
 
 <div class = "menu-wrapper">
 <<button "Yes, I’m in a quiet spot with a bit of space">><<set $prevpass to $passage>><<goto "DM-12A">><</button>>
@@ -793,7 +1026,7 @@ We need a quiet spot with a bit of space. Can you find one?
 <<button "No, give me a moment">><<set $prevpass to $passage>><<goto "DM-12B">><</button>>
 </div>
 
-
+<</replace>><</timed>>
 
 </main>
 <<include "footersimple">>
@@ -805,10 +1038,7 @@ We need a quiet spot with a bit of space. Can you find one?
 
 Great, let’s get started.
 
-
 <<button "Alright">><<set $prevpass to $passage>><<goto "DM-12B">><</button>>
-
-
 
 
 </main>
@@ -819,9 +1049,9 @@ Great, let’s get started.
 <<set $passage to "DM-12B">><<set $nextpassage to "DM-13">><<audio ":all" stop>><<audio "DM_12B" play>>
 <main>
 
+<div id="mount"></div>
+
 Okay. We need some room to practise our punches. Let’s get away from the crowd.
-
-
 
 <<button "I'm in a quiet spot">><<set $prevpass to $passage>><<goto "DM-13">><</button>>
 
@@ -836,33 +1066,51 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 <<set $passage to "DM-13">><<audio ":all" stop>><<audio "DM_13" play>>
 <main>
 
-So, as you know from my book, which I’m sure you read, you need to be strong to be a good boxer.
-To be honest, you didn’t need me to tell you that.
-I mean, look at you? You look like you could crush bricks in your sleep.
-That’s a compliment.
-But, as I said in my book, there’s some exercises I like to do.
+<div id="mount"></div>
 
-/*This message is in an old typeface*/
+<<timed 0s>><<replace "#mount">>So, as you know from my book, which I am sure you've read, you need to be strong to be a good boxer. <</replace>><</timed>>
 
-You may amuse yourself by striking straight forward with each arm successively. By
-repeating this you will find yourself able to strike much oftener and quicker in any
-certain, limited, space of time, than you could at first.”
-Why don’t you give it a shot?
-Put your nondominant foot in front of you and point it at a 35- to 45-degree angle
-towards the air. Make sure no one is around you.
-Now put your dominant foot behind you and point it away from the target at a 45- to
-60-degree angle.
-Raise both your arms and make a fist with your hands.
-Have you got it? There we go.
-Now I’m going to need you to slowly, VERY SLOWLY, punch the air in front of you.
-Alternate between each arm.
-…
-There we go.
-Let’s see if you can keep it going for thirty seconds.
-…
-One, two, three, punch, to three. Other hand, two three, punch, two three
-…
-There we go. Do you think you can do a minute?
+<<timed 7.5s>><<replace "#mount">>To be honest, you didn't need me to tell you that.<</replace>><</timed>>
+
+<<timed 10s>><<replace "#mount">>I mean, look at you. You look like you could crush bricks in your sleep.<</replace>><</timed>>
+
+<<timed 15.5s>><<replace "#mount">>That's a compliment.<</replace>><</timed>>
+
+<<timed 17.5s>><<replace "#mount">>But as I said, in my book, there's some exercises that I like to do.<</replace>><</timed>>
+
+<<timed 21s>><<replace "#mount">><p class="cursive">"You may amuse yourself by striking straight forward with each arm successively.</p><</replace>><</timed>>
+
+<<timed 26.5s>><<replace "#mount">><p class="cursive">"By repeating this, you will find yourself able to strike much oftener and quicker in any certain limited space of time than you could at first."</p><</replace>><</timed>>
+
+<<timed 37s>><<replace "#mount">>So, why don't you give it a shot?<</replace>><</timed>>
+
+<<timed 38.5s>><<replace "#mount">>Put your non-dominant foot in front of you and point out a 35- to 45-degree angle towards the air.<</replace>><</timed>>
+
+<<timed 47s>><<replace "#mount">>Make sure no one else is around you.<</replace>><</timed>>
+
+<<timed 50.5s>><<replace "#mount">>Now, put your dominant foot behind you and point it away from the target at a 45- to 60- degree angle.<</replace>><</timed>>
+
+<<timed 58.5s>><<replace "#mount">>Raise both your arms and make a fist with your hands. <</replace>><</timed>>
+
+<<timed 62.5s>><<replace "#mount">>Have you got it? There we go.<</replace>><</timed>>
+
+<<timed 66s>><<replace "#mount">>Now, I'm going to need you to slowly, very slowly, punch the air in front of you.<</replace>><</timed>>
+
+<<timed 73s>><<replace "#mount">>Alternate between each arm.<</replace>><</timed>>
+
+<<timed 75s>><<replace "#mount">>1, 2, 3. Punch.<</replace>><</timed>>
+
+<<timed 77s>><<replace "#mount">>Other hand: 1, 2, 3. Punch.<</replace>><</timed>>
+
+<<timed 80s>><<replace "#mount">>There we go. Let's see if you can keep it going for 30 seconds<</replace>><</timed>>
+
+<<timed 84s>><<replace "#mount">>1, 2, 3. Punch.<</replace>><</timed>>
+
+<<timed 87s>><<replace "#mount">>Other hand: ...2, 3. Punch.<</replace>><</timed>>
+
+<<timed 91s>><<replace "#mount">>... 2, 3.<</replace>><</timed>>
+
+<<timed 115.5s>><<replace "#mount">>There we go. Do you think you can do a minute?
 
 <div class = "menu-wrapper">
 <<button "Yes">><<set $prevpass to $passage>><<goto "DM-14A">><</button>>
@@ -870,6 +1118,7 @@ There we go. Do you think you can do a minute?
 <<button "No">><<set $prevpass to $passage>><<goto "DM-14B">><</button>>
 </div>
 
+<</replace>><</timed>>
 
 </main>
 <<include "footersimple">>
@@ -879,15 +1128,39 @@ There we go. Do you think you can do a minute?
 <<set $passage to "DM-14A">><<set $nextpassage to "DM-15">><<audio ":all" stop>><<audio "DM_14A" play>>
 <main>
 
-That’s what I thought. Let’s try that again. I’ll talk to you as you’re working out.
-Whenever you’re ready. Try to build a rhythm.
+<div id="mount"></div>
 
+<<timed 0s>><<replace "#mount">>That's what I thought. Let's try that again.<</replace>><</timed>>
 
+<<timed 4s>><<replace "#mount">>I'll talk to you as you're working out. Whenever you're ready, try to build a rhythm.<</replace>><</timed>>
 
-<<button "Did it">><<set $prevpass to $passage>><<goto "DM-15">><</button>>
+<<timed 10s>><<replace "#mount">>1, 2, 3. Punch, 2, 3.<</replace>><</timed>>
 
+<<timed 12.5s>><<replace "#mount">>Other hand, 2, 3. Punch, 2, 3.<</replace>><</timed>>
 
+<<timed 17s>><<replace "#mount">>[metronome]<</replace>><</timed>>
 
+<<timed 26s>><<replace "#mount">>I often think about strength when I'm here.<</replace>><</timed>>
+
+<<timed 30s>><<replace "#mount">>All these buildings, the storms they've withstood. The way they stand upright at any time of the day.<</replace>><</timed>>
+
+<<timed 36.5s>><<replace "#mount">>You can see Bevis Marks Synagogue just over there.<</replace>><</timed>>
+
+<<timed 40.5s>><<replace "#mount">>That's where I go to daven, to pray. That's where I ask for strength every day.<</replace>><</timed>>
+
+<<timed 47.5s>><<replace "#mount">>The building has been around nearly 100 years now.<</replace>><</timed>>
+
+<<timed 51s>><<replace "#mount">>That doesn't sound like a long time, but it's one of the oldest synagogues to still be in use today.<</replace>><</timed>>
+
+<<timed 56.5s>><<replace "#mount">>It's a small, slightly hidden building.<</replace>><</timed>>
+
+<<timed 60s>><<replace "#mount">>Everyone thinks it's trying to be big and grand and intimidating.<</replace>><</timed>>
+
+<<timed 64.5s>><<replace "#mount">>But it was built to serve the community. It wasn't designed for prominence.<</replace>><</timed>>
+
+<<timed 71s>><<replace "#mount">>There we go.<</replace>><</timed>>
+
+<<timed 73s>><<set $prevpass to $passage>><<goto "DM-15">><</timed>>
 
 </main>
 <<include "footer">>
@@ -897,14 +1170,29 @@ Whenever you’re ready. Try to build a rhythm.
 <<set $passage to "DM-14B">><<set $nextpassage to "DM-15">><<audio ":all" stop>><<audio "DM_14B" play>>
 <main>
 
-It’s good to preserve your energy. Let’s take a breather.
+<div id="mount"></div>
 
+<<timed 0s>><<replace "#mount">>It's good to preserve your energy. Let's take a breather.<</replace>><</timed>>
 
+<<timed 5s>><<replace "#mount">>I often think about strength when I'm here.<</replace>><</timed>>
 
-<<button "Sounds good">><<set $prevpass to $passage>><<goto "DM-15">><</button>>
+<<timed 9s>><<replace "#mount">>All these buildings, the storms they've withstood. The way they stand upright at any time of the day.<</replace>><</timed>>
 
+<<timed 15s>><<replace "#mount">>You can see Bevis Marks Synagogue just over there.<</replace>><</timed>>
 
+<<timed 19s>><<replace "#mount">>That's where I go to daven, to pray. That's where I ask for strength every day.<</replace>><</timed>>
 
+<<timed 26s>><<replace "#mount">>The building has been around nearly 100 years now.<</replace>><</timed>>
+
+<<timed 30s>><<replace "#mount">>That doesn't sound like a long time, but it's one of the oldest synagogues to still be in use today.<</replace>><</timed>>
+
+<<timed 35s>><<replace "#mount">>It's a small, slightly hidden building.<</replace>><</timed>>
+
+<<timed 39s>><<replace "#mount">>Everyone thinks it's trying to be big and grand and intimidating.<</replace>><</timed>>
+
+<<timed 43.5s>><<replace "#mount">>But it was built to serve the community. It wasn't designed for prominence.<</replace>><</timed>>
+
+<<timed 51s>><<set $prevpass to $passage>><<goto "DM-15">><</timed>>
 
 </main>
 <<include "footer">>
@@ -914,38 +1202,42 @@ It’s good to preserve your energy. Let’s take a breather.
 <<set $passage to "DM-15">><<set $nextpassage to "DM-16">><<audio ":all" stop>><<audio "DM_15" play>><<set $map3 = setup.generateDirectionsMap([51.51470988196478, -0.0790065685171643], [51.513336789798096, -0.08330679250171254])>>
 <main>
 
-I often think about strength when I’m here.
-All these buildings: the storms they’ve withstood. The way they stand upright any time of day.
-You can see Bevis Marks Synagogue just over there.
-That’s where I go to daven, to pray. It’s where I ask for strength every day.
-The building has been around nearly a hundred years now.
-That doesn’t sound like a long time, but it’s one of the oldest synagogues to still be in use today. It’s a small, slightly hidden building.
-Everyone thinks it’s trying to be big and grand and intimidating,
-But it was built to serve the community. It wasn’t designed for prominence.
+<div id="mount"></div>
 
-Daniel! Daniel!
+<<timed 1s>><<replace "#mount">>JOURNALISTS: Daniel! Daniel! Daniel!<</replace>><</timed>>
 
-The more attention I get, sometimes, this sounds daft.
-Sometimes I like to think of myself as a building.
-Not built for prominence, but for strength. In public but trying to serve the community.
+<<timed 8s>><<replace "#mount">>DANIEL: The more attention I get, sometimes - this sounds daft - sometimes, I like to think of myself as a building.<</replace>><</timed>>
 
-DANIEL! Daniel!
+<<timed 18s>><<replace "#mount">>Not built for prominence, but for strength. In public, but trying to serve the community.<</replace>><</timed>>
 
-I want to tell these people to bugger off. But I know what the press will say. I have to be twice as polite as a gentile boxer. One slip of the tongue and they’ll call me smug.
+<<timed 25s>><<replace "#mount">>I wanna tell these people to bugger off. But I know what the press will say.<</replace>><</timed>>
 
-Daniel the Jew! Over here!
+<<timed 30.5s>><<replace "#mount">>I have to be twice as polite as a gentile boxer. One slip of the tongue and they'll call me smug. <</replace>><</timed>>
 
-That nickname. I had no choice but to claim it. I would have shut-it-down on the spot, I would have practised my boxing with the hack who coined it, if I didn’t think it would harm my community. It’s unfair. But if I win, it’s their win too.
-I’m going to nip in to shul, get away from this lot, have a word with my Rabbi before the big day.
-But I’ll meet you at the market?
+<<timed 37.5s>><<replace "#mount">>J: Daniel the Jew! Over here!<</replace>><</timed>>
+
+<<timed 40s>><<replace "#mount">>D: That nickname. I've had no choice but to claim it.<</replace>><</timed>>
+
+<<timed 46s>><<replace "#mount">>I would have shut it down on the spot. I would have practiced my boxing with the hack who coined it - if I didn't think it would harm my community.<</replace>><</timed>>
+
+<<timed 54s>><<replace "#mount">>It's unfair but if I win, it's their win too.<</replace>><</timed>>
+
+<<timed 60s>><<replace "#mount">>I'm going to nip into shul, get away from this lot. Have a word with my Rabbi before the big day.<</replace>><</timed>>
+
+<<timed 66.5s>><<replace "#mount">>But I'll meet you at the market?<</replace>><</timed>>
+
+
+<<timed 69s>><<replace "#mount">>
+
+Head back down Bury Street the way you came. Follow the path around the Gherkin, back to St Mary Axe Street.
+
+When you get there, carefully cross the street and take a left, heading toward to the open area in front of the building with the colourful vents.
 
 $map3
 
 <<button "Here">><<set $prevpass to $passage>><<goto "DM-16">><</button>>
 
-
-
-
+<</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -955,24 +1247,49 @@ $map3
 <<set $passage to "DM-16">><<audio ":all" stop>><<audio "DM_16" play>>
 <main>
 
-Thanks for meeting me here. I know, this place looks unassuming. I need to stop off to look at some paperwork. I’m going to build a school here.
-Only if I win, if I ever become, I don’t know: supreme boxer, or something.
-I doubt it will happen.
-I know, I shouldn’t let my ego stop me from doing what I want to do; I can’t help myself. Days like this, when the stress really gets to me, I feel like an imposter.
-It’s hard to think about teaching or doing anything so serious when I’m struggling to take myself seriously. Or maybe I’m taking myself too seriously.
-Anyway, I’ve been talking with some landlords. They have the capacity.
-I think my first course will be on the art of boxing.
-I call it an art even though it’s a science.
-You’ll remember, I wrote about it in my book.
+<div id="mount"></div>
 
-/*Next part needs to be in old typeface*/
+<<timed 0s>><<replace "#mount">>Thanks for meeting me here.<</replace>><</timed>>
 
-“It must be acknowledged, that the art is of such importance, that no boxer ought to trust their strength, however great, without calling in some knowledge of the science to his assistance. Art will always give a boxer the advantage over an adversary.”
+<<timed 2.5s>><<replace "#mount">>I know this place looks unassuming, but I need to stop off to look at some paperwork.<</replace>><</timed>>
 
-Boxing is an art because you’re moving with intention. It’s real-time, responsive, and you’re communicating with your opponent. Just how people avoid each other in crowds. Just watch the pavement for a second and you’ll see: the ways people signal where they’re walking with their eyes, the little dances they play when two people approach each other from opposite directions.
-Being a good boxer is about controlling your body, how you present your intentions and how you read your opponent.
-I want you to try using your body to communicate.
-Pay attention to every finger, every joint, every way you position yourself. It’s all one decision.
+<<timed 7s>><<replace "#mount">>I'm going to build a school here.<</replace>><</timed>>
+
+<<timed 8.5s>><<replace "#mount">>Only if I win. If I ever become, I don't know, supreme boxer or something.<</replace>><</timed>>
+
+<<timed 15s>><<replace "#mount">>I doubt it will happen.<</replace>><</timed>>
+
+<<timed 17.5s>><<replace "#mount">>I know. I shouldn't let my ego stop me from doing what I want to do.<</replace>><</timed>>
+
+<<timed 22.5s>><<replace "#mount">>I can't help myself. Days like this, when the stress really gets to me, I feel like an imposter.<</replace>><</timed>>
+
+<<timed 33s>><<replace "#mount">>It's hard to think about teaching or doing anything else serious when I'm struggling to take myself seriously.<</replace>><</timed>>
+
+<<timed 38s>><<replace "#mount">>Or maybe I'm taking myself too seriously. Anyway.<</replace>><</timed>>
+
+<<timed 42s>><<replace "#mount">>I've been talking with some landlords. They have the capacity.<</replace>><</timed>>
+
+<<timed 45s>><<replace "#mount">>I think my first course will be on the art of boxing.<</replace>><</timed>>
+
+<<timed 50.5s>><<replace "#mount">>I call it an art, even though it's a science. You remember, I wrote about it in my book.<</replace>><</timed>>
+
+<<timed 57s>><<replace "#mount">><p class="cursive">"It must be acknowledged that the art is of such importance that no boxer ought to trust their strength, however great, without calling in some knowledge of the science to his assistance.</p><</replace>><</timed>>
+
+<<timed 69s>><<replace "#mount">><p class="cursive">"Art will always give a boxer the advantage over an adversary."</p><</replace>><</timed>>
+
+<<timed 74s.5>><<replace "#mount">>Boxing is an art because you're moving with intention.<</replace>><</timed>>
+
+<<timed 79s>><<replace "#mount">>It's real time responsive and you're communicating with your opponent. Just how people avoid each other in crowds.<</replace>><</timed>>
+
+<<timed 86.5s>><<replace "#mount">>Just watch the pavement for a second and you'll see.<</replace>><</timed>>
+
+<<timed 89.5s>><<replace "#mount">>The ways people signal they're walking with their eyes, the little dances they play when two people approach each other from opposite directions.<</replace>><</timed>>
+
+<<timed 97.5s>><<replace "#mount">>Being a good boxer is all about controlling your body. How you present your intentions, how you read an opponent.<</replace>><</timed>>
+
+<<timed 106s>><<replace "#mount">>I want you to try using your body to communicate.<</replace>><</timed>>
+
+<<timed 110s>><<replace "#mount">>Pay attention to every finger, every joint, every way you position yourself. It's all one decision.
 
 <div class="menu-wrapper">
 <<button "Let's try, we're in a group">><<set $prevpass to $passage>><<goto "DM-17A">><</button>>
@@ -980,6 +1297,7 @@ Pay attention to every finger, every joint, every way you position yourself. It�
 <<button "Let's try, I'm solo">><<set $prevpass to $passage>><<goto "DM-17B">><</button>>
 </div>
 
+<</replace>><</timed>>
 
 </main>
 <<include "footersimple">>
@@ -988,13 +1306,23 @@ Pay attention to every finger, every joint, every way you position yourself. It�
 :: DM-17A {"position":"375,1700","size":"100,100"}
 <<set $passage to "DM-17A">><<set $nextpassage to "DM-18A">><<audio ":all" stop>><<audio "DM_17A" play>>
 <main>
+
+<div id="mount"></div>
+
 <<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
 <<set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()>>
 
-Okay, we need one challenger to face some opponents. You can pair off for
-this exercise, or take it in turns challenging.
+<<timed 0s>><<replace "#mount">>Okay, we need one challenger to face some opponents.<</replace>><</timed>>
 
-If you’re a challenger, take a look at this letter. DON’T show your opponents. I need you to embody this letter, I’ll give you thirty seconds to get into position. Can your opponent get it?
+<<timed 4.5s>><<replace "#mount">>You can pair off for this exercise or take it in turns challenging.<</replace>><</timed>>
+
+<<timed 8.5s>><<replace "#mount">>If you're the challenger, take a look at this letter.<</replace>><</timed>>
+
+<<timed 12.5s>><<replace "#mount">>Don't show your opponents.<</replace>><</timed>>
+
+<<timed 15s>><<replace "#mount">>You need to embody this letter. I'll give you 30 seconds to get into position.<</replace>><</timed>>
+
+<<timed 21s>><<replace "#mount">>Can your opponent get it?
 
 <div class="randomletter ">
 <<button "Reveal random letter">>
@@ -1008,8 +1336,7 @@ If you’re a challenger, take a look at this letter. DON’T show your opponent
 <div class="nextbuttoncontainer">
 </div>
 
-
-
+<</replace>><</timed>>
 
 
 </main>
@@ -1020,13 +1347,15 @@ If you’re a challenger, take a look at this letter. DON’T show your opponent
 <<set $passage to "DM-18A">><<set $nextpassage to "DM-19A">><<audio ":all" stop>><<audio "DM_18A" play>>
 <main>
 
-Now, I have another challenge. Feel free to swap roles with your opponent. I’m going to share it as soon as you can peek discreetly.
+<div id="mount"></div>
+
+<<timed 0s>><<replace "#mount">>Now, I have another challenge. Feel free to swap roles with your opponent.<</replace>><</timed>>
+
+<<timed 6s>><<replace "#mount">>I'm going to share it as soon as you can peek discreetly.
 
 <<button "Continue">><<set $prevpass to $passage>><<goto "DM-19A">><</button>>
 
-
-
-
+<</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -1034,12 +1363,22 @@ Now, I have another challenge. Feel free to swap roles with your opponent. I’m
 
 :: DM-19A {"position":"375,1950","size":"100,100"}
 <<set $passage to "DM-19A">><<set $nextpassage to "DM-20A">><<audio ":all" stop>><<audio "DM_19A" play>><<set $randomletter2 to $notweirdalphabet.pluck().toUpperCase()>>
+
 <main>
+<div id="mount"></div>
 <h2 class="letter">$randomletter2</h2>
-I want you to look around the court. What do you see? Can you see anything beginning with this letter? As soon as you do, find a way to communicate that object without using any words. Let your opponents guess the letter behind the object.
+
+<<timed 0s>><<replace "#mount">>I want you is a look around the court. What do you see?<</replace>><</timed>>
+
+<<timed 4s>><<replace "#mount">>Can you see anything beginning with this letter?<</replace>><</timed>>
+
+<<timed 7s>><<replace "#mount">>As soon as you do, find a way to communicate that object without using any words.<</replace>><</timed>>
+
+<<timed 12s>><<replace "#mount">>Let your opponents guess the letter behind the object.
 
 <<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-20A">><</button>>
 
+<</replace>><</timed>>
 
 
 </main>
@@ -1052,9 +1391,7 @@ I want you to look around the court. What do you see? Can you see anything begin
 
 One last challenge. One last letter. Any takers?
 
-
 <<button "Continue">><<set $prevpass to $passage>><<goto "DM-21A">><</button>>
-
 
 
 </main>
@@ -1064,12 +1401,18 @@ One last challenge. One last letter. Any takers?
 :: DM-21A {"position":"375,2200","size":"100,100"}
 <<set $passage to "DM-21A">><<set $nextpassage to "DM-22A">><<audio ":all" stop>><<audio "DM_21A" play>><<set $randomletter3 to $notweirdalphabet.pluck().toUpperCase()>>
 <main>
+<div id="mount"></div>
 <h2 class="letter">$randomletter3</h2>
-Think of an adjective or a way of describing the previous object. This word should start with this letter. I want you to communicate that adjective using only your body. How easy is it to guess the letter?
+
+<<timed 0s>><<replace "#mount">>Think of an adjective or a way of describing the previous object.<</replace>><</timed>>
+
+<<timed 4s>><<replace "#mount">>This should start with this letter. I want you to communicate that adjective using only your body.<</replace>><</timed>>
+
+<<timed 12s>><<replace "#mount">>How easy is it to get the letter?
 
 <<button "Next">><<set $prevpass to $passage>><<goto "DM-22A">><</button>>
 
-
+<</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -1087,7 +1430,6 @@ Do you want another round?
 <<button "No">><<set $prevpass to $passage>><<goto "DM-23">><</button>>
 </div>
 
-
 </main>
 <<include "footersimple">>
 
@@ -1096,8 +1438,9 @@ Do you want another round?
 <<set $passage to "DM-17B">><<audio ":all" stop>><<audio "DM_17B" play>>
 <main>
 
-You can find a partner to play with, or practise this alone, for when you’re in the ring.
+<div id="mount"></div>
 
+You can find a partner to play with, or practise this alone, for when you’re in the ring.
 
 <div class="menu-wrapper">
 <<button "Playing with an opponent">><<set $prevpass to $passage>><<goto "DM-17A">><</button>>
@@ -1113,18 +1456,22 @@ You can find a partner to play with, or practise this alone, for when you’re i
 :: DM-18B {"position":"525,1825","size":"100,100"}
 <<set $passage to "DM-18B">><<set $nextpassage to "DM-19B">><<audio ":all" stop>><<audio "DM_18B" play>>
 <main>
+
+<div id="mount"></div>
+
 <<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
 <<set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()>>
 
 $randomletter1
 
-1. Take a look at this letter. DON’T show anyone. I need you to embody this letter, I’ll give you thirty seconds to get into position.
+<<timed 0s>><<replace "#mount">>Take a look at this letter. Don't show anyone.<</replace>><</timed>>
 
+<<timed 4s>><<replace "#mount">>I need you to embody this letter. I'll give you 30 seconds to get into position.
 
 <<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-19B">><</button>>
 
 
-
+<</replace>><</timed>>
 
 
 </main>
@@ -1135,16 +1482,21 @@ $randomletter1
 <<set $passage to "DM-19B">><<set $nextpassage to "DM-20B">><<audio ":all" stop>><<audio "DM_19B" play>>
 <main>
 
+<div id="mount"></div>
+
 $randomletter1
 
-2. Now, I want you to look around the court. What do you see? Can you see anything beginning with your letter? As soon as you do, find a way to communicate that object without using any words.
+<<timed 0s>><<replace "#mount">>Now I want you to look around the court. What can you see?<</replace>><</timed>>
 
+<<timed 4.5s>><<replace "#mount">>Can you see anything beginning with your letter?<</replace>><</timed>>
+
+<<timed 9s>><<replace "#mount">>As soon as you do, find a way to communicate that object without using any words.
 
 
 <<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-20B">><</button>>
 
 
-
+<</replace>><</timed>>
 
 
 </main>
@@ -1154,17 +1506,21 @@ $randomletter1
 :: DM-20B {"position":"525,2075","size":"100,100"}
 <<set $passage to "DM-20B">><<set $nextpassage to "DM-21B">><<audio ":all" stop>><<audio "DM_20B" play>>
 <main>
+<div id="mount"></div>
 
 $randomletter1
 
-3. Finally, think of an adjective or a way of describing your object. This word should start with the same letter. I want you to communicate that adjective using only your body. How easy is it to guess?
+<<timed 0s>><<replace "#mount">>Finally, think of an adjective or a way of describing your object.<</replace>><</timed>>
 
+<<timed 4.5s>><<replace "#mount">>This word should start with the same letter.<</replace>><</timed>>
+
+<<timed 8s>><<replace "#mount">>I want you to communicate that adjective using only your body. How easy is it to guess?
 
 
 <<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-21B">><</button>>
 
 
-
+<</replace>><</timed>>
 
 
 </main>
@@ -1186,7 +1542,6 @@ Do you want another round?
 
 
 
-
 </main>
 <<include "footersimple">>
 
@@ -1195,13 +1550,25 @@ Do you want another round?
 <<set $passage to "DM-23">><<set $nextpassage to "DM-24">><<audio ":all" stop>><<audio "DM_23" play>><<set $map4 = setup.generateDirectionsMap([51.513336789798096, -0.08330679250171254], [51.512892842200664, -0.08337869822763945])>>
 <main>
 
-Daniel! Daniel!
+<div id="mount"></div>
 
-For goodness sake. Let’s get out of here, but try to transform yourself into the first animal you see. I’ve found one will pay you attention if you move like a pigeon.
+<<timed 0s>><<replace "#mount">>JOURNALISTS: Daniel! Daniel!<</replace>><</timed>>
+
+<<timed 2s>><<replace "#mount">>For goodness' sake. Let's get out of here. <</replace>><</timed>>
+
+<<timed 5.5s>><<replace "#mount">>But try to transform yourself into the first animal you see.<</replace>><</timed>>
+
+<<timed 9.5s>><<replace "#mount">>I found no one will pay attention if you move like a pigeon.<</replace>><</timed>>
+
+<<timed 13.5s>><<replace "#mount">>
+
+Get to Leadenhall Street and take a right.
+
 $map4
 
 <<button "Here">><<set $prevpass to $passage>><<goto "DM-24">><</button>>
 
+<</replace>><</timed>>
 
 
 </main>
@@ -1212,32 +1579,55 @@ $map4
 <<set $passage to "DM-24">><<set $nextpassage to "DM-25">><<audio ":all" stop>><<audio "DM_24" play>><<set $map4 = setup.generateDirectionsMap([51.513336789798096, -0.08330679250171254], [51.512892842200664, -0.08337869822763945])>>
 <main>
 
-Great, we shook them off.
-Whilst we’re walking, I can probably squeeze in another lesson. My nerves about today also have me stressing about you, making this trip worth your while. I have another spiel for you. Stop me if you know it: I’m sure you definitely, one-hundred-per-cent read my book,
-The part about activity.
-“Strength and art mean very little for a static boxer.
-Movement, and precise activity is a necessary requisite”
-I want to teach you side-stepping. It’s a somewhat self-explanatory move.
-You can maximise pressure on your opponent by moving side to side.
-You open new angles for attack. Pair a side-step with a tactical duck or slip, and you’ve got a defensive move too.
-It’s my signature.
-But it’s all in the footwork, and it’s a tricky skill to get right.
-So as you walk down this street, and I need you to be careful,
-I want you to practise your footwork.
-Try turning ninety degrees and walking sideways.
-Make sure to turn your head left-to-right. You need to keep your wits about you.
-There you go.
-Once you have a clearing, try turning 180 degrees but walk in the same direction.
-It’s not easy is it?
+<div id="mount"></div>
 
-Daniel! Daniel!
+<<timed 1s>><<replace "#mount">>Great, we shook them off.<</replace>><</timed>>
 
-Oh dear. We need to pick up the pace. I’ll run ahead; you keep practicing the side-step.
+<<timed 4s>><<replace "#mount">>Whilst we're walking, I can probably squeeze in another lesson.<</replace>><</timed>>
+
+<<timed 8.5s>><<replace "#mount">>My nerves about today also have me stressing about you, making this trip worth your while.<</replace>><</timed>>
+
+<<timed 14.5s>><<replace "#mount">>I have another spiel for you. Stop me if you know it, I'm sure you definitely will 100% have read my book.<</replace>><</timed>>
+
+<<timed 21.5s>><<replace "#mount">>The part about activity.<</replace>><</timed>>
+
+<<timed 25s>><<replace "#mount">><p class="cursive">"Strength and art mean very little for a static boxer. Movement and precise activity is a necessary requisite."</p><</replace>><</timed>>
+
+<<timed 34.5s>><<replace "#mount">>I wanna teach you side-stepping. It's a somewhat self-explanatory move.<</replace>><</timed>>
+
+<<timed 39.5s>><<replace "#mount">>You can maximise pressure on your opponent by moving side to side. You open new angles for attack.<</replace>><</timed>>
+
+<<timed 47s>><<replace "#mount">>Pair a side-step with a tactical duck or slip, and you got yourself a defensive move too. It's my signature.<</replace>><</timed>>
+
+<<timed 54s>><<replace "#mount">>But it's all in the footwork. And it's a tricky skill to get right. <</replace>><</timed>>
+
+<<timed 59.5s>><<replace "#mount">>So, as soon as you walk down this street, and I need you to be careful, I want you to practice your footwork.<</replace>><</timed>>
+
+<<timed 66s>><<replace "#mount">>Try turning 90 degrees and walking sideways.<</replace>><</timed>>
+
+<<timed 70s>><<replace "#mount">>Make sure to turn your head left to right. You need to keep your wits about you.<</replace>><</timed>>
+
+<<timed 77.5s>><<replace "#mount">>There you go.<</replace>><</timed>>
+
+<<timed 81s>><<replace "#mount">>Once you have a clearing, try turning 180 degrees but walk in the same direction.<</replace>><</timed>>
+
+<<timed 88s>><<replace "#mount">>Yeah, it's not easy, is it?<</replace>><</timed>>
+
+<<timed 93s>><<replace "#mount">>JOURNALISTS: Daniel! Daniel! Over here!<</replace>><</timed>>
+
+<<timed 95s>><<replace "#mount">>Oh dear. Right, we need to pick up the pace. I'll run ahead. You keep practicing the sidestep. <</replace>><</timed>>
+
+<<timed 104s>><<replace "#mount">>Continue down Leadenhall Street until you come to the busy intersection.
+
+Take a left, carefully cross the road.
+
+On the lefthand side, you come up to Leadenhall Market. Head in.
 
 $map4
 
 <<button "At Leadenhall Market">><<set $prevpass to $passage>><<goto "DM-25">><</button>>
 
+<</replace>><</timed>>
 
 
 </main>
@@ -1248,51 +1638,65 @@ $map4
 <<set $passage to "DM-25">><<set $nextpassage to "DM-26">><<audio ":all" stop>><<audio "DM_25" play>>
 <main>
 
-There you are! I was just picking up some groceries.
-I only eat a slice of bread, maybe some butter on a big day.
-But my wife: she wants some kosher meat for shabbat.
-And a place like this, it helps calm me down.
-Sometimes I’ll look around and catch a detail that’s been here for hundreds of years.
-It’s easy to imagine crowds of people who were here before me, and the countless crowds who will be here after. It makes stressing about the present seem pointless.
-Anyway, I need to tell you about courage.
-Let me check my notes.
-…
-Ah! There it is.
-Yes
+<div id="mount"></div>
 
-/*Next passage in old typeface*/
+<<timed 4s>><<replace "#mount">>There you are. I was just picking up some groceries.<</replace>><</timed>>
 
-“In mentioning Courage as a necessary requisite, it has been considered in both its active and passive sense; that is, as spirit or resolution in engaging your adversary, and as hardiness or bottom in bearing their blows.”
-You see courage is a give and take.
-It’s about opening yourself to the unknownSorry. Surely that’s not?
-No way. Of all the days to see Elizabeth Wilkinson doing her errands.
-Elizabeth!
+<<timed 7.5s>><<replace "#mount">>I only eat half a slice of bread, maybe some butter on a big day.<</replace>><</timed>>
 
-Daniel!
+<<timed 11s>><<replace "#mount">>But my wife, she wants some kosher meat for shabbat. And a place like this, it helps me calm down.<</replace>><</timed>>
 
-You know Elizabeth Wilkinson? The ‘Championess’? I don’t think she picked her nickname either. But she’s a legend of the ring, a bare-knuckled titan.
+<<timed 20.5s>><<replace "#mount">>Sometimes I look around and catch a detail that's been here for hundreds of years. <</replace>><</timed>>
 
-I thought that was you. I spotted you in the distance.
-There aren’t many 5 foot 7 inch men who walk with your posture.
-And to see two up and coming boxers as I’m doing my groceries
+<<timed 25s>><<replace "#mount">>It's easy to imagine crowds of people who were here before me and the countless crowds who will be here after.<</replace>><</timed>>
 
-I’m going for the championship, Elizabeth.
+<<timed 31.5s>><<replace "#mount">>It makes stressing about the present seem pointless. <</replace>><</timed>>
 
-You’ll always be up-and coming to me.
+<<timed 36.5s>><<replace "#mount">>Anyway, I need to tell you about courage. Let me check my notes...<</replace>><</timed>>
 
-I was going to encourage my mentee to play a game. Maybe you’ll take part?
+<<timed 43s>><<replace "#mount">>There it is, yes.<</replace>><</timed>>
 
-I only have a minute…
+<<timed 45s>><<replace "#mount">><p class="cursive">"In mentioning courage as a necessary requisite, it has been considered in both its active and passive sense,</p><</replace>><</timed>>
 
-Okay. Best of three then.
+<<timed 51s>><<replace "#mount">><p class="cursive">"That is, as a spirit or resolution in engaging your adversary and as hardiness or bottom in baring their blows."</p><</replace>><</timed>>
 
-Rock, paper, scissors. I need you to raise a move on three.
-You know how to play?
+<<timed 59s>><<replace "#mount">>You see, courage is about a give and take. It's about opening yourself into the unknown -<</replace>><</timed>>
 
-Of course. I’ll hold up rock, paper or scissors on three.
+<<timed 65s>><<replace "#mount">>Sorry. Surely that's not... no way.<</replace>><</timed>>
 
+<<timed 71s>><<replace "#mount">>Of all the days to see Elizabeth Wilkinson doing her errands. Elizabeth!<</replace>><</timed>>
+
+<<timed 76s>><<replace "#mount">>ELIZABETH: Daniel!<</replace>><</timed>>
+
+<<timed 77s>><<replace "#mount">>DANIEL: You know, Elizabeth Wilkinson. The 'Championess'? I don't think she picked her nickname either.<</replace>><</timed>>
+
+<<timed 83.5s>><<replace "#mount">>But she's a legend of the ring. A bare-knuckled titan.<</replace>><</timed>>
+
+<<timed 87s>><<replace "#mount">>E: I thought that was you. I spotted you in the distance.<</replace>><</timed>>
+
+<<timed 91s>><<replace "#mount">>There aren't many five foot seven inch men who walk with your posture.<</replace>><</timed>>
+
+<<timed 95s>><<replace "#mount">>And to see two up-and-coming boxers as I'm doing my groceries -<</replace>><</timed>>
+
+<<timed 99s>><<replace "#mount">>D: I'm going for the championship. Elizabeth.<</replace>><</timed>>
+
+<<timed 101s>><<replace "#mount">>E: You'll always be up-and-coming to me.<</replace>><</timed>>
+
+<<timed 103s>><<replace "#mount">>D: I was going to encourage my mentee to play a game. Maybe you'll take part?<</replace>><</timed>>
+
+<<timed 108s>><<replace "#mount">>E: I only have a minute...<</replace>><</timed>>
+
+<<timed 109.5s>><<replace "#mount">>D: Okay, best of three then?<</replace>><</timed>>
+
+<<timed 112s>><<replace "#mount">>Rock, paper, scissors. I need you to raise a move on three. You know how to play?<</replace>><</timed>>
+
+<<timed 116.5s>><<replace "#mount">>E: Of course. I'll hold up rock, paper or scissors on three.<</replace>><</timed>>
+
+<<timed 121s>><<replace "#mount">>D: Okay.
 
 <<button "Let's play">><<set $prevpass to $passage>><<goto "DM-26">><</button>>
+
+<</replace>><</timed>>
 
 
 
@@ -1305,8 +1709,9 @@ Of course. I’ll hold up rock, paper or scissors on three.
 <<set $opponent to $rps.random()>>
 
 <main>
+<div id="mount"></div>
 
-Okay. One, two, three
+One, two, three
 <<if $opponent is "Rock!">>
 <<audio ":all" stop>><<audio "DM_26-8_R" play>>
 <<elseif $opponent is "Paper!">>
@@ -1329,9 +1734,11 @@ Okay. One, two, three
 
 <main>
 
+<div id="mount"></div>
+
 <<set $opponent to $rps.random()>>
 
-Okay. One, two, three
+One, two, three
 <<if $opponent is "Rock!">>
 <<audio ":all" stop>><<audio "DM_26-8_R" play>>
 <<elseif $opponent is "Paper!">>
@@ -1353,9 +1760,11 @@ Okay. One, two, three
 <<set $passage to "DM-28">><<set $nextpassage to "DM-29">>
 <main>
 
+<div id="mount"></div>
+
 <<set $opponent to $rps.random()>>
 
-Okay. One, two, three
+ One, two, three
 <<if $opponent is "Rock!">>
 <<audio ":all" stop>><<audio "DM_26-8_R" play>>
 <<elseif $opponent is "Paper!">>
@@ -1376,77 +1785,171 @@ Okay. One, two, three
 :: DM-29 {"position":"450,3200","size":"100,100"}
 <<set $passage to "DM-29">><<set $nextpassage to "DM-30">><<audio ":all" stop>><<audio "DM_29" play>><<set $map6 = setup.generateDirectionsMap([51.512892842200664, -0.08337869822763945], [51.51233042912303, -0.0809482307665927])>>
 <main>
+<div id="mount"></div>
 
-There it is-
+<<timed 0s>><<replace "#mount">>DANIEL: There it is.<</replace>><</timed>>
 
-I really need to go. Best of luck tonight.
+<<timed 1.5s>><<replace "#mount">>ELIZABETH: I really need to go. Best of luck tonight.<</replace>><</timed>>
 
-Always a pleasure.
+<<timed 5s>><<replace "#mount">>D: Always a pleasure.<</replace>><</timed>>
 
+<<timed 7s>><<replace "#mount">>You had some great reflexes there. But I wonder if there are any other worthy adversaries in this area.<</replace>><</timed>>
 
-You had some great reflexes there. But I wonder if there are any other worthy adversaries in this area. Do you see any other boxers on your level? Any other people who play your game?
-I bet there’s a few around here. You don’t have to know them.
-Challenge another person to a few rounds of rock, paper, scissors.
-I’ll meet you in a moment.
+<<timed 15.5s>><<replace "#mount">>Do you see any other boxes on your level? Any other people who play your game?<</replace>><</timed>>
+
+<<timed 21s>><<replace "#mount">>I bet there's a few around here. You don't have to know them.<</replace>><</timed>>
+
+<<timed 24.5s>><<replace "#mount">>Challenge another person to a few rounds of rock, paper, scissors. I'll meet you in a moment.<</replace>><</timed>>
+
+<<timed 30s>><<replace "#mount">>
+
+Continue down Whittington Avenue in the same direction as before. Head through the market to the opposite side you entered from.
+
+You should find yourself at Lime Street. Take a left.
+
+Just before the pedestrian section, the road turns right becoming Fenchurch Avenue. follow that.
+
+You’re looking for The Garden at 120
 
 $map6
 
 <<button "At 120">><<set $prevpass to $passage>><<goto "DM-30">><</button>>
 
-
+<</replace>><</timed>>
 
 </main>
 <<include "footer">>
 
 
 :: DM-30 {"position":"450,3325","size":"100,100"}
-<<set $passage to "DM-30">><<set $nextpassage to "end">><<audio ":all" stop>><<audio "34" play>>
+<<set $passage to "DM-30">><<set $nextpassage to "DM-31">><<audio ":all" stop>><<audio "34" play>>
 <main>
-
-And now we reach our
-We reach our
-Sorry, I-
-Now we reach our final lesson.
-I’m getting overwhelmed. The pressure is mounting.
-I feel the weight of my own name and my community behind me.
-I could do with this lesson too.
-You remember what I wrote about wind?
-
-/*Next passage in typeface font*/
-
-“To improve wind, one must breath. By too violent exertion in fighting a person becomes winded, or out of breath. The wind may be much improved by frequent practice, and greatly recovered when lost in fighting.”
-
-Sometimes it’s important to find some fresh air.
-I need to calm down.
-Let me guide you through one of my breathing exercises.
-I’ll join you.
-
-First, I need you to look at a spot that is completely unmoving.
-I know it’s hard; the city is always on-the-go. But find an anchoring point, stare at it for 30 seconds. Let the world move around you; stay focused; don’t allow yourself to get swept up.
-
-Now inhale, take a deep breath through your nose.
-Look around you. Find a building or a structure that represents stability. Something sturdy, something standing with confidence, something unphased by the weather. 
-Focus on it. Breathe out through your nose.
-
-Now breathe in again.
-
-Daniel! Daniel!
-
-Find a building that represents intention. Something artistic, something designed with a specific purpose, something choreographed with the world around it. Focus on it.
-Breathe out.
-
-Now breathe in again. One last time. Find a building that represents a larger idea. Something that’s meaningful to lots of people, something that leads the way, something that can inspire the next generation. Now breathe out.
-
-Daniel! Daniel! Daniel!
-
-I think I’m ready.
+<div id="mount"></div>
 
 
-<<button "Good luck Daniel!">><<set $prevpass to $passage>><<goto "end">><</button>>
+<<timed 0s>><<replace "#mount">>And now we reach our -<</replace>><</timed>>
 
+<<timed 3s>><<replace "#mount">>We reach our... sorry, I'm -<</replace>><</timed>>
+
+<<timed 9.5s>><<replace "#mount">>Now, we reach our final lesson.<</replace>><</timed>>
+
+<<timed 12.5s>><<replace "#mount">>I'm getting overwhelmed. The pressure is mounting.<</replace>><</timed>>
+
+<<timed 17s>><<replace "#mount">>I can feel the weight of my own name and my community behind me.<</replace>><</timed>>
+
+<<timed 21s>><<replace "#mount">>I could do with this lesson too.<</replace>><</timed>>
+
+<<timed 23.5s>><<replace "#mount">>You remember what I wrote about wind?<</replace>><</timed>>
+
+<<timed 25.5s>><<replace "#mount">><p class="cursive">"To improve wind, one must breathe. By too violent exertion in fighting, a person becomes winded, or out of breath.</p><</replace>><</timed>>
+
+<<timed 36s>><<replace "#mount">><p class="cursive">"The wind may be much improved by frequent practice and greatly recovered when lost in fighting."</p><</replace>><</timed>>
+
+<<timed 43.5s>><<replace "#mount">>Sometimes, it's important to find some fresh air.<</replace>><</timed>>
+
+<<timed 49s>><<replace "#mount">>I need to calm down. Let me guide you through one of my breathing exercises. I'll join you.<</replace>><</timed>>
+
+<<timed 56s>><<replace "#mount">>First, I need you to look at a spot that is completely unmoving.<</replace>><</timed>>
+
+<<timed 61s>><<replace "#mount">>I know it's hard. The city is always on the go, but find an anchoring point.<</replace>><</timed>>
+
+<<timed 66s>><<replace "#mount">>Stare at it for 30 seconds. Let the world move around you. <</replace>><</timed>>
+
+<<timed 72s>><<replace "#mount">>Stay focused. Don't allow yourself to get swept up.<</replace>><</timed>>
+
+<<timed 76.5s>><<replace "#mount">>Now, inhale. Take a deep breath through your nose.<</replace>><</timed>>
+
+<<timed 84s>><<replace "#mount">>Look around you. Find a building or structure that represents stability.<</replace>><</timed>>
+
+<<timed 89.5s>><<replace "#mount">>Something sturdy, something standing with confidence, something unfazed by the weather.<</replace>><</timed>>
+
+<<timed 96.5s>><<replace "#mount">>Focus on it. Breathe out through your nose. Now, breathe in again.<</replace>><</timed>>
+
+<<timed 108.5s>><<replace "#mount">>Find a building that represents intention. Something artistic, something designed with a specific purpose, something choreographed with the world around it.<</replace>><</timed>>
+
+<<timed 116s>><<replace "#mount">>Focus on it. Breathe out.<</replace>><</timed>>
+
+<<timed 121s>><<replace "#mount">>Breathe in again. One last time. <</replace>><</timed>>
+
+<<timed 125s>><<replace "#mount">>Find a building that represents a large idea. Something that's meaningful to lots of people, something that leads the way, something that can inspire the next generation.<</replace>><</timed>>
+
+<<timed 136s>><<replace "#mount">>Now, breathe out. <</replace>><</timed>>
+
+<<timed 141s>><<replace "#mount">> <</replace>><</timed>>
+
+<<timed 145s>><<replace "#mount">>[boxing match bell dings]<</replace>><</timed>>
+
+<<timed 148.5s>><<replace "#mount">>I think I'm ready.<</replace>><</timed>>
+
+
+
+<<timed 150s>><<replace "#mount">>I think I'm ready.
+
+<<button "Good luck Daniel!">><<set $prevpass to $passage>><<goto "DM-31">><</button>>
+
+<</replace>><</timed>>
 
 
 </main>
 <<include "footer">>
 
+
+
+
+:: DM-31 {"position":"520,2113","size":"100,100"}
+<<set $passage to "DM-31">><<set $nextpassage to "DM-32">>
+
+<main>
+<div id="mount"></div>
+Thanks for helping Daniel out. I am sure he enjoyed meeting and training with you.
+
+Now, if you’re ready, let's head inside. 
+
+You’re going to need to go through security for this one. 
+
+Get your bags scanned and head up in the lift to the Garden at 120.
+
+When you’re up on the rooftop, find a steward in blue and show them this <<button "key">><<set $prevpass to $passage>><<goto "DM-32">><</button>>
+</main>
+<<include "footer">>
+
+:: DM-32 {"position":"520,2113","size":"100,100"}
+<<set $passage to "DM-32">><<set $nextpassage to "DM-32adventures">>
+ <main>
+<div class="key-wrapper glowing"><img src="./assets/Gardenat120.png"></div>
+
+<h2 class="endpoint">Garden at 120</h2>
+</main>
+<<include "footerkey">>
+
+
+::  DM-32adventures {"position":"520,2113","size":"100,100"}
+<<set $passage to "DM-32adventures">><<audio ":all" stop>><main>
+<h3>Start a new adventure...</h3>
+<div class="choices">
+<div class="adventure-wrapper"><h3>A Resting Place </h3><div class="adv-item"><div>7 min walk away</div><<button "Show Map">><<set $prevpass to $passage>><<goto "DM-33A">><</button>></div></div>
+
+<div class="adventure-wrapper"><h3>Share Mile  </h3><div class="adv-item"><div>18+
+9 min walk away</div><<button "Show Map">><<set $prevpass to $passage>><<goto "DM-33B">><</button>></div></div>
+
+
+
+</main>
+<<include "footerkey">>
+
+:: DM-33A {"position":"520,2113","size":"100,100"}
+<<set $passage to "DM-33A">><<set $map = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.51015287207643, -0.08593906808892092])>><main>
+<h2>A Resting Place</h2>
+$map
+
+</main>
+<<include "footerlost">>
+
+:: DM-33B {"position":"520,2113","size":"100,100"}
+<<set $passage to "DM-33B">><<set $map = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.50918673253736, -0.07806720674610745])>><main>
+<h2>Share Mile</h2>
+$map
+
+</main>
+<<include "footerlost">>
 
