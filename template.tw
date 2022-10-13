@@ -20,6 +20,8 @@ Daniel Mendoza's Art of Boxing
   src: url("/assets/fonts/bigjohn.otf") format("opentype");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
 /* GENERICS */
 html {
   box-sizing: border-box;
@@ -467,6 +469,11 @@ h2.letter{
 
 }
 
+.cursive{
+font-family: 'Dancing Script', cursive;
+  font-size: 3rem
+}
+
 
 :: Story JavaScript [script]
 $('#ui-bar').remove();
@@ -557,7 +564,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -784,7 +791,7 @@ We must be connecting with Daniel, take good care of him for me.
 <<include "footer">>
 
 :: DM-05 {"position":"454,195","size":"100,100"}
-<<set $passage to "DM-05">><<set $nextpassage to "DM-06">>
+<<set $passage to "DM-05">><<set $nextpassage to "DM-06A">>
 <<audio ":all" stop>><<audio "DM_05" play>>
 <main>
 
@@ -836,7 +843,7 @@ D: You'll have to read my book.<</replace>><</timed>>
  <</replace>><</timed>>
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-06A {"position":"375,325","size":"100,100"}
@@ -847,7 +854,7 @@ D: You'll have to read my book.<</replace>><</timed>>
 Fantastic. We’re off to a great start.
 
 
-<<timed 3s>><<set $prevpass to $passage>><<goto "DM-07">><</timed>>
+<<timed 5s>><<set $prevpass to $passage>><<goto "DM-07">><</timed>>
 
 
 
@@ -919,7 +926,7 @@ That’s a pity, but out of adversity comes stronger fighters.
 
 
 :: DM-08 {"position":"450,575","size":"100,100"}
-<<set $passage to "DM-08">><<set $nextpassage to "DM-09">><<audio ":all" stop>><<audio "DM_08" play>><<set $map1 = setup.generateDirectionsMap([51.51488091335985, -0.08084894611020126], [51.51478694203192, -0.08001595791060313])>>
+<<set $passage to "DM-08">><<set $nextpassage to "DM-08map">><<audio ":all" stop>><<audio "DM_08" play>>
 <main>
 
 <div id="mount"></div>
@@ -928,17 +935,22 @@ That’s a pity, but out of adversity comes stronger fighters.
 
 <<timed 3s>><<replace "#mount">>You don't want to say that name too loudly here or the press will hound both of us.<</replace>><</timed>>
 
-<<timed 8s>><<replace "#mount">>Let's get out discreetly. <</replace>><</timed>>
+<<timed 8s>><<replace "#mount">>Let's get out discreetly.
 
-<<timed 10s>><<replace "#mount">>
+<<button "Show map">><<set $prevpass to $passage>><<goto "DM-08map">><</button>> <</replace>><</timed>>
 
+</main>
+<<include "footer">>
+
+:: DM-08map {"position":"450,575","size":"100,100"}
+<<set $passage to "DM-08map">><<set $nextpassage to "DM-09">><<audio ":all" stop>><<set $map1 = setup.generateDirectionsMap([51.51488091335985, -0.08084894611020126], [51.51431124551452, -0.07979814600153363])>>
+<main>
 Cross St Mary Axe Street and find your way to the opposite side of the Gherkin.
 
 $map1
 
 <<button "Ok, here. Now what?">><<set $prevpass to $passage>><<goto "DM-09">><</button>>
 
-<</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -965,7 +977,7 @@ $map1
 
 
 :: DM-10 {"position":"450,825","size":"100,100"}
-<<set $passage to "DM-10">><<set $nextpassage to "DM-11">><<audio ":all" stop>><<audio "DM_10" play>><<set $map2 = setup.generateDirectionsMap([51.51478694203192, -0.08001595791060313], [51.51470988196478, -0.0790065685171643])>>
+<<set $passage to "DM-10">><<set $nextpassage to "DM-10map">><<audio ":all" stop>><<audio "DM_10" play>>
 <main>
 
 <div id="mount"></div>
@@ -982,26 +994,29 @@ $map1
 
 <<timed 28s>><<replace "#mount">>I'll help you become a better boxer. You'll help me become a better teacher. <</replace>><</timed>>
 
-<<timed 33.5s>><<replace "#mount">>It's very generous that you've come to my neighbourhood. So, bear with me and I'll give you what I've got.<</replace>><</timed>>
+<<timed 33.5s>><<replace "#mount">>It's very generous that you've come to my neighbourhood. So, bear with me and I'll give you what I've got.
 
-<<timed 41s>><<replace "#mount">>
+<<button "Show map ">><<set $prevpass to $passage>><<goto "DM-10map">><</button>><</replace>><</timed>>
 
-Head down the ramps. You should see Hollander House just in front of you. This is Bury Street. Take a left down here
+</main>
+<<include "footer">>
 
-Turn right at Bevis Marks. On your left, you’ll see a plaque and heritage work site
-
-$map2
+:: DM-10map {"position":"450,825","size":"100,100"}
+<<set $passage to "DM-10map">><<set $nextpassage to "DM-11">><<audio ":all" stop>><<set $map2 = setup.generateDirectionsMap([51.51431124551452, -0.07979814600153363], [51.5146934884185, -0.07882986850522901],)>>
+<main>
+Head down the ramps you should see Hollander house just in front of you. This is Bury Street. Take a left down here. Turn right at Bevis Marks. On your left you’ll see a plaque and heritage work site.
 
 <<button "At Bevis Marks ">><<set $prevpass to $passage>><<goto "DM-11">><</button>>
 
-<</replace>><</timed>>
+$map2
+
 
 </main>
 <<include "footer">>
 
 
 :: DM-11 {"position":"450,950","size":"100,100"}
-<<set $passage to "DM-11">><<audio ":all" stop>><<audio "DM_11" play>>
+<<set $passage to "DM-11">><<audio ":all" stop>><<audio "DM_11" play>><<set $nextpassage to "DM-12A">>
 <main>
 
 <div id="mount"></div>
@@ -1029,7 +1044,7 @@ $map2
 <</replace>><</timed>>
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-12A {"position":"375,1075","size":"100,100"}
@@ -1063,7 +1078,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 
 :: DM-13 {"position":"450,1200","size":"100,100"}
-<<set $passage to "DM-13">><<audio ":all" stop>><<audio "DM_13" play>>
+<<set $passage to "DM-13">><<audio ":all" stop>><<audio "DM_13" play>><<set $nextpassage to "DM-14A">>
 <main>
 
 <div id="mount"></div>
@@ -1121,7 +1136,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 <</replace>><</timed>>
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-14A {"position":"375,1325","size":"100,100"}
@@ -1199,7 +1214,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 
 :: DM-15 {"position":"450,1450","size":"100,100"}
-<<set $passage to "DM-15">><<set $nextpassage to "DM-16">><<audio ":all" stop>><<audio "DM_15" play>><<set $map3 = setup.generateDirectionsMap([51.51470988196478, -0.0790065685171643], [51.513336789798096, -0.08330679250171254])>>
+<<set $passage to "DM-15">><<set $nextpassage to "DM-15map">><<audio ":all" stop>><<audio "DM_15" play>>
 <main>
 
 <div id="mount"></div>
@@ -1224,27 +1239,31 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 <<timed 60s>><<replace "#mount">>I'm going to nip into shul, get away from this lot. Have a word with my Rabbi before the big day.<</replace>><</timed>>
 
-<<timed 66.5s>><<replace "#mount">>But I'll meet you at the market?<</replace>><</timed>>
+<<timed 66.5s>><<replace "#mount">>But I'll meet you at the market?
+
+<<button "Show map">><<set $prevpass to $passage>><<goto "DM-15map">><</button>><</replace>><</timed>>
 
 
-<<timed 69s>><<replace "#mount">>
+</main>
+<<include "footer">>
 
-Head back down Bury Street the way you came. Follow the path around the Gherkin, back to St Mary Axe Street.
-
-When you get there, carefully cross the street and take a left, heading toward to the open area in front of the building with the colourful vents.
-
-$map3
+:: DM-15map {"position":"450,1450","size":"100,100"}
+<<set $passage to "DM-15map">><<set $nextpassage to "DM-16">><<audio ":all" stop>><<set $map3 = setup.generateDirectionsMap([51.5146934884185, -0.07882986850522901], [51.513684383924925, -0.0815345435712461])>>
+<main>
+Head back down Bury St the way you came, follow the path around the Gherkin, back to St Mary Axe St.
+When you get there cross the street and take a left heading toward to the open area in front of the building with the colorful vents.
 
 <<button "Here">><<set $prevpass to $passage>><<goto "DM-16">><</button>>
 
-<</replace>><</timed>>
+$map3
+
 
 </main>
 <<include "footer">>
 
 
 :: DM-16 {"position":"450,1575","size":"100,100"}
-<<set $passage to "DM-16">><<audio ":all" stop>><<audio "DM_16" play>>
+<<set $passage to "DM-16">><<audio ":all" stop>><<audio "DM_16" play>><<set $nextpassage to "DM-17B">>
 <main>
 
 <div id="mount"></div>
@@ -1300,18 +1319,14 @@ $map3
 <</replace>><</timed>>
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-17A {"position":"375,1700","size":"100,100"}
-<<set $passage to "DM-17A">><<set $nextpassage to "DM-18A">><<audio ":all" stop>><<audio "DM_17A" play>>
-<main>
-
-<div id="mount"></div>
-
-<<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
+<<set $passage to "DM-17A">><<set $nextpassage to "DM-18A">><<audio ":all" stop>><<audio "DM_17A" play>><<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
 <<set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()>>
-
+<main>
+<div id="mount"></div>
 <<timed 0s>><<replace "#mount">>Okay, we need one challenger to face some opponents.<</replace>><</timed>>
 
 <<timed 4.5s>><<replace "#mount">>You can pair off for this exercise or take it in turns challenging.<</replace>><</timed>>
@@ -1419,7 +1434,7 @@ One last challenge. One last letter. Any takers?
 
 
 :: DM-22A {"position":"375,2325","size":"100,100"}
-<<set $passage to "DM-22A">><<audio ":all" stop>><<audio "DM_22A" play>>
+<<set $passage to "DM-22A">><<audio ":all" stop>><<audio "DM_22A" play>><<set $nextpassage to "DM-23">>
 <main>
 
 Do you want another round?
@@ -1431,11 +1446,11 @@ Do you want another round?
 </div>
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-17B {"position":"525,1700","size":"100,100"}
-<<set $passage to "DM-17B">><<audio ":all" stop>><<audio "DM_17B" play>>
+<<set $passage to "DM-17B">><<audio ":all" stop>><<audio "DM_17B" play>><<set $nextpassage to "DM-18B">>
 <main>
 
 <div id="mount"></div>
@@ -1450,20 +1465,15 @@ You can find a partner to play with, or practise this alone, for when you’re i
 
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-18B {"position":"525,1825","size":"100,100"}
-<<set $passage to "DM-18B">><<set $nextpassage to "DM-19B">><<audio ":all" stop>><<audio "DM_18B" play>>
-<main>
-
-<div id="mount"></div>
-
-<<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
+<<set $passage to "DM-18B">><<set $nextpassage to "DM-19B">><<audio ":all" stop>><<audio "DM_18B" play>><<set $notweirdalphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u']>>
 <<set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()>>
-
-$randomletter1
-
+<main>
+<h2 class="letter">$randomletter1</h2>
+<div id="mount"></div>
 <<timed 0s>><<replace "#mount">>Take a look at this letter. Don't show anyone.<</replace>><</timed>>
 
 <<timed 4s>><<replace "#mount">>I need you to embody this letter. I'll give you 30 seconds to get into position.
@@ -1481,20 +1491,15 @@ $randomletter1
 :: DM-19B {"position":"525,1950","size":"100,100"}
 <<set $passage to "DM-19B">><<set $nextpassage to "DM-20B">><<audio ":all" stop>><<audio "DM_19B" play>>
 <main>
-
+<h2 class="letter">$randomletter1</h2>
 <div id="mount"></div>
-
-$randomletter1
-
 <<timed 0s>><<replace "#mount">>Now I want you to look around the court. What can you see?<</replace>><</timed>>
 
 <<timed 4.5s>><<replace "#mount">>Can you see anything beginning with your letter?<</replace>><</timed>>
 
 <<timed 9s>><<replace "#mount">>As soon as you do, find a way to communicate that object without using any words.
 
-
 <<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-20B">><</button>>
-
 
 <</replace>><</timed>>
 
@@ -1506,16 +1511,13 @@ $randomletter1
 :: DM-20B {"position":"525,2075","size":"100,100"}
 <<set $passage to "DM-20B">><<set $nextpassage to "DM-21B">><<audio ":all" stop>><<audio "DM_20B" play>>
 <main>
+<h2 class="letter">$randomletter1</h2>
 <div id="mount"></div>
-
-$randomletter1
-
 <<timed 0s>><<replace "#mount">>Finally, think of an adjective or a way of describing your object.<</replace>><</timed>>
 
 <<timed 4.5s>><<replace "#mount">>This word should start with the same letter.<</replace>><</timed>>
 
 <<timed 8s>><<replace "#mount">>I want you to communicate that adjective using only your body. How easy is it to guess?
-
 
 <<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-21B">><</button>>
 
@@ -1528,7 +1530,7 @@ $randomletter1
 
 
 :: DM-21B {"position":"525,2200","size":"100,100"}
-<<set $passage to "DM-20B">><<set $nextpassage to "DM-23">><<audio ":all" stop>><<audio "DM_21B" play>>
+<<set $passage to "DM-20B">><<set $nextpassage to "DM-23">><<audio ":all" stop>><<audio "DM_21B" play>><<set $nextpassage to "DM-23">>
 <main>
 
 Do you want another round?
@@ -1547,7 +1549,7 @@ Do you want another round?
 
 
 :: DM-23 {"position":"450,2450","size":"100,100"}
-<<set $passage to "DM-23">><<set $nextpassage to "DM-24">><<audio ":all" stop>><<audio "DM_23" play>><<set $map4 = setup.generateDirectionsMap([51.513336789798096, -0.08330679250171254], [51.512892842200664, -0.08337869822763945])>>
+<<set $passage to "DM-23">><<set $nextpassage to "DM-23map">><<audio ":all" stop>><<audio "DM_23" play>>
 <main>
 
 <div id="mount"></div>
@@ -1566,7 +1568,7 @@ Get to Leadenhall Street and take a right.
 
 $map4
 
-<<button "Here">><<set $prevpass to $passage>><<goto "DM-24">><</button>>
+<<button "Here">><<set $prevpass to $passage>><<goto "DM-23map">><</button>>
 
 <</replace>><</timed>>
 
@@ -1574,12 +1576,26 @@ $map4
 </main>
 <<include "footer">>
 
+:: DM-23map {"position":"450,2450","size":"100,100"}
+<<set $passage to "DM-23map">><<set $nextpassage to "DM-24">><<audio ":all" stop>><<set $map4 = setup.generateDirectionsMap([51.513684383924925, -0.081534543571246], [51.51353527313783, -0.08229860558299848])>>
+<main>
+Get to Leadenhall Street and take a right.
+
+<<button "Here">><<set $prevpass to $passage>><<goto "DM-24">><</button>>
+
+$map4
+
+
+
+
+
+</main>
+<<include "footer">>
+
 
 :: DM-24 {"position":"450,2575","size":"100,100"}
-<<set $passage to "DM-24">><<set $nextpassage to "DM-25">><<audio ":all" stop>><<audio "DM_24" play>><<set $map4 = setup.generateDirectionsMap([51.513336789798096, -0.08330679250171254], [51.512892842200664, -0.08337869822763945])>>
-<main>
-
-<div id="mount"></div>
+<<set $passage to "DM-24">><<set $nextpassage to "DM-24map">><<audio ":all" stop>><<audio "DM_24" play>>
+<main><div id="mount"></div>
 
 <<timed 1s>><<replace "#mount">>Great, we shook them off.<</replace>><</timed>>
 
@@ -1625,9 +1641,27 @@ On the lefthand side, you come up to Leadenhall Market. Head in.
 
 $map4
 
-<<button "At Leadenhall Market">><<set $prevpass to $passage>><<goto "DM-25">><</button>>
+<<button "Show map">><<set $prevpass to $passage>><<goto "DM-24map">><</button>>
 
 <</replace>><</timed>>
+
+
+</main>
+<<include "footer">>
+
+:: DM-24map {"position":"450,2575","size":"100,100"}
+<<set $passage to "DM-24map">><<set $nextpassage to "DM-25">><<audio ":all" stop>><<set $map4 = setup.generateDirectionsMapWP([51.51353527313783, -0.08229860558299848], [51.51279475119132, -0.08377214934032554], "90 Gracechurch St")>>
+<main>
+Continue down Leadenhall Street until you come to the busy intersection.
+Take a left, carefully cross the road.
+On the lefthand side, you come up to Leadenhall Market. Head in.
+
+<<button "At Leadenhall Market">><<set $prevpass to $passage>><<goto "DM-25">><</button>>
+
+$map4
+
+
+
 
 
 </main>
@@ -1705,12 +1739,8 @@ $map4
 
 
 :: DM-26 {"position":"450,2825","size":"100,100"}
-<<set $passage to "DM-26">><<audio ":all" stop>><<set $rps to ["Rock!", "Paper!", "Scissors!"]>>
-<<set $opponent to $rps.random()>>
-
-<main>
-<div id="mount"></div>
-
+<<set $passage to "DM-26">><<audio ":all" stop>><<set $rps to ["Rock!", "Paper!", "Scissors!"]>><<set $nextpassage to "DM-27">><<set $opponent to $rps.random()>>
+<main><div id="mount"></div>
 One, two, three
 <<if $opponent is "Rock!">>
 <<audio ":all" stop>><<audio "DM_26-8_R" play>>
@@ -1730,13 +1760,8 @@ One, two, three
 
 
 :: DM-27 {"position":"450,2950","size":"100,100"}
-<<set $passage to "DM-27">>
-
-<main>
-
-<div id="mount"></div>
-
-<<set $opponent to $rps.random()>>
+<<set $passage to "DM-27">><<set $nextpassage to "DM-28">><<set $opponent to $rps.random()>>
+<main><div id="mount"></div>
 
 One, two, three
 <<if $opponent is "Rock!">>
@@ -1753,17 +1778,12 @@ One, two, three
 
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-28 {"position":"450,3075","size":"100,100"}
-<<set $passage to "DM-28">><<set $nextpassage to "DM-29">>
-<main>
-
-<div id="mount"></div>
-
-<<set $opponent to $rps.random()>>
-
+<<set $passage to "DM-28">><<set $nextpassage to "DM-29">><<set $opponent to $rps.random()>>
+<main><div id="mount"></div>
  One, two, three
 <<if $opponent is "Rock!">>
 <<audio ":all" stop>><<audio "DM_26-8_R" play>>
@@ -1779,11 +1799,11 @@ One, two, three
 
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-29 {"position":"450,3200","size":"100,100"}
-<<set $passage to "DM-29">><<set $nextpassage to "DM-30">><<audio ":all" stop>><<audio "DM_29" play>><<set $map6 = setup.generateDirectionsMap([51.512892842200664, -0.08337869822763945], [51.51233042912303, -0.0809482307665927])>>
+<<set $passage to "DM-29">><<set $nextpassage to "DM-29map">><<audio ":all" stop>><<audio "DM_29" play>>
 <main>
 <div id="mount"></div>
 
@@ -1799,23 +1819,32 @@ One, two, three
 
 <<timed 21s>><<replace "#mount">>I bet there's a few around here. You don't have to know them.<</replace>><</timed>>
 
-<<timed 24.5s>><<replace "#mount">>Challenge another person to a few rounds of rock, paper, scissors. I'll meet you in a moment.<</replace>><</timed>>
+<<timed 24.5s>><<replace "#mount">>Challenge another person to a few rounds of rock, paper, scissors. I'll meet you in a moment.
 
-<<timed 30s>><<replace "#mount">>
+<<button "At 120">><<set $prevpass to $passage>><<goto "DM-29map">><</button>><</replace>><</timed>>
+
+
+</main>
+<<include "footer">>
+
+:: DM-29map {"position":"450,3200","size":"100,100"}
+<<set $passage to "DM-29map">><<set $nextpassage to "DM-30">><<audio ":all" stop>><<set $map6 = setup.generateDirectionsMap([51.51279475119132, -0.08377214934032554], [51.512498718222815, -0.08099917839387917])>>
+<main>
+
 
 Continue down Whittington Avenue in the same direction as before. Head through the market to the opposite side you entered from.
 
 You should find yourself at Lime Street. Take a left.
 
-Just before the pedestrian section, the road turns right becoming Fenchurch Avenue. follow that.
+Just before the pedestrian section, the road turns right becoming Fenchurch Avenue, follow that.
 
 You’re looking for The Garden at 120
 
-$map6
-
 <<button "At 120">><<set $prevpass to $passage>><<goto "DM-30">><</button>>
 
-<</replace>><</timed>>
+$map6
+
+
 
 </main>
 <<include "footer">>
@@ -1825,8 +1854,6 @@ $map6
 <<set $passage to "DM-30">><<set $nextpassage to "DM-31">><<audio ":all" stop>><<audio "34" play>>
 <main>
 <div id="mount"></div>
-
-
 <<timed 0s>><<replace "#mount">>And now we reach our -<</replace>><</timed>>
 
 <<timed 3s>><<replace "#mount">>We reach our... sorry, I'm -<</replace>><</timed>>
@@ -1898,9 +1925,7 @@ $map6
 
 :: DM-31 {"position":"520,2113","size":"100,100"}
 <<set $passage to "DM-31">><<set $nextpassage to "DM-32">>
-
-<main>
-<div id="mount"></div>
+<main><div id="mount"></div>
 Thanks for helping Daniel out. I am sure he enjoyed meeting and training with you.
 
 Now, if you’re ready, let's head inside. 
@@ -1932,7 +1957,7 @@ When you’re up on the rooftop, find a steward in blue and show them this <<but
 <div class="adventure-wrapper"><h3>Share Mile  </h3><div class="adv-item"><div>18+
 9 min walk away</div><<button "Show Map">><<set $prevpass to $passage>><<goto "DM-33B">><</button>></div></div>
 
-
+</div>
 
 </main>
 <<include "footerkey">>

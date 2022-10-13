@@ -105,6 +105,8 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
   src: url("/assets/fonts/bigjohn.otf") format("opentype");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
 /* GENERICS */
 html {
   box-sizing: border-box;
@@ -550,6 +552,11 @@ h2.letter{
 
   font-size: 5rem;
 
+}
+
+.cursive{
+font-family: 'Dancing Script', cursive;
+  font-size: 3rem
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
 $(document.head).find('#style-ui-bar').remove();
 // TYPEWRITER FN
@@ -638,7 +645,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -808,7 +815,7 @@ We must be connecting with Daniel, take good care of him for me.
 &lt;&lt;timed 8s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-05&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="DM-05" tags="" position="454,195" size="100,100">&lt;&lt;set $passage to &quot;DM-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-06&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="DM-05" tags="" position="454,195" size="100,100">&lt;&lt;set $passage to &quot;DM-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-06A&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_05&quot; play&gt;&gt;
 &lt;main&gt;
 
@@ -860,14 +867,14 @@ D: You&#39;ll have to read my book.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt
  &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="DM-06A" tags="" position="375,325" size="100,100">&lt;&lt;set $passage to &quot;DM-06A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-07&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_06A&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="DM-06A" tags="" position="375,325" size="100,100">&lt;&lt;set $passage to &quot;DM-06A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-07&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_06A&quot; play&gt;&gt;
 &lt;main&gt;
 
 
 Fantastic. We’re off to a great start.
 
 
-&lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-07&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-07&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
 
@@ -927,7 +934,7 @@ That’s a pity, but out of adversity comes stronger fighters.
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="DM-08" tags="" position="450,575" size="100,100">&lt;&lt;set $passage to &quot;DM-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-09&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_08&quot; play&gt;&gt;&lt;&lt;set $map1 = setup.generateDirectionsMap([51.51488091335985, -0.08084894611020126], [51.51478694203192, -0.08001595791060313])&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="DM-08" tags="" position="450,575" size="100,100">&lt;&lt;set $passage to &quot;DM-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-08map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_08&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -936,20 +943,22 @@ That’s a pity, but out of adversity comes stronger fighters.
 
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;You don&#39;t want to say that name too loudly here or the press will hound both of us.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Let&#39;s get out discreetly. &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Let&#39;s get out discreetly.
 
-&lt;&lt;timed 10s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+&lt;&lt;button &quot;Show map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-08map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="DM-08map" tags="" position="450,575" size="100,100">&lt;&lt;set $passage to &quot;DM-08map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-09&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map1 = setup.generateDirectionsMap([51.51488091335985, -0.08084894611020126], [51.51431124551452, -0.07979814600153363])&gt;&gt;
+&lt;main&gt;
 Cross St Mary Axe Street and find your way to the opposite side of the Gherkin.
 
 $map1
 
 &lt;&lt;button &quot;Ok, here. Now what?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-09&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="DM-09" tags="" position="450,700" size="100,100">&lt;&lt;set $passage to &quot;DM-09&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-10&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_09&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="DM-09" tags="" position="450,700" size="100,100">&lt;&lt;set $passage to &quot;DM-09&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-10&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_09&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -965,7 +974,7 @@ $map1
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="DM-10" tags="" position="450,825" size="100,100">&lt;&lt;set $passage to &quot;DM-10&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_10&quot; play&gt;&gt;&lt;&lt;set $map2 = setup.generateDirectionsMap([51.51478694203192, -0.08001595791060313], [51.51470988196478, -0.0790065685171643])&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="DM-10" tags="" position="450,825" size="100,100">&lt;&lt;set $passage to &quot;DM-10&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-10map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_10&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -982,22 +991,22 @@ $map1
 
 &lt;&lt;timed 28s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;I&#39;ll help you become a better boxer. You&#39;ll help me become a better teacher. &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 33.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;It&#39;s very generous that you&#39;ve come to my neighbourhood. So, bear with me and I&#39;ll give you what I&#39;ve got.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 33.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;It&#39;s very generous that you&#39;ve come to my neighbourhood. So, bear with me and I&#39;ll give you what I&#39;ve got.
 
-&lt;&lt;timed 41s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+&lt;&lt;button &quot;Show map &quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-10map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-Head down the ramps. You should see Hollander House just in front of you. This is Bury Street. Take a left down here
-
-Turn right at Bevis Marks. On your left, you’ll see a plaque and heritage work site
-
-$map2
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="DM-10map" tags="" position="450,825" size="100,100">&lt;&lt;set $passage to &quot;DM-10map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map2 = setup.generateDirectionsMap([51.51431124551452, -0.07979814600153363], [51.5146934884185, -0.07882986850522901],)&gt;&gt;
+&lt;main&gt;
+Head down the ramps you should see Hollander house just in front of you. This is Bury Street. Take a left down here. Turn right at Bevis Marks. On your left you’ll see a plaque and heritage work site.
 
 &lt;&lt;button &quot;At Bevis Marks &quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-11&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+$map2
+
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="DM-11" tags="" position="450,950" size="100,100">&lt;&lt;set $passage to &quot;DM-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_11&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="DM-11" tags="" position="450,950" size="100,100">&lt;&lt;set $passage to &quot;DM-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_11&quot; play&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-12A&quot;&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1025,7 +1034,7 @@ $map2
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="DM-12A" tags="" position="375,1075" size="100,100">&lt;&lt;set $passage to &quot;DM-12A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_12A&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="DM-12A" tags="" position="375,1075" size="100,100">&lt;&lt;set $passage to &quot;DM-12A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_12A&quot; play&gt;&gt;
 &lt;main&gt;
 
 Great, let’s get started.
@@ -1034,7 +1043,7 @@ Great, let’s get started.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="DM-12B" tags="" position="525,1075" size="100,100">&lt;&lt;set $passage to &quot;DM-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_12B&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="DM-12B" tags="" position="525,1075" size="100,100">&lt;&lt;set $passage to &quot;DM-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_12B&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1047,7 +1056,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="DM-13" tags="" position="450,1200" size="100,100">&lt;&lt;set $passage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_13&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="DM-13" tags="" position="450,1200" size="100,100">&lt;&lt;set $passage to &quot;DM-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_13&quot; play&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-14A&quot;&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1105,7 +1114,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="DM-14A" tags="" position="375,1325" size="100,100">&lt;&lt;set $passage to &quot;DM-14A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_14A&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="DM-14A" tags="" position="375,1325" size="100,100">&lt;&lt;set $passage to &quot;DM-14A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_14A&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1143,7 +1152,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 &lt;&lt;timed 73s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-15&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="DM-14B" tags="" position="525,1325" size="100,100">&lt;&lt;set $passage to &quot;DM-14B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_14B&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="DM-14B" tags="" position="525,1325" size="100,100">&lt;&lt;set $passage to &quot;DM-14B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_14B&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1171,7 +1180,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 &lt;&lt;timed 51s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-15&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="DM-15" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-16&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_15&quot; play&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.51470988196478, -0.0790065685171643], [51.513336789798096, -0.08330679250171254])&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="DM-15" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;DM-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-15map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_15&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1196,23 +1205,24 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 &lt;&lt;timed 60s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;I&#39;m going to nip into shul, get away from this lot. Have a word with my Rabbi before the big day.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 66.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;But I&#39;ll meet you at the market?&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 66.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;But I&#39;ll meet you at the market?
+
+&lt;&lt;button &quot;Show map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-15map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
-&lt;&lt;timed 69s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-
-Head back down Bury Street the way you came. Follow the path around the Gherkin, back to St Mary Axe Street.
-
-When you get there, carefully cross the street and take a left, heading toward to the open area in front of the building with the colourful vents.
-
-$map3
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="DM-15map" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;DM-15map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-16&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.5146934884185, -0.07882986850522901], [51.513684383924925, -0.0815345435712461])&gt;&gt;
+&lt;main&gt;
+Head back down Bury St the way you came, follow the path around the Gherkin, back to St Mary Axe St.
+When you get there cross the street and take a left heading toward to the open area in front of the building with the colorful vents.
 
 &lt;&lt;button &quot;Here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-16&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+$map3
+
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="DM-16" tags="" position="450,1575" size="100,100">&lt;&lt;set $passage to &quot;DM-16&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_16&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="DM-16" tags="" position="450,1575" size="100,100">&lt;&lt;set $passage to &quot;DM-16&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_16&quot; play&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-17B&quot;&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1268,14 +1278,10 @@ $map3
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="DM-17A" tags="" position="375,1700" size="100,100">&lt;&lt;set $passage to &quot;DM-17A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-18A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_17A&quot; play&gt;&gt;
-&lt;main&gt;
-
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
-&lt;&lt;set $notweirdalphabet = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;,&#39;i&#39;,&#39;j&#39;,&#39;k&#39;,&#39;l&#39;,&#39;m&#39;,&#39;n&#39;,&#39;o&#39;,&#39;p&#39;,&#39;r&#39;,&#39;s&#39;,&#39;t&#39;,&#39;u&#39;]&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="DM-17A" tags="" position="375,1700" size="100,100">&lt;&lt;set $passage to &quot;DM-17A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-18A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_17A&quot; play&gt;&gt;&lt;&lt;set $notweirdalphabet = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;,&#39;i&#39;,&#39;j&#39;,&#39;k&#39;,&#39;l&#39;,&#39;m&#39;,&#39;n&#39;,&#39;o&#39;,&#39;p&#39;,&#39;r&#39;,&#39;s&#39;,&#39;t&#39;,&#39;u&#39;]&gt;&gt;
 &lt;&lt;set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
-
+&lt;main&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Okay, we need one challenger to face some opponents.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 4.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;You can pair off for this exercise or take it in turns challenging.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1304,7 +1310,7 @@ $map3
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="DM-18A" tags="" position="375,1825" size="100,100">&lt;&lt;set $passage to &quot;DM-18A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_18A&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="DM-18A" tags="" position="375,1825" size="100,100">&lt;&lt;set $passage to &quot;DM-18A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_18A&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1318,7 +1324,7 @@ $map3
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="DM-19A" tags="" position="375,1950" size="100,100">&lt;&lt;set $passage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-20A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_19A&quot; play&gt;&gt;&lt;&lt;set $randomletter2 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="DM-19A" tags="" position="375,1950" size="100,100">&lt;&lt;set $passage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-20A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_19A&quot; play&gt;&gt;&lt;&lt;set $randomletter2 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
 
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1338,7 +1344,7 @@ $map3
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="DM-20A" tags="" position="375,2075" size="100,100">&lt;&lt;set $passage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-21A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_20A&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="DM-20A" tags="" position="375,2075" size="100,100">&lt;&lt;set $passage to &quot;DM-19A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-21A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_20A&quot; play&gt;&gt;
 &lt;main&gt;
 
 One last challenge. One last letter. Any takers?
@@ -1347,7 +1353,7 @@ One last challenge. One last letter. Any takers?
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="DM-21A" tags="" position="375,2200" size="100,100">&lt;&lt;set $passage to &quot;DM-21A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-22A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_21A&quot; play&gt;&gt;&lt;&lt;set $randomletter3 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="DM-21A" tags="" position="375,2200" size="100,100">&lt;&lt;set $passage to &quot;DM-21A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-22A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_21A&quot; play&gt;&gt;&lt;&lt;set $randomletter3 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;h2 class=&quot;letter&quot;&gt;$randomletter3&lt;/h2&gt;
@@ -1363,7 +1369,7 @@ One last challenge. One last letter. Any takers?
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="DM-22A" tags="" position="375,2325" size="100,100">&lt;&lt;set $passage to &quot;DM-22A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_22A&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="DM-22A" tags="" position="375,2325" size="100,100">&lt;&lt;set $passage to &quot;DM-22A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_22A&quot; play&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-23&quot;&gt;&gt;
 &lt;main&gt;
 
 Do you want another round?
@@ -1375,7 +1381,7 @@ Do you want another round?
 &lt;/div&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="DM-17B" tags="" position="525,1700" size="100,100">&lt;&lt;set $passage to &quot;DM-17B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_17B&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="DM-17B" tags="" position="525,1700" size="100,100">&lt;&lt;set $passage to &quot;DM-17B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_17B&quot; play&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-18B&quot;&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1390,16 +1396,11 @@ You can find a partner to play with, or practise this alone, for when you’re i
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="DM-18B" tags="" position="525,1825" size="100,100">&lt;&lt;set $passage to &quot;DM-18B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-19B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_18B&quot; play&gt;&gt;
-&lt;main&gt;
-
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
-&lt;&lt;set $notweirdalphabet = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;,&#39;i&#39;,&#39;j&#39;,&#39;k&#39;,&#39;l&#39;,&#39;m&#39;,&#39;n&#39;,&#39;o&#39;,&#39;p&#39;,&#39;r&#39;,&#39;s&#39;,&#39;t&#39;,&#39;u&#39;]&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="DM-18B" tags="" position="525,1825" size="100,100">&lt;&lt;set $passage to &quot;DM-18B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-19B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_18B&quot; play&gt;&gt;&lt;&lt;set $notweirdalphabet = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;,&#39;i&#39;,&#39;j&#39;,&#39;k&#39;,&#39;l&#39;,&#39;m&#39;,&#39;n&#39;,&#39;o&#39;,&#39;p&#39;,&#39;r&#39;,&#39;s&#39;,&#39;t&#39;,&#39;u&#39;]&gt;&gt;
 &lt;&lt;set $randomletter1 to $notweirdalphabet.pluck().toUpperCase()&gt;&gt;
-
-$randomletter1
-
+&lt;main&gt;
+&lt;h2 class=&quot;letter&quot;&gt;$randomletter1&lt;/h2&gt;
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Take a look at this letter. Don&#39;t show anyone.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;I need you to embody this letter. I&#39;ll give you 30 seconds to get into position.
@@ -1411,39 +1412,31 @@ $randomletter1
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="DM-19B" tags="" position="525,1950" size="100,100">&lt;&lt;set $passage to &quot;DM-19B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_19B&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="DM-19B" tags="" position="525,1950" size="100,100">&lt;&lt;set $passage to &quot;DM-19B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_19B&quot; play&gt;&gt;
 &lt;main&gt;
-
+&lt;h2 class=&quot;letter&quot;&gt;$randomletter1&lt;/h2&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
-$randomletter1
-
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Now I want you to look around the court. What can you see?&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 4.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Can you see anything beginning with your letter?&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;As soon as you do, find a way to communicate that object without using any words.
 
-
 &lt;&lt;button &quot;Next Challenge&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-20B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-
 
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="DM-20B" tags="" position="525,2075" size="100,100">&lt;&lt;set $passage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-21B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_20B&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="DM-20B" tags="" position="525,2075" size="100,100">&lt;&lt;set $passage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-21B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_20B&quot; play&gt;&gt;
 &lt;main&gt;
+&lt;h2 class=&quot;letter&quot;&gt;$randomletter1&lt;/h2&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
-$randomletter1
-
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Finally, think of an adjective or a way of describing your object.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 4.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;This word should start with the same letter.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 8s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;I want you to communicate that adjective using only your body. How easy is it to guess?
-
 
 &lt;&lt;button &quot;Next Challenge&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-21B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
@@ -1452,7 +1445,7 @@ $randomletter1
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="DM-21B" tags="" position="525,2200" size="100,100">&lt;&lt;set $passage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-23&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_21B&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="DM-21B" tags="" position="525,2200" size="100,100">&lt;&lt;set $passage to &quot;DM-20B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-23&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_21B&quot; play&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-23&quot;&gt;&gt;
 &lt;main&gt;
 
 Do you want another round?
@@ -1467,7 +1460,7 @@ Do you want another round?
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="DM-23" tags="" position="450,2450" size="100,100">&lt;&lt;set $passage to &quot;DM-23&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_23&quot; play&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([51.513336789798096, -0.08330679250171254], [51.512892842200664, -0.08337869822763945])&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="DM-23" tags="" position="450,2450" size="100,100">&lt;&lt;set $passage to &quot;DM-23&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-23map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_23&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1486,16 +1479,27 @@ Get to Leadenhall Street and take a right.
 
 $map4
 
-&lt;&lt;button &quot;Here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-23map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="DM-24" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-25&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_24&quot; play&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([51.513336789798096, -0.08330679250171254], [51.512892842200664, -0.08337869822763945])&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="DM-23map" tags="" position="450,2450" size="100,100">&lt;&lt;set $passage to &quot;DM-23map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([51.513684383924925, -0.081534543571246], [51.51353527313783, -0.08229860558299848])&gt;&gt;
 &lt;main&gt;
+Get to Leadenhall Street and take a right.
 
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;button &quot;Here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+$map4
+
+
+
+
+
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="DM-24" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-24map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_24&quot; play&gt;&gt;
+&lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 
 &lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Great, we shook them off.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -1541,13 +1545,28 @@ On the lefthand side, you come up to Leadenhall Market. Head in.
 
 $map4
 
-&lt;&lt;button &quot;At Leadenhall Market&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-25&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Show map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-24map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="DM-25" tags="" position="450,2700" size="100,100">&lt;&lt;set $passage to &quot;DM-25&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_25&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="DM-24map" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;DM-24map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-25&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMapWP([51.51353527313783, -0.08229860558299848], [51.51279475119132, -0.08377214934032554], &quot;90 Gracechurch St&quot;)&gt;&gt;
+&lt;main&gt;
+Continue down Leadenhall Street until you come to the busy intersection.
+Take a left, carefully cross the road.
+On the lefthand side, you come up to Leadenhall Market. Head in.
+
+&lt;&lt;button &quot;At Leadenhall Market&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-25&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+$map4
+
+
+
+
+
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="DM-25" tags="" position="450,2700" size="100,100">&lt;&lt;set $passage to &quot;DM-25&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_25&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1613,12 +1632,8 @@ $map4
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="DM-26" tags="" position="450,2825" size="100,100">&lt;&lt;set $passage to &quot;DM-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $rps to [&quot;Rock!&quot;, &quot;Paper!&quot;, &quot;Scissors!&quot;]&gt;&gt;
-&lt;&lt;set $opponent to $rps.random()&gt;&gt;
-
-&lt;main&gt;
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="DM-26" tags="" position="450,2825" size="100,100">&lt;&lt;set $passage to &quot;DM-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $rps to [&quot;Rock!&quot;, &quot;Paper!&quot;, &quot;Scissors!&quot;]&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-27&quot;&gt;&gt;&lt;&lt;set $opponent to $rps.random()&gt;&gt;
+&lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 One, two, three
 &lt;&lt;if $opponent is &quot;Rock!&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_26-8_R&quot; play&gt;&gt;
@@ -1634,13 +1649,8 @@ One, two, three
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="DM-27" tags="" position="450,2950" size="100,100">&lt;&lt;set $passage to &quot;DM-27&quot;&gt;&gt;
-
-&lt;main&gt;
-
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
-&lt;&lt;set $opponent to $rps.random()&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="DM-27" tags="" position="450,2950" size="100,100">&lt;&lt;set $passage to &quot;DM-27&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-28&quot;&gt;&gt;&lt;&lt;set $opponent to $rps.random()&gt;&gt;
+&lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 
 One, two, three
 &lt;&lt;if $opponent is &quot;Rock!&quot;&gt;&gt;
@@ -1657,13 +1667,8 @@ One, two, three
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="DM-28" tags="" position="450,3075" size="100,100">&lt;&lt;set $passage to &quot;DM-28&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-29&quot;&gt;&gt;
-&lt;main&gt;
-
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
-&lt;&lt;set $opponent to $rps.random()&gt;&gt;
-
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="DM-28" tags="" position="450,3075" size="100,100">&lt;&lt;set $passage to &quot;DM-28&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-29&quot;&gt;&gt;&lt;&lt;set $opponent to $rps.random()&gt;&gt;
+&lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
  One, two, three
 &lt;&lt;if $opponent is &quot;Rock!&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_26-8_R&quot; play&gt;&gt;
@@ -1679,7 +1684,7 @@ One, two, three
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="DM-29" tags="" position="450,3200" size="100,100">&lt;&lt;set $passage to &quot;DM-29&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-30&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_29&quot; play&gt;&gt;&lt;&lt;set $map6 = setup.generateDirectionsMap([51.512892842200664, -0.08337869822763945], [51.51233042912303, -0.0809482307665927])&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="DM-29" tags="" position="450,3200" size="100,100">&lt;&lt;set $passage to &quot;DM-29&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-29map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_29&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 
@@ -1695,30 +1700,34 @@ One, two, three
 
 &lt;&lt;timed 21s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;I bet there&#39;s a few around here. You don&#39;t have to know them.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 24.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Challenge another person to a few rounds of rock, paper, scissors. I&#39;ll meet you in a moment.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 24.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Challenge another person to a few rounds of rock, paper, scissors. I&#39;ll meet you in a moment.
 
-&lt;&lt;timed 30s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+&lt;&lt;button &quot;At 120&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-29map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="DM-29map" tags="" position="450,3200" size="100,100">&lt;&lt;set $passage to &quot;DM-29map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-30&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map6 = setup.generateDirectionsMap([51.51279475119132, -0.08377214934032554], [51.512498718222815, -0.08099917839387917])&gt;&gt;
+&lt;main&gt;
+
 
 Continue down Whittington Avenue in the same direction as before. Head through the market to the opposite side you entered from.
 
 You should find yourself at Lime Street. Take a left.
 
-Just before the pedestrian section, the road turns right becoming Fenchurch Avenue. follow that.
+Just before the pedestrian section, the road turns right becoming Fenchurch Avenue, follow that.
 
 You’re looking for The Garden at 120
 
-$map6
-
 &lt;&lt;button &quot;At 120&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-30&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+$map6
+
+
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="DM-30" tags="" position="450,3325" size="100,100">&lt;&lt;set $passage to &quot;DM-30&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-31&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;34&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="DM-30" tags="" position="450,3325" size="100,100">&lt;&lt;set $passage to &quot;DM-30&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-31&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;34&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
-
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;And now we reach our -&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;We reach our... sorry, I&#39;m -&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1783,10 +1792,8 @@ $map6
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="DM-31" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-31&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-32&quot;&gt;&gt;
-
-&lt;main&gt;
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="DM-31" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-31&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-32&quot;&gt;&gt;
+&lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Thanks for helping Daniel out. I am sure he enjoyed meeting and training with you.
 
 Now, if you’re ready, let&#39;s head inside. 
@@ -1797,13 +1804,13 @@ Get your bags scanned and head up in the lift to the Garden at 120.
 
 When you’re up on the rooftop, find a steward in blue and show them this &lt;&lt;button &quot;key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-32&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="DM-32" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-32&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-32adventures&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="DM-32" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-32&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-32adventures&quot;&gt;&gt;
  &lt;main&gt;
 &lt;div class=&quot;key-wrapper glowing&quot;&gt;&lt;img src=&quot;./assets/Gardenat120.png&quot;&gt;&lt;/div&gt;
 
 &lt;h2 class=&quot;endpoint&quot;&gt;Garden at 120&lt;/h2&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="DM-32adventures" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-32adventures&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
+&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="DM-32adventures" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-32adventures&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
 &lt;h3&gt;Start a new adventure...&lt;/h3&gt;
 &lt;div class=&quot;choices&quot;&gt;
 &lt;div class=&quot;adventure-wrapper&quot;&gt;&lt;h3&gt;A Resting Place &lt;/h3&gt;&lt;div class=&quot;adv-item&quot;&gt;&lt;div&gt;7 min walk away&lt;/div&gt;&lt;&lt;button &quot;Show Map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-33A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1811,15 +1818,15 @@ When you’re up on the rooftop, find a steward in blue and show them this &lt;&
 &lt;div class=&quot;adventure-wrapper&quot;&gt;&lt;h3&gt;Share Mile  &lt;/h3&gt;&lt;div class=&quot;adv-item&quot;&gt;&lt;div&gt;18+
 9 min walk away&lt;/div&gt;&lt;&lt;button &quot;Show Map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-33B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;
 
-
+&lt;/div&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="DM-33A" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-33A&quot;&gt;&gt;&lt;&lt;set $map = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.51015287207643, -0.08593906808892092])&gt;&gt;&lt;main&gt;
+&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="DM-33A" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-33A&quot;&gt;&gt;&lt;&lt;set $map = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.51015287207643, -0.08593906808892092])&gt;&gt;&lt;main&gt;
 &lt;h2&gt;A Resting Place&lt;/h2&gt;
 $map
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footerlost&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="DM-33B" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-33B&quot;&gt;&gt;&lt;&lt;set $map = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.50918673253736, -0.07806720674610745])&gt;&gt;&lt;main&gt;
+&lt;&lt;include &quot;footerlost&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="DM-33B" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;DM-33B&quot;&gt;&gt;&lt;&lt;set $map = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.50918673253736, -0.07806720674610745])&gt;&gt;&lt;main&gt;
 &lt;h2&gt;Share Mile&lt;/h2&gt;
 $map
 
