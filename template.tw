@@ -592,45 +592,53 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "DM_05" "https://www.youhavefoundconey.net/tgksnd/DM/DM_05.mp3">>
+<<cacheaudio "DM-01" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_01.mp3">>
+<<cacheaudio "DM-02A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/felix/XX_02_greatsolo.mp3">>
+<<cacheaudio "DM-02B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/felix/XX_02_perfectgroup.mp3">>
+<<cacheaudio "DM-03" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/felix/XX_03.mp3">>
+<<cacheaudio "DM-04" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM-04.mp3">>
+<<cacheaudio "DM_05" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_05.mp3">>
 
-<<cacheaudio "DM_06A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_06A.mp3">>
-<<cacheaudio "DM_06B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_06B.mp3">>
-<<cacheaudio "DM_07" "https://www.youhavefoundconey.net/tgksnd/DM/DM_07.mp3">>
-<<cacheaudio "DM_08" "https://www.youhavefoundconey.net/tgksnd/DM/DM_08.mp3">>
-<<cacheaudio "DM_09" "https://www.youhavefoundconey.net/tgksnd/DM/DM_09.mp3">>
+<<cacheaudio "DM_06A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_06A.mp3">>
+<<cacheaudio "DM_06B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_06B.mp3">>
+<<cacheaudio "DM_07" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_07.mp3">>
+<<cacheaudio "DM_08" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_08.mp3">>
+<<cacheaudio "DM_09" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_09.mp3">>
 
-<<cacheaudio "DM_10" "https://www.youhavefoundconey.net/tgksnd/DM/DM_10.mp3">>
-<<cacheaudio "DM_11" "https://www.youhavefoundconey.net/tgksnd/DM/DM_11.mp3">>
+<<cacheaudio "DM_10" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_10.mp3">>
+<<cacheaudio "DM_11" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_11.mp3">>
 
-<<cacheaudio "DM_12A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_12A.mp3">>
-<<cacheaudio "DM_12B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_12B.mp3">>
-<<cacheaudio "DM_13" "https://www.youhavefoundconey.net/tgksnd/DM/DM_13.mp3">>
-<<cacheaudio "DM_14A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_14A.mp3">>
-<<cacheaudio "DM_14B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_14B.mp3">>
-<<cacheaudio "DM_15" "https://www.youhavefoundconey.net/tgksnd/DM/DM_15.mp3">>
-<<cacheaudio "DM_16" "https://www.youhavefoundconey.net/tgksnd/DM/DM_16.mp3">>
+<<cacheaudio "DM_12A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_12A.mp3">>
+<<cacheaudio "DM_12B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_12B.mp3">>
+<<cacheaudio "DM_13" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_13.mp3">>
+<<cacheaudio "DM_14A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_14A.mp3">>
+<<cacheaudio "DM_14B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_14B.mp3">>
+<<cacheaudio "DM_15" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_15.mp3">>
+<<cacheaudio "DM_16" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_16.mp3">>
 
-<<cacheaudio "DM_17A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_17A.mp3">>
-<<cacheaudio "DM_17B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_17B.mp3">>
-<<cacheaudio "DM_18B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_18B.mp3">>
-<<cacheaudio "DM_18A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_18A.mp3">>
-<<cacheaudio "DM_19A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_19A.mp3">>
+<<cacheaudio "DM_17A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_17A.mp3">>
+<<cacheaudio "DM_17B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_17B.mp3">>
+<<cacheaudio "DM_18B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_18B.mp3">>
+<<cacheaudio "DM_18A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_18A.mp3">>
+<<cacheaudio "DM_19A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_19A.mp3">>
 
-<<cacheaudio "DM_19B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_19B.mp3">>
-<<cacheaudio "DM_20A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_20A.mp3">>
-<<cacheaudio "DM_20B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_20B.mp3">>
-<<cacheaudio "DM_21A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_21A.mp3">>
-<<cacheaudio "DM_21B" "https://www.youhavefoundconey.net/tgksnd/DM/DM_21B.mp3">>
-<<cacheaudio "DM_22A" "https://www.youhavefoundconey.net/tgksnd/DM/DM_22A.mp3">>
-<<cacheaudio "DM_23" "https://www.youhavefoundconey.net/tgksnd/DM/DM_23.mp3">>
-<<cacheaudio "DM_24" "https://www.youhavefoundconey.net/tgksnd/DM/DM_24.mp3">>
-<<cacheaudio "DM_25" "https://www.youhavefoundconey.net/tgksnd/DM/DM_25.mp3">>
-<<cacheaudio "DM_26-8_P" "https://www.youhavefoundconey.net/tgksnd/DM/DM_26-8_P.mp3">>
-<<cacheaudio "DM_26-8_R" "https://www.youhavefoundconey.net/tgksnd/DM/DM_26-8_R.mp3">>
-<<cacheaudio "DM_26-8_S" "https://www.youhavefoundconey.net/tgksnd/DM/DM_26-8_S.mp3">>
-<<cacheaudio "DM_29" "https://www.youhavefoundconey.net/tgksnd/DM/DM_29.mp3">>
-<<cacheaudio "34" "https://www.youhavefoundconey.net/tgksnd/DM/34.mp3">>
+<<cacheaudio "DM_19B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_19B.mp3">>
+<<cacheaudio "DM_20A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_20A.mp3">>
+<<cacheaudio "DM_20B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_20B.mp3">>
+<<cacheaudio "DM_21A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_21A.mp3">>
+<<cacheaudio "DM_21B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_21B.mp3">>
+<<cacheaudio "DM_22A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_22A.mp3">>
+<<cacheaudio "DM_23" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_23.mp3">>
+<<cacheaudio "DM_24" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_24.mp3">>
+<<cacheaudio "DM_25" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_25.mp3">>
+<<cacheaudio "DM_26-8_P" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_26-8_P.mp3">>
+<<cacheaudio "DM_26-8_R" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_26-8_R.mp3">>
+<<cacheaudio "DM_26-8_S" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_26-8_S.mp3">>
+<<cacheaudio "DM_29" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_29.mp3">>
+<<cacheaudio "DM-30" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM-30.mp3">>
+<<cacheaudio "DM-31" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM-31.mp3">>
+
+<<cacheaudio "34" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/34.mp3">>
 
 
 <<waitforaudio>>
@@ -662,11 +670,13 @@ setup.checkForRepeats = (array,element) => {
 <div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
 </footer>
 
-:: footerkey
+
+:: footerkey {"position":"225,150","size":"100,100"}
 <footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "DM-32">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "DM-32adventures">><</button>></div></div></footer>
 
-:: lost {"position":"710,53","size":"100,100"}
-<<set $passage to "lost">>
+
+:: lost {"position":"225,25","size":"100,100"}
+<<set $passage to "lost">><<audio ":all" stop>>
 <main>
 You have two options:
 
@@ -683,8 +693,9 @@ You have two options:
 <<set $passage to "landing">>
 
 <main>
+<h2>Daniel Mendoza's Art of Boxing</h2>
 
-<<button "Start">><<set $prevpass to $passage>><<goto "DM-05">><</button>>
+<<button "Start">><<set $prevpass to $passage>><<goto "DM-01">><</button>>
      
 
 </main>
@@ -702,50 +713,62 @@ $endMap
 <<include "footerend">>
 
 
-:: DM-01 {"position":"449,226","size":"100,100"}
+:: DM-01 {"position":"450,200","size":"100,100"}
 <<set $passage to "DM-01">><<set $nextpassage to "DM-02B">>
-/* <<audio ":all" stop>><<audio "DM-01" play>> */
-<main>
-<div id="mount"></div> 
+<<audio ":all" stop>><<audio "DM-01" play>>
+<main><div id="mount"></div> 
+<<timed 2s>><<replace "#mount">>
+  Felix, keeper of the Maze, and small dragon, here at your service.
+  <</replace>>
+<</timed>>
+  <<timed 8s>><<replace "#mount">>
+  I'm opening up the City to you, a City you've never experienced before, and its secrets too. 
+  
+  For the City is full of treasure. 
+  <</replace>><</timed>>
+  <<timed 16s>><<replace "#mount">> Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+  <</replace>><</timed>>
 
-Felix, keeper of the Maze, and small dragon, here at your service.
+<<timed 24s>><<replace "#mount">>You're now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I've been alive. 
+ <</replace>><</timed>>
 
+<<timed 38s>><<replace "#mount">>You've opened up door #4 into the maze of adventures. 
 
-I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. For the City is full of treasure. Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+You'll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
+ <</replace>><</timed>>
 
-You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
+<<timed 47s>><<replace "#mount">>If you follow them all the way along their adventure, I'll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+ <</replace>><</timed>>
 
-You’ve opened up door #4 into the maze of adventures. 
+<<timed 57s>><<replace "#mount">>What kind of amazing experience? Well, it's a surprise. Otherwise this wouldn't be an adventure.
 
-You’ll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
-
-If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
-
-What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
-
-Now are you playing this adventure solo or with a group?
+Now - are you playing this adventure solo, or in a group?
  
 <div class="menu-wrapper">
   <<button "Solo">><<set $prevpass to $passage>><<goto "DM-02A">><</button>>
   
   <<button "Group">><<set $prevpass to $passage>><<goto "DM-02B">><</button>></div>
+ <</replace>><</timed>>
 </main>
-<<include "footer">>
+ <<include "footer">>
 
-:: DM-02A {"position":"448,476","size":"100,100"}
+
+:: DM-02A {"position":"600,125","size":"100,100"}
 <<set $passage to "DM-02A">><<set $nextpassage to "DM-03">>
-/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<<audio ":all" stop>><<audio "DM-02A" play>>
 <main>
 <div id="mount"></div> 
 This adventure is great for a solo player
+
 <<button "Next">><<set $prevpass to $passage>><<goto "DM-03">><</button>>
  
 </main>
 <<include "footer">>
 
-:: DM-02B {"position":"448,476","size":"100,100"}
+
+:: DM-02B {"position":"600,250","size":"100,100"}
 <<set $passage to "DM-02B">><<set $nextpassage to "DM-03">>
-/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<<audio ":all" stop>><<audio "DM-02B" play>>
 <main>
 <div id="mount"></div> 
 This is perfect for a group! If you’re playing on separate devices try to press your buttons at the same time to stay in sync.  
@@ -756,9 +779,10 @@ This is perfect for a group! If you’re playing on separate devices try to pres
 </main>
 <<include "footer">>
 
-:: DM-03 {"position":"448,476","size":"100,100"}
-<<set $passage to "DM-03.1">><<set $nextpassage to "DM-04">>
-/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+
+:: DM-03 {"position":"725,175","size":"100,100"}
+<<set $passage to "DM-03">><<set $nextpassage to "DM-04">>
+<<audio ":all" stop>><<audio "DM-03" play>>
 <main>
 <div id="mount"></div> 
 You can always use the arrows or the replay button if you need to hear or read anything again. 
@@ -776,8 +800,10 @@ Are you ready?
 </main>
 <<include "footer">>
 
-:: DM-04 {"position":"448,476","size":"100,100"}
-<<set $passage to "DM-04">><<set $nextpassage to "DM-05">><<audio ":all" stop>><main>
+
+:: DM-04 {"position":"850,175","size":"100,100"}
+<<set $passage to "DM-04">><<set $nextpassage to "DM-05">><<audio ":all" stop>><<audio "DM-04" play>>
+<main>
 My friend Daniel will be here soon to guide you, connecting from the year 1789.
 
 I’ll provide maps when needed. 
@@ -786,12 +812,13 @@ Oh, I hear the reporters now.
 
 We must be connecting with Daniel, take good care of him for me. 
 
-<<timed 8s>><<set $prevpass to $passage>><<goto "DM-05">><</timed>>
+<<timed 18s>><<set $prevpass to $passage>><<goto "DM-05">><</timed>>
 
 </main>
 <<include "footer">>
 
-:: DM-05 {"position":"454,195","size":"100,100"}
+
+:: DM-05 {"position":"1000,175","size":"100,100"}
 <<set $passage to "DM-05">><<set $nextpassage to "DM-06A">>
 <<audio ":all" stop>><<audio "DM_05" play>>
 <main>
@@ -855,7 +882,7 @@ D: You'll have to read my book.<</replace>><</timed>>
 Fantastic. We’re off to a great start.
 
 
-<<timed 5s>><<set $prevpass to $passage>><<goto "DM-07">><</timed>>
+<<timed 5s>><<set $prevpass to "DM-05">><<goto "DM-07">><</timed>>
 
 
 
@@ -863,7 +890,7 @@ Fantastic. We’re off to a great start.
 <<include "footer">>
 
 
-:: DM-06B {"position":"525,325","size":"100,100"}
+:: DM-06B {"position":"500,325","size":"100,100"}
 <<set $passage to "DM-06B">><<set $nextpassage to "DM-07">><<audio ":all" stop>><<audio "DM_06B" play>>
 <main>
 
@@ -871,7 +898,7 @@ Fantastic. We’re off to a great start.
 That’s a pity, but out of adversity comes stronger fighters.
 
 
-<<timed 7s>><<set $prevpass to $passage>><<goto "DM-07">><</timed>>
+<<timed 7s>><<set $prevpass to "DM-05">><<goto "DM-07">><</timed>>
 
 
 
@@ -943,7 +970,8 @@ That’s a pity, but out of adversity comes stronger fighters.
 </main>
 <<include "footer">>
 
-:: DM-08map {"position":"450,575","size":"100,100"}
+
+:: DM-08map {"position":"575,575","size":"100,100"}
 <<set $passage to "DM-08map">><<set $nextpassage to "DM-09">><<audio ":all" stop>><<set $map1 = setup.generateDirectionsMap([51.51488091335985, -0.08084894611020126], [51.51431124551452, -0.07979814600153363])>>
 <main>
 Cross St Mary Axe Street and find your way to the opposite side of the Gherkin.
@@ -965,11 +993,11 @@ $map1
 
 <<timed 0s>><<replace "#mount">>Okay. I need you to distract the press for a little bit.<</replace>><</timed>>
 
-<<timed 5s>><<replace "#mount">>Is there anything exciting behind us? Maybe a suggestion of a good story?<</replace>><</timed>>
+<<timed 5s>><<replace "#mount">>Is there anything exciting behind us? Maybe a suggestion of a good story?
 
-<<timed 9.5s>><<replace "#mount">>Just point something out that could make a good decoy. Do it loudly.
+Just point something out that could make a good decoy. Do it loudly.
 
-<<button "Done">><<set $prevpass to $passage>><<goto "DM-10">><</button>>
+<<button "Done">><<set $prevpass to "DM-08map">><<goto "DM-10">><</button>>
 
 <</replace>><</timed>>
 
@@ -997,12 +1025,13 @@ $map1
 
 <<timed 33.5s>><<replace "#mount">>It's very generous that you've come to my neighbourhood. So, bear with me and I'll give you what I've got.
 
-<<button "Show map ">><<set $prevpass to $passage>><<goto "DM-10map">><</button>><</replace>><</timed>>
+<<button "Show map ">><<set $prevpass to "DM-09"><<goto "DM-10map">><</button>><</replace>><</timed>>
 
 </main>
 <<include "footer">>
 
-:: DM-10map {"position":"450,825","size":"100,100"}
+
+:: DM-10map {"position":"575,825","size":"100,100"}
 <<set $passage to "DM-10map">><<set $nextpassage to "DM-11">><<audio ":all" stop>><<set $map2 = setup.generateDirectionsMap([51.51431124551452, -0.07979814600153363], [51.5146934884185, -0.07882986850522901],)>>
 <main>
 Head down the ramps you should see Hollander house just in front of you. This is Bury Street. Take a left down here. Turn right at Bevis Marks. On your left you’ll see a plaque and heritage work site.
@@ -1079,7 +1108,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 
 :: DM-13 {"position":"450,1200","size":"100,100"}
-<<set $passage to "DM-13">><<audio ":all" stop>><<audio "DM_13" play>><<set $nextpassage to "DM-14A">>
+<<set $passage to "DM-13">><<audio ":all" stop>><<audio "DM_13" play>><<set $nextpassage to "DM-14B">>
 <main>
 
 <div id="mount"></div>
@@ -1108,7 +1137,8 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 <<timed 58.5s>><<replace "#mount">>Raise both your arms and make a fist with your hands. <</replace>><</timed>>
 
-<<timed 62.5s>><<replace "#mount">>Have you got it? There we go.<</replace>><</timed>>
+<<timed 62.5s>><<replace "#mount">>Have you got it? 
+There we go.<</replace>><</timed>>
 
 <<timed 66s>><<replace "#mount">>Now, I'm going to need you to slowly, very slowly, punch the air in front of you.<</replace>><</timed>>
 
@@ -1176,7 +1206,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 <<timed 71s>><<replace "#mount">>There we go.<</replace>><</timed>>
 
-<<timed 73s>><<set $prevpass to $passage>><<goto "DM-15">><</timed>>
+<<timed 73s>><<set $prevpass to "DM-13">><<goto "DM-15">><</timed>>
 
 </main>
 <<include "footer">>
@@ -1208,7 +1238,7 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 
 <<timed 43.5s>><<replace "#mount">>But it was built to serve the community. It wasn't designed for prominence.<</replace>><</timed>>
 
-<<timed 51s>><<set $prevpass to $passage>><<goto "DM-15">><</timed>>
+<<timed 51s>><<set $prevpass to "DM-13">><<goto "DM-15">><</timed>>
 
 </main>
 <<include "footer">>
@@ -1248,7 +1278,8 @@ Okay. We need some room to practise our punches. Let’s get away from the crowd
 </main>
 <<include "footer">>
 
-:: DM-15map {"position":"450,1450","size":"100,100"}
+
+:: DM-15map {"position":"575,1450","size":"100,100"}
 <<set $passage to "DM-15map">><<set $nextpassage to "DM-16">><<audio ":all" stop>><<set $map3 = setup.generateDirectionsMap([51.5146934884185, -0.07882986850522901], [51.513684383924925, -0.0815345435712461])>>
 <main>
 Head back down Bury St the way you came, follow the path around the Gherkin, back to St Mary Axe St.
@@ -1293,23 +1324,23 @@ $map3
 
 <<timed 50.5s>><<replace "#mount">>I call it an art, even though it's a science. You remember, I wrote about it in my book.<</replace>><</timed>>
 
-<<timed 57s>><<replace "#mount">><p class="cursive">"It must be acknowledged that the art is of such importance that no boxer ought to trust their strength, however great, without calling in some knowledge of the science to his assistance.</p><</replace>><</timed>>
+<<timed 56s>><<replace "#mount">><p class="cursive">"It must be acknowledged that the art is of such importance that no boxer ought to trust their strength, however great, without calling in some knowledge of the science to his assistance.</p><</replace>><</timed>>
 
-<<timed 69s>><<replace "#mount">><p class="cursive">"Art will always give a boxer the advantage over an adversary."</p><</replace>><</timed>>
+<<timed 68s>><<replace "#mount">><p class="cursive">"Art will always give a boxer the advantage over an adversary."</p><</replace>><</timed>>
 
-<<timed 74s.5>><<replace "#mount">>Boxing is an art because you're moving with intention.<</replace>><</timed>>
+<<timed 73s.5>><<replace "#mount">>Boxing is an art because you're moving with intention.<</replace>><</timed>>
 
-<<timed 79s>><<replace "#mount">>It's real time responsive and you're communicating with your opponent. Just how people avoid each other in crowds.<</replace>><</timed>>
+<<timed 78s>><<replace "#mount">>It's real time responsive and you're communicating with your opponent. Just how people avoid each other in crowds.<</replace>><</timed>>
 
-<<timed 86.5s>><<replace "#mount">>Just watch the pavement for a second and you'll see.<</replace>><</timed>>
+<<timed 85.5s>><<replace "#mount">>Just watch the pavement for a second and you'll see.<</replace>><</timed>>
 
-<<timed 89.5s>><<replace "#mount">>The ways people signal they're walking with their eyes, the little dances they play when two people approach each other from opposite directions.<</replace>><</timed>>
+<<timed 88.5s>><<replace "#mount">>The ways people signal they're walking with their eyes, the little dances they play when two people approach each other from opposite directions.<</replace>><</timed>>
 
-<<timed 97.5s>><<replace "#mount">>Being a good boxer is all about controlling your body. How you present your intentions, how you read an opponent.<</replace>><</timed>>
+<<timed 96.5s>><<replace "#mount">>Being a good boxer is all about controlling your body. How you present your intentions, how you read an opponent.<</replace>><</timed>>
 
-<<timed 106s>><<replace "#mount">>I want you to try using your body to communicate.<</replace>><</timed>>
+<<timed 105s>><<replace "#mount">>I want you to try using your body to communicate.<</replace>><</timed>>
 
-<<timed 110s>><<replace "#mount">>Pay attention to every finger, every joint, every way you position yourself. It's all one decision.
+<<timed 109s>><<replace "#mount">>Pay attention to every finger, every joint, every way you position yourself. It's all one decision.
 
 <div class="menu-wrapper">
 <<button "Let's try, we're in a group">><<set $prevpass to $passage>><<goto "DM-17A">><</button>>
@@ -1344,7 +1375,7 @@ $map3
 <<button "Reveal random letter">>
 	<<replace ".randomletter">><h2 class="letter">$randomletter1</h2><</replace>>
     <<replace ".nextbuttoncontainer">>
-    	<<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-18A">><</button>>
+    	<<button "Next Challenge">><<set $prevpass to "DM-17A">><<goto "DM-18A">><</button>>
     <</replace>>    
 <</button>>
 </div>
@@ -1369,7 +1400,7 @@ $map3
 
 <<timed 6s>><<replace "#mount">>I'm going to share it as soon as you can peek discreetly.
 
-<<button "Continue">><<set $prevpass to $passage>><<goto "DM-19A">><</button>>
+<<button "Continue">><<set $prevpass to "DM-17A">><<goto "DM-19A">><</button>>
 
 <</replace>><</timed>>
 
@@ -1386,13 +1417,13 @@ $map3
 
 <<timed 0s>><<replace "#mount">>I want you is a look around the court. What do you see?<</replace>><</timed>>
 
-<<timed 4s>><<replace "#mount">>Can you see anything beginning with this letter?<</replace>><</timed>>
+<<timed 4s>><<replace "#mount">>Can you see anything beginning with this 
 
-<<timed 7s>><<replace "#mount">>As soon as you do, find a way to communicate that object without using any words.<</replace>><</timed>>
+As soon as you do, find a way to communicate that object without using any words.
 
-<<timed 12s>><<replace "#mount">>Let your opponents guess the letter behind the object.
+Let your opponents guess the letter behind the object.
 
-<<button "Next Challenge">><<set $prevpass to $passage>><<goto "DM-20A">><</button>>
+<<button "Next Challenge">><<set $prevpass to "DM-18A">><<goto "DM-20A">><</button>>
 
 <</replace>><</timed>>
 
@@ -1407,7 +1438,7 @@ $map3
 
 One last challenge. One last letter. Any takers?
 
-<<button "Continue">><<set $prevpass to $passage>><<goto "DM-21A">><</button>>
+<<button "Continue">><<set $prevpass to "DM-19A">><<goto "DM-21A">><</button>>
 
 
 </main>
@@ -1420,13 +1451,13 @@ One last challenge. One last letter. Any takers?
 <div id="mount"></div>
 <h2 class="letter">$randomletter3</h2>
 
-<<timed 0s>><<replace "#mount">>Think of an adjective or a way of describing the previous object.<</replace>><</timed>>
+<<timed 0s>><<replace "#mount">>Think of an adjective or a way of describing the previous object.
 
-<<timed 4s>><<replace "#mount">>This should start with this letter. I want you to communicate that adjective using only your body.<</replace>><</timed>>
+This should start with this letter. I want you to communicate that adjective using only your body.
 
-<<timed 12s>><<replace "#mount">>How easy is it to get the letter?
+How easy is it to get the letter?
 
-<<button "Next">><<set $prevpass to $passage>><<goto "DM-22A">><</button>>
+<<button "Next">><<set $prevpass to "DM-20A">><<goto "DM-22A">><</button>>
 
 <</replace>><</timed>>
 
@@ -1443,7 +1474,7 @@ Do you want another round?
 <div class ="menu-wrapper">
 <<button "Yes">><<set $prevpass to $passage>><<goto "DM-17A">><</button>>
 
-<<button "No">><<set $prevpass to $passage>><<goto "DM-23">><</button>>
+<<button "No">><<set $prevpass to "DM-22A">><<goto "DM-23">><</button>>
 </div>
 
 </main>
@@ -1546,7 +1577,7 @@ Do you want another round?
 
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-23 {"position":"450,2450","size":"100,100"}
@@ -1565,11 +1596,7 @@ Do you want another round?
 
 <<timed 13.5s>><<replace "#mount">>
 
-Get to Leadenhall Street and take a right.
-
-$map4
-
-<<button "Here">><<set $prevpass to $passage>><<goto "DM-23map">><</button>>
+<<button "Show Map">><<set $prevpass to $passage>><<goto "DM-23map">><</button>>
 
 <</replace>><</timed>>
 
@@ -1577,7 +1604,8 @@ $map4
 </main>
 <<include "footer">>
 
-:: DM-23map {"position":"450,2450","size":"100,100"}
+
+:: DM-23map {"position":"575,2450","size":"100,100"}
 <<set $passage to "DM-23map">><<set $nextpassage to "DM-24">><<audio ":all" stop>><<set $map4 = setup.generateDirectionsMap([51.513684383924925, -0.081534543571246], [51.51353527313783, -0.08229860558299848])>>
 <main>
 Get to Leadenhall Street and take a right.
@@ -1642,7 +1670,7 @@ On the lefthand side, you come up to Leadenhall Market. Head in.
 
 $map4
 
-<<button "Show map">><<set $prevpass to $passage>><<goto "DM-24map">><</button>>
+<<button "Show map">><<set $prevpass to "DM-23map">><<goto "DM-24map">><</button>>
 
 <</replace>><</timed>>
 
@@ -1650,7 +1678,8 @@ $map4
 </main>
 <<include "footer">>
 
-:: DM-24map {"position":"450,2575","size":"100,100"}
+
+:: DM-24map {"position":"575,2575","size":"100,100"}
 <<set $passage to "DM-24map">><<set $nextpassage to "DM-25">><<audio ":all" stop>><<set $map4 = setup.generateDirectionsMapWP([51.51353527313783, -0.08229860558299848], [51.51279475119132, -0.08377214934032554], "90 Gracechurch St")>>
 <main>
 Continue down Leadenhall Street until you come to the busy intersection.
@@ -1757,7 +1786,7 @@ One, two, three
 
 
 </main>
-<<include "footersimple">>
+<<include "footer">>
 
 
 :: DM-27 {"position":"450,2950","size":"100,100"}
@@ -1795,7 +1824,7 @@ One, two, three
 <</if>>
 <<timed 3s>><h2 class="letter">$opponent</h2><</timed>>
 
-<<button "Next round">><<set $prevpass to $passage>><<goto "DM-29">><</button>>
+<<button "Nice Game">><<set $prevpass to $passage>><<goto "DM-29">><</button>>
 
 
 
@@ -1822,13 +1851,14 @@ One, two, three
 
 <<timed 24.5s>><<replace "#mount">>Challenge another person to a few rounds of rock, paper, scissors. I'll meet you in a moment.
 
-<<button "At 120">><<set $prevpass to $passage>><<goto "DM-29map">><</button>><</replace>><</timed>>
+<<button "Continue">><<set $prevpass to $passage>><<goto "DM-29map">><</button>><</replace>><</timed>>
 
 
 </main>
 <<include "footer">>
 
-:: DM-29map {"position":"450,3200","size":"100,100"}
+
+:: DM-29map {"position":"575,3200","size":"100,100"}
 <<set $passage to "DM-29map">><<set $nextpassage to "DM-30">><<audio ":all" stop>><<set $map6 = setup.generateDirectionsMap([51.51279475119132, -0.08377214934032554], [51.512498718222815, -0.08099917839387917])>>
 <main>
 
@@ -1922,10 +1952,8 @@ $map6
 <<include "footer">>
 
 
-
-
-:: DM-31 {"position":"520,2113","size":"100,100"}
-<<set $passage to "DM-31">><<set $nextpassage to "DM-32">>
+:: DM-31 {"position":"450,3450","size":"100,100"}
+<<set $passage to "DM-31">><<set $nextpassage to "DM-32">><<audio ":all" stop>><<audio "DM-31" play>>
 <main><div id="mount"></div>
 Thanks for helping Daniel out. I am sure he enjoyed meeting and training with you.
 
@@ -1939,7 +1967,8 @@ When you’re up on the rooftop, find a steward in blue and show them this <<but
 </main>
 <<include "footer">>
 
-:: DM-32 {"position":"520,2113","size":"100,100"}
+
+:: DM-32 {"position":"450,3575","size":"100,100"}
 <<set $passage to "DM-32">><<set $nextpassage to "DM-32adventures">>
  <main>
 <div class="key-wrapper glowing"><img src="./assets/Gardenat120.png"></div>
@@ -1949,7 +1978,7 @@ When you’re up on the rooftop, find a steward in blue and show them this <<but
 <<include "footerkey">>
 
 
-::  DM-32adventures {"position":"520,2113","size":"100,100"}
+:: DM-32adventures {"position":"575,3575","size":"100,100"}
 <<set $passage to "DM-32adventures">><<audio ":all" stop>><main>
 <h3>Start a new adventure...</h3>
 <div class="choices">
@@ -1963,7 +1992,8 @@ When you’re up on the rooftop, find a steward in blue and show them this <<but
 </main>
 <<include "footerkey">>
 
-:: DM-33A {"position":"520,2113","size":"100,100"}
+
+:: DM-33A {"position":"500,3700","size":"100,100"}
 <<set $passage to "DM-33A">><<set $map = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.51015287207643, -0.08593906808892092])>><main>
 <h2>A Resting Place</h2>
 $map
@@ -1971,11 +2001,13 @@ $map
 </main>
 <<include "footerlost">>
 
-:: DM-33B {"position":"520,2113","size":"100,100"}
+
+:: DM-33B {"position":"375,3700","size":"100,100"}
 <<set $passage to "DM-33B">><<set $map = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.50918673253736, -0.07806720674610745])>><main>
 <h2>Share Mile</h2>
 $map
 
 </main>
 <<include "footerlost">>
+
 
