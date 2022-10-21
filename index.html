@@ -455,6 +455,44 @@ textarea{
     }
 }
 
+/* LANDING  */
+main.landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh
+}
+
+.landing > h2 {
+  font-family: "Big John";
+  text-align:center;
+  margin-block-end: 0;
+}
+
+.landing > a {
+  display:flex;    
+  justify-content: center;
+  
+}
+
+.landing > a:active{
+  background-color: transparent;
+
+}
+
+.landing > a > img {
+  width: 80%;
+  max-width: 300px;
+}
+
+/* END */
+main.end > h2{
+  margin-block-end: 0;
+}
+
+
+
 /* KEY  */
 .key-wrapper{
   width:fit-content;
@@ -628,7 +666,7 @@ iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
 console.log(iFrame)
 return iFrame
@@ -643,7 +681,7 @@ iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&waypoints=${wayp}&mode=walking`)
 const mount = document.getElementById("mapMount")
 // console.log(iFrame)
 return iFrame
@@ -669,53 +707,53 @@ setup.checkForRepeats = (array,element) => {
  const arrayCopy = [...array];
  const duplicates = arrayCopy.filter((item, index) => index !== arrayCopy.indexOf(item));
  return duplicates.contains(element)
-}</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;DM-01&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_01.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM-02A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/felix/XX_02_greatsolo.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM-02B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/felix/XX_02_perfectgroup.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM-03&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/felix/XX_03.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM-04&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM-04.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_05&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_05.mp3&quot;&gt;&gt;
+}</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;DM-01&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_01.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM-02A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/felix/XX_02_greatsolo.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM-02B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/felix/XX_02_perfectgroup.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM-03&quot; &quot;https://www.youhavefoundconey.net/tgksnd/felix/XX_03.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM-04&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM-04.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_05&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_05.mp3&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;DM_06A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_06A.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_06B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_06B.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_07&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_07.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_08&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_08.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_09&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_09.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_06A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_06A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_06B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_06B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_07&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_07.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_08&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_08.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_09&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_09.mp3&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;DM_10&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_10.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_11&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_11.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_10&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_10.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_11&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_11.mp3&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;DM_12A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_12A.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_12B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_12B.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_13&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_13.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_14A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_14A.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_14B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_14B.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_15&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_15.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_16&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_16.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_12A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_12A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_12B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_12B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_13&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_13.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_14A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_14A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_14B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_14B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_15&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_15.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_16&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_16.mp3&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;DM_17A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_17A.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_17B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_17B.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_18B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_18B.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_18A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_18A.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_19A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_19A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_17A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_17A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_17B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_17B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_18B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_18B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_18A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_18A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_19A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_19A.mp3&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;DM_19B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_19B.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_20A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_20A.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_20B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_20B.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_21A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_21A.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_21B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_21B.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_22A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_22A.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_23&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_23.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_24&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_24.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_25&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_25.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_26-8_P&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_26-8_P.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_26-8_R&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_26-8_R.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_26-8_S&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_26-8_S.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM_29&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM_29.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM-30&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM-30.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;DM-31&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/DM-31.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_19B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_19B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_20A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_20A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_20B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_20B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_21A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_21A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_21B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_21B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_22A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_22A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_23&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_23.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_24&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_24.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_25&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_25.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_26-8_P&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_26-8_P.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_26-8_R&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_26-8_R.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_26-8_S&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_26-8_S.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM_29&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM_29.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM-30&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM-30.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;DM-31&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/DM-31.mp3&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;34&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/DM/34.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;34&quot; &quot;https://www.youhavefoundconey.net/tgksnd/DM/34.mp3&quot;&gt;&gt;
 
 
 &lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="" position="100,225" size="100,100">&lt;header&gt;Daniel Mendoza&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footer" tags="" position="99,493" size="100,100">&lt;footer&gt;
@@ -725,7 +763,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="footersimple" tags="" position="100,375" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper &quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Take me to the end&quot;&gt;&gt;&lt;&lt;goto &quot;lost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="footerlost" tags="" position="100,375" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper &quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Back&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="footerend" tags="" position="99,485" size="100,100">&lt;footer&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="footerkey" tags="" position="225,150" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper end&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-32&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Try another adventure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-32adventures&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="8" name="lost" tags="" position="225,25" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="footerkey" tags="" position="225,150" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Show map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper end&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-32&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Try another adventure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-32adventures&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="8" name="lost" tags="" position="225,25" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main&gt;
 You have two options:
 
@@ -735,23 +773,26 @@ You have two options:
   &lt;&lt;button &quot;Take me straight to the end location!&quot;&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footerlost&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="landing" tags="" position="455,60" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;
-
-&lt;main&gt;
+&lt;&lt;include &quot;footerlost&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="landing" tags="" position="455,60" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;main class=&quot;landing&quot;&gt;
 &lt;h2&gt;Daniel Mendoza&#39;s Art of Boxing&lt;/h2&gt;
-
+&lt;&lt;link &quot;&lt;img src=&#39;./assets/dragon2.gif&#39;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-01&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;button &quot;Start&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-01&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
      
 
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="10" name="end" tags="" position="100,625" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $endMap = setup.generateDirectionsMap([51.514552320765084, -0.08076707116407163], [51.51233042912303, -0.0809482307665927])&gt;&gt;
-&lt;main&gt;
-
-$endMap
+&lt;main class=&quot;end&quot;&gt;&lt;h2&gt;End location&lt;/h2&gt;Garden at 120
+120 Fenchurch Street
+EC3M 5BA
 
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-32&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
+$endMap
+
+
+
 &lt;/main&gt;
-&lt;&lt;include &quot;footerend&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DM-01" tags="" position="450,200" size="100,100">&lt;&lt;set $passage to &quot;DM-01&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-02B&quot;&gt;&gt;
+&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DM-01" tags="" position="450,200" size="100,100">&lt;&lt;set $passage to &quot;DM-01&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-02B&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM-01&quot; play&gt;&gt;
 &lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
@@ -1014,7 +1055,7 @@ Just point something out that could make a good decoy. Do it loudly.
 
 &lt;&lt;timed 33.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;It&#39;s very generous that you&#39;ve come to my neighbourhood. So, bear with me and I&#39;ll give you what I&#39;ve got.
 
-&lt;&lt;button &quot;Show map &quot;&gt;&gt;&lt;&lt;set $prevpass to &quot;DM-09&quot;&gt;&lt;&lt;goto &quot;DM-10map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;button &quot;Show map &quot;&gt;&gt;&lt;&lt;set $prevpass to &quot;DM-09&quot;&gt;&gt;&lt;&lt;goto &quot;DM-10map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="DM-10map" tags="" position="575,825" size="100,100">&lt;&lt;set $passage to &quot;DM-10map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map2 = setup.generateDirectionsMap([51.51431124551452, -0.07979814600153363], [51.5146934884185, -0.07882986850522901],)&gt;&gt;
@@ -1505,7 +1546,7 @@ Do you want another round?
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="DM-23map" tags="" position="575,2450" size="100,100">&lt;&lt;set $passage to &quot;DM-23map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([51.513684383924925, -0.081534543571246], [51.51353527313783, -0.08229860558299848])&gt;&gt;
 &lt;main&gt;
-Get to Leadenhall Street and take a right.
+Turn right and walk past the front of the Leadenhall Building
 
 &lt;&lt;button &quot;Here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;DM-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
@@ -1516,9 +1557,12 @@ $map4
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="DM-24" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-24map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_24&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="DM-24" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;DM-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;DM-24map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;DM_24&quot; play&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMapWP([51.51353527313783, -0.08229860558299848], [51.51279475119132, -0.08377214934032554], &quot;90 Gracechurch St&quot;)&gt;&gt;
 &lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
+$map4
+Continue down Leadenhall Street until you come to the busy intersection.
+Take a left, carefully cross the road.
+On the lefthand side, you come up to Leadenhall Market. Head in.
 &lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Great, we shook them off.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Whilst we&#39;re walking, I can probably squeeze in another lesson.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1555,15 +1599,8 @@ $map4
 
 &lt;&lt;timed 95s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Oh dear. Right, we need to pick up the pace. I&#39;ll run ahead. You keep practicing the sidestep. &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 104s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Continue down Leadenhall Street until you come to the busy intersection.
-
-Take a left, carefully cross the road.
-
-On the lefthand side, you come up to Leadenhall Market. Head in.
-
-$map4
-
-&lt;&lt;button &quot;Show map&quot;&gt;&gt;&lt;&lt;set $prevpass to &quot;DM-23map&quot;&gt;&gt;&lt;&lt;goto &quot;DM-24map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;timed 104s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+&lt;&lt;button &quot;We&#39;re at the market&quot;&gt;&gt;&lt;&lt;set $prevpass to &quot;DM-25&quot;&gt;&gt;&lt;&lt;goto &quot;DM-24map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -1714,7 +1751,7 @@ One, two, three
 
 &lt;&lt;timed 7s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;You had some great reflexes there. But I wonder if there are any other worthy adversaries in this area.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 15.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Do you see any other boxes on your level? Any other people who play your game?&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 15.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Do you see any other boxers on your level? Any other people who play your game?&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 21s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;I bet there&#39;s a few around here. You don&#39;t have to know them.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
